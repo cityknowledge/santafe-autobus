@@ -1,0 +1,4 @@
+datastore
+*.sublime*
+*.tmproj
+node_modules

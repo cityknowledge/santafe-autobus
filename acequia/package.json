@@ -1,0 +1,27 @@
+{ "name" : "acequia"
+, "version" : "0.2.1"
+, "description":"Message router for node supporting multiple protocols"
+, "main": "index.js"
+, "preferGlobal": "true"
+, "directories": {"lib": "./lib" }
+, "scripts": { "start": "node server.js" }
+, "engines": { "node": ">=0.6" }
+, "dependencies" : 
+  { "log4js" : ">=0.4.1"
+  , "express": "3.1.x"
+  , "socket.io": ">=0.9.6"
+  , "socket.io-client":">=0.9.6"
+  , "uglify-js": ">=1.2.5"
+  , "buffertools" : ">=1.0.9" 
+  } 
+, "homepage": "https://github.com/prgsmall/acequia"
+, "repository": 
+  { "type": "git"
+  , "url": "https://prgsmall@github.com/prgsmall/acequia.git"
+  }
+, "author": 
+  { "name": "Peter R. G. Small"
+  , "email": "prgsmall@gmail.com"
+  ,"github": "prgsmall"
+  }
+}
