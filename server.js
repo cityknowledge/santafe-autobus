@@ -62,7 +62,7 @@ var startHTTPServer = function () {
 
     server.listen(3000);
 
-    acequiaServer = require("./acequia").createServer({
+    acequiaServer = require("acequia").createServer({
         express_app: app
         , httpServer: server
         , oscPort: false
