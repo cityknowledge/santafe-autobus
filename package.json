@@ -6,6 +6,7 @@
     "start": "server.js"
   },
   "dependencies": {
+    "acequia": "git://github.com/bennlich/acequia.git",
     "express": ">=2.5.8",
     "csv": ">=0.0.11",
     "feedparser": ">=0.9.6",
