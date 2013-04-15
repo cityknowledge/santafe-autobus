@@ -1,5 +1,6 @@
 {
   "name": "santafe-autobus",
+  "user": "bennlich",
   "version": "0.0.2",
   "scripts": {
     "start": "server.js"
