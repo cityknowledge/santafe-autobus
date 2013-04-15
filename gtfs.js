@@ -23,7 +23,8 @@ var GTFSReader = function (uri, gtfsobj) {
     this.version = "";
     
     var parser = new FeedParser();
-    parser.parseUrl(uri, utils.objCallback(this, "onfeed"));
+    // parser.parseUrl(uri, utils.objCallback(this, "onfeed"));
+    this.gtfsobj.parseFeedFiles();
 };
 
 GTFSReader.prototype.onfeed = function (error, meta, articles) {
@@ -342,7 +343,7 @@ GeneralTransitFeed.prototype.load = function (feed, cb, self) {
         stats = fs.lstatSync(feedFile);
 
         csv()
-        .fromPath(feedFile, {
+        .from.path(feedFile, {
             columns: true,
             trim: true
         })
@@ -356,11 +357,12 @@ GeneralTransitFeed.prototype.load = function (feed, cb, self) {
             }
             return ret;
         })
-        .on('data', function (data, index) {
+        .on('record', function (data, index) {
             out.push(data);
         })
         .on('end', function (count) {
             console.log(feed + ':  number of lines: ' + count);
+            // console.log("out",out);
             self.dataset[feed] = out;
             self.checkLoad(cb);
         })
