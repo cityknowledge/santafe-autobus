@@ -1,0 +1,433 @@
+stop_id,stop_name,stop_lat,stop_lon
+1,Cerrillos Rd NS Clark Rd (Sonic),35.657087,-105.989141
+3,South Capitol Station,35.673178,-105.957191
+5,Hospital Drive OPS Santa Fe Imaging,35.66053, -105.948613
+2001,Sabino St. NS Guadalupe St.,35.69153,-105.952286
+2002,Sabino FS Guadalupe St.,35.691522,-105.952498
+2003,Perimeter Rd. FS Paseo de Peralta,35.69498,-105.95128
+2004,Perimeter Rd NS Paseo de Peralta ,35.695046,-105.951401
+2005,Rodeo Rd FS Richards Ave,35.63902,-106.0004
+2006,Cam. Entrada OPS Fam. Shelter,35.630201,-106.028495
+2007,Cam. Ortiz Ops MVD,35.632927,-106.024955
+2008,Cam. Ortiz NS Cam. Entrada ,35.633071,-106.022474
+2009,Camino Lejo NS Old Santa Fe Trail ,35.668059,-105.924943
+2010,E. Alameda Ave. NS El Alamo St,35.683352,-105.926193
+2011,E. Alameda. @ Walking Bridge,35.682363,-105.925013
+2012,E. Alameda NS E. Palace Ave.,35.68064,-105.923443
+2013,Camino Del Monte Sol FS Old Santa Fe Trail,35.668269,-105.922505
+2014,Cam Del Monte Sol NS Camino de Cruz Blanca,35.669657,-105.922267
+2015,Camino de Cruz Blanca @ S.F. Prep. School,35.669923,-105.920084
+2016,Camino de Cruz Blanca NS Calle Rumolo,35.670223,-105.915879
+2017,Cam de Cruz Blanca NS St. John's College Ent,35.669295,-105.914157
+2018,Calle Picacho FS Camino de Cruz Blanca,35.669369,-105.90981
+2019,Calle Picacho @Rio Grande School,35.670963,-105.911647
+2020,Camino Cabra @ Atalaya School,35.672733,-105.913406
+2021,Camino Cabra OPS Camino de La Luz,35.673434,-105.913781
+2022,Camino Cabra FS Camino Ribera,35.675462,-105.914871
+2023,Camino Cabra FS Camino San Acacio,35.677662,-105.915907
+2024,Camino Cabra FS Cristo Rey St.,35.678856,-105.916368
+2025,E. Alameda St. OPS Park Entrance,35.680492,-105.918785
+2027,833 E. Alameda St,35.682549,-105.92494
+2028,E. Alameda St. NS Delgado St.,35.684627,-105.930877
+2029,E. Alameda St. NS Paseo de Peralta,35.684481,-105.933783
+2030,E. Alameda St. @ City Parking lot,35.684617,-105.935305
+2031,Cam. Ortiz FS Cam Entrada,35.633163,-106.022379
+2032,Cam. Ortiz @ MVD,35.632993,-106.025076
+2035,Siringo Rd. FS Llano,35.652073,-105.970231
+2037,Miguel Chavez Rd.FS Brothers Rd.,35.650444,-105.953357
+2038,Siringo Rd. FS Llano St.,35.65231,-105.970688
+2042,Zia Rd OPS Villa Real Apts.,35.646865,-105.954716
+2043,Don Diego Ave NS Grillo,35.676327,-105.948311
+2045,Don Diego Ave. NS Adela St.,35.67622,-105.9482
+2050,Botulph Rd. fS Chavez Rd,35.649238,-105.947922
+2051,Botulph Rd. NS Chavez Rd,35.649278,-105.947642
+2052,E. Alameda St. NS Alamo,35.68338,-105.926002
+2053,E. Alameda St. NS Old Santa Fe Trail.,35.684847,-105.937787
+2054,E. Alameda St. OPS City Parking Lot,35.684527,-105.9357
+2055,E. Alameda Ave. NS Delgado,35.684546,-105.931251
+2057,So. Meadow FS Jaguar,35.62787,-106.032482
+2058,Zia Rd. OPS Capshaw Jr. High School,35.645691,-105.951776
+2059,E. Alameda NS Old Santa Fe Trl,35.684924,-105.937514
+2062,Botulph Rd. NS Zia Rd,35.646026,-105.94757
+2063,Zia Rd. NS Botulph,35.645658,-105.947543
+2064,Agua fria FS Santeros Pl,35.648895,-106.03692
+2065,Cerrillos Rd NS Gilmore,35.679185,-105.950853
+2066,Cam. Entrada @ Victory Church,35.6303,-106.028626
+2067,Botulph Rd. NS Calle Ojo Feliz,35.652467,-105.947994
+3002,Cerrillos Rd. FS Zafarano,35.640577,-106.011371
+3003,Cerrillos Rd. FS Vegas Verde,35.64449,-106.008746
+3004,Rodeo FS GCCC ,35.639094,-105.99386
+3005,Rodeo Rd. NS Rodeo Ln,35.638695,-106.00594
+3006,Cerrillos FS Alta Vista,35.672946,-105.960932
+3007,Rodeo FS GCCC Entrance,35.639057,-105.993884
+3100,Cerrillos Rd. @ HSD,35.659423,-105.982618
+5005,2905 Rodeo Park East,35.637822,-105.958559
+5006,Sawmill Rd. OPS Ventoso,35.639259,-105.947511
+5007,Sawmill Rd. OPS Pradera,35.642289,-105.951369
+5008,Sawmill Rd. NS Pradera,35.641974,-105.951622
+5009,Sawmill Rd. NS Ventoso,35.639345,-105.947757
+6001,Rodeo Park east FS Vivigen way,35.63705,-105.9595
+6002,Rodeo Park East @ Eye associates,35.63745,-105.9592
+6003,Rodeo Park west NS Vivigen way,35.637668,-105.960953
+6004,2905 Rodeo Park East,35.637822,-105.958559
+6005,Rodeo rd. @ Rainbow Vision,35.638424,-105.952476
+6006,Siringo NS Ridgeway,35.652144,-105.951696
+6007,Brother Rd OPS Vet Center,35.651219,-105.952429
+6012,Rodeo Rd. Via Antigua,35.638652,-105.952067
+6013,Agua Fria FS Willy Rd,35.649625,-106.036241
+6014,Cam. Entrada FS Cam. Entrada ,35.634823,-106.021043
+7001,Sandoval St. FS W. Alameda St.,35.686222,-105.94311
+7002,Country Club NS Camino Rojo,35.628804,-106.050933
+7004,Jaguar Dr. NS Apache Knl,35.623368,-106.053814
+7005,Jaguar Dr. NS Plaza del Sol West,35.620561,-106.056961
+7006,Plaza del Sol West FS Plaza Central,35.625325,-106.061437
+7007,Plaza del Sol West  NS Airport Rd.,35.633175,-106.060691
+9001,HSD,35.6085,-106.039787
+9002,Rancho Veijo FS Dinosaur Rd.,35.597831,-106.039276
+9003,Rancho Veijo NS Avenida Del Sur,35.597432,-106.014557
+9004,A Van Nu Po OPS IAIA,35.584764,-106.008118
+9005,Richards Ave FS E Saddleback,35.588973,-105.997204
+9006,Richards Ave FS Flowering Wells Rd.,35.590637,-105.991694
+9007,Richards Ave NS Chile Line Rd,35.593738,-105.998917
+9008,Richards Ave FS Chile Line Rd,35.593303,-105.999463
+9009,Richards Ave OPS Dalton,35.590639,-105.992666
+9010,Richards Ave NS E Saddleback,35.58924,-105.998499
+9011,A Van Nu Po @ IAIA,35.585822,-106.008331
+9012,Rancho Veijo FS Avenida Del Sur,35.598047,-106.013476
+9013,Rancho Veijo NS Dinosuar Rd.,35.598182,-106.038195
+9015,Governor Miles FS Richards Ave,35.628336,-106.001292
+9016,Governor Miles NS Richards Ave,35.627367,-106.001295
+9017,Governor Miles FS Dancing Ground,35.629061,-106.010901
+10001,599 Railrunner Station,35.591229,-106.060989
+94001,Sheridan Transit Center,35.68869,-105.939512
+94002,Sandoval St. NS W. San Francisco,35.688077,-105.941873
+94003,Sandoval St. NS W. Alameda,35.686699,-105.942704
+94004,Agua Fria NS Closson St.,35.686025,-105.948437
+94005,Agua Fria NS Irvine St.,35.685167,-105.952441
+94006,Agua Fria NS St. Francis Rd.,35.684412,-105.954601
+94007,Agua Fria NS Cortez,35.683263,-105.958561
+94008,Agua Fria FS La Madera St.,35.682433,-105.960903
+94009,Agua Fria NS Camino Alire,35.681238,-105.963332
+94010,Agua Fria NS Cristobal Colon,35.678325,-105.968484
+94011,Agua Fria OPS Larragoite Elem. School,35.676653,-105.971493
+94012,Agua Fria OPS Velarde St.,35.674715,-105.97502
+94013,Agua Fria OPS Camino Solano,35.672865,-105.979435
+94014,Agua Fria NS Osage Ave.,35.672078,-105.981197
+94015,Agua Fria FS Camino Carlos Rael,35.669348,-105.98684
+94016,Agua Fria OPS Maez Rd.,35.668306,-105.988361
+94017,Agua Fria FS Harrison Rd.,35.666899,-105.990174
+94018,Agua Fria OPS Siler Park Lane,35.664626,-105.994975
+94021,Agua Fria OPS Agua Fria Elem. School,35.660338,-106.00456
+94024,Agua Fria @ Bus pull in,35.657875,-106.016414
+94027,Agua Fria @ Lone Star Trailer Park,35.653516,-106.02673
+94028,Agua Fria FS Rodriguez Sand & Gravel,35.651233,-106.032557
+94029,Agua Fria NS Jemez Rd.,35.648406,-106.038091
+94030,Agua Fria OPS Morning Dr.,35.645689,-106.042427
+94031,Agua Fria NS Cottonwood Village,35.643972,-106.044884
+94032,San Felipe NS La Parc,35.638312,-106.052208
+94033,Airport Rd. OPS Tierra Real,35.635081,-106.048476
+94035,Airport Rd. OPS Country Club Garden Apts.,35.636266,-106.03973
+94036,Airport Rd. FS Jemez Rd.,35.637146,-106.033242
+94037,Airport Rd. @ Allsups,35.637749,-106.028512
+94038,Airport Rd. NS Zepol Rd.,35.638186,-106.025514
+94042,Rodeo Rd. NS County Rd. 64A,35.638508,-106.008662
+94043,Rodeo Rd. NS Richards Ave.,35.638446,-105.999615
+94045,Santa Fe Community College,35.604277,-105.99863
+94047,Rodeo Rd. FS Richards Ave.,35.639038,-106.001217
+94050,Airport Rd. FS Lopez Ln.,35.639227,-106.019706
+94051,Airport Rd. FS Zepol Rd.,35.638545,-106.025789
+94052,Airport Rd. FS Calle Inez,35.638003,-106.029287
+94053,Airport Rd. FS Jemez Rd.,35.637316,-106.03443
+94054,Airport Rd. FS Country Club Gardens,35.636433,-106.040667
+94055,Airport Rd. FS Paseo del Sol,35.635674,-106.04373
+94056,Airport Rd. NS Tierra Real,35.635453,-106.048197
+94057,San Felipe OPS Le Parc,35.638315,-106.052064
+94058,Agua Fria NS Cottonwood Village,35.64349,-106.045105
+94059,Agua Fria NS Morning Dr.,35.645514,-106.042319
+94060,Agua Fria FS Jemez Rd.,35.648168,-106.038138
+94061,Agua Fria OPS Rodriguez Bros.,35.650941,-106.0328
+94062,Agua Fria OPS Lone Star Trailer Park,35.653381,-106.026614
+94063,Agua Fria FS Lopez Lane,35.654734,-106.0224
+94064,Agua Fria @ Bus pull in,35.657726,-106.016374
+94065,Agua Fria FS San Isidro Church,35.658433,-106.014438
+94066,Agua Fria ops Case rd,35.659679,-106.006415
+94067,Agua Fria FS Agua Fria Elem. School,35.660395,-106.003952
+94068,Agua Fria FS Siler Rd.,35.663393,-105.99685
+94069,Agua Fria FS Siler Park Lane,35.664561,-105.994509
+94070,Agua Fria FS Harrison Rd.,35.666833,-105.989887
+94071,Agua Fria FS Maez Rd.,35.667947,-105.988652
+94072,Agua Fria FS Family Lane,35.669084,-105.986927
+94073,Agua Fria FS Osage Ave. ,35.671933,-105.981045
+94074,Agua Fria NS Rafael St.,35.672706,-105.979254
+94075,Agua Fria FS Camino de Guadalupita,35.674636,-105.974811
+94076,Agua Fria FS Larragiote Elem. School,35.676537,-105.971534
+94077,Agua Fria NS Cristobal Colon,35.677912,-105.96885
+94078,Agua Fria NS Camino Alire,35.68076,-105.963767
+94079,Agua Fria NS Alicia St. ,35.682289,-105.960839
+94080,Agua Fria NS Kathryn St. ,35.683229,-105.958115
+94081,Agua Fria NS St. Francis Rd.,35.684049,-105.955398
+94082,Agua Fria OPS Irvine St.,35.684987,-105.952524
+94083,Agua Fria OPS Closson St.,35.685942,-105.948275
+94084,Agua Fria FS Guadalupe Ave.,35.686596,-105.945363
+94085,Sandoval St. NS Water St.,35.686936,-105.942181
+94086,Sandoval St. FS Montezuma Ave.,35.684664,-105.944241
+94087,Cerrillos Rd. NS Paseo de Peralta,35.681748,-105.946042
+94089,St. Francis Dr. @ Chevron Station,35.676688,-105.953883
+94090,St. Francis Dr. NS Cordova Rd.,35.674466,-105.953767
+94091,Cordova Rd. NS Cerrillos Rd.,35.674947,-105.957606
+94092,Cerrillos Rd. NS Baca St.,35.672536,-105.961994
+94093,1420 Cerrillos Rd. (Indian School),35.670207,-105.965368
+94094,Cerrillos Rd. NS 2nd St.,35.667142,-105.969662
+94095,Cerrillos Rd. FS San Jose Ave.,35.665311,-105.972286
+94096,Cerrillos Rd. NS Osage Ave.,35.662902,-105.977013
+94098,Cerrillos Rd. NS Lujan St. ,35.6608,-105.98094
+94100,Cerrillos Rd. FS Siler Rd.,35.655742,-105.991223
+94101,Cerrillos Rd. NS Calle Del Cielo,35.653626,-105.994789
+94103,Cerrillos Rd. FS Richards Ave.(I-Hop),35.649229,-106.001948
+94104,Cerrillos Rd. NS Atocha,35.646994,-106.005549
+94105,Cerrillos Rd. FS Vegas Verde,35.644061,-106.01012
+94107,Cerrillos Rd. @ Holiday Inn,35.640406,-106.015464
+94114,Cerrillos Rd. NS Calle de Cielo,35.653063,-105.995108
+94115,Cerrillos Rd. NS Siler Rd.,35.655536,-105.990934
+94116,Cerrillos Rd. @ Jackalope,35.65693,-105.98816
+94117,Cerrillos Rd. FS Camino Carlos Rey,35.65839,-105.98526
+94118,Cerrillos Rd. NS Lujan ,35.66051,-105.980973
+94120,Cerrillos Rd. FS 4th St.,35.663248,-105.975786
+94121,Cerrillos Rd. NS 2nd St.,35.666724,-105.969805
+94122,Cerrillos Rd. FS Cochiti,35.668022,-105.968081
+94123,Cerrillos Rd. @ Hostel,35.670057,-105.965166
+94124,Cerrillos Rd. NS Monterey Dr.,35.671958,-105.962465
+94125,Cerrillos Rd. @ NMSHTD Building,35.674695,-105.958285
+94126,Cordova Rd. @ Montoya Building,35.674252,-105.955039
+94127,St. Francis Dr. NS Cerrillos Rd,35.676639,-105.953475
+94129,Cerrillos Rd. NS Paseo de Peralta,35.681474,-105.946136
+94131,Grant Ave. NS Catron St.,35.683944,-105.94296
+94132,Catron St. NS Guadalupe St.,35.69097,-105.944523
+94135,Rio Vista FS El Camino de las Crucitas,35.69167,-105.955677
+94136,Placita de Oro FS Rio Vista,35.690339,-105.957446
+94137,Placita de Oro NS W. Alameda St.,35.68893,-105.957319
+94138,W. Alameda St. FS Solana Dr.,35.687674,-105.961374
+94139,W. Alameda St. FS Sicomoro St.,35.686461,-105.964571
+94140,W. Alameda St. NS Mesa Vista St.,35.685473,-105.966523
+94150,Cam Alire OPS Paseo de La Conquistadora,35.684369,-105.966537
+94152,W. Alameda St. OPS Sicomoro St.,35.68651,-105.964115
+94153,W. Alameda St. OPS Solana Dr.,35.687588,-105.960884
+94154,Placita de Oro FS W. Alameda St.,35.689076,-105.957079
+94155,Placita de Oro NS Rio Vista,35.690489,-105.957281
+94156,Rio Vista NS El Camino de las Crucitas,35.691657,-105.955557
+94158,Catron St. FS Guadalupe St.,35.691027,-105.94429
+94163,Guadalupe St. FS Agua Fria Rd.,35.686328,-105.945081
+94164,Guadalupe St. FS Montezuma Ave.,35.684831,-105.945838
+94165,Guadalupe St. NS Paseo de Peralta,35.681905,-105.948474
+94167,St. Francis Dr. FS Cordova Rd.,35.673599,-105.954005
+94168,St. Francis Dr. FS Alta Vista St.,35.670793,-105.955539
+94169,St. Francis Dr. FS Columbia St.,35.66811,-105.956289
+94170,St. Francis Dr. FS Camino del Monte Rey,35.666063,-105.956442
+94172,Pacheco St. FS San Mateo Rd. ,35.661146,-105.959852
+94173,Pacheco St. FS St. Michael's Dr.,35.658772,-105.959371
+94174,Pacheco St. OPS #2009 Pacheco Building,35.657381,-105.959151
+94176,Pacheco St. NS Siringo Rd.,35.652481,-105.958646
+94177,Siringo Rd. @ St. Michael's High School,35.65188,-105.950019
+94178,Siringo Rd. FS Calle Contento,35.652282,-105.961642
+94179,Siringo Rd. FS Calle Lorca,35.652267,-105.964358
+94180,Siringo Rd. FS 5th St.,35.652287,-105.967357
+94182,Siringo Rd. NS Yucca St.,35.652247,-105.971148
+94183,Siringo Rd. OPS Alamosa Place,35.652249,-105.978837
+94185,Camino Carlos Rey @ Herb Martinez Park,35.64855,-105.984587
+94187,Camino Carlos Rey NS Princessa Juana ,35.643926,-105.983403
+94189,Rodeo Rd. NS Zia Rd.,35.638881,-105.985005
+94190,Rodeo Rd. NS Avenida de las Companas,35.639015,-105.989638
+94191,Rodeo Rd. FS Paseo de los Pueblos,35.639031,-105.997209
+94194,Rodeo Rd. FS Paseo de los Pueblos,35.63864,-105.99632
+94195,Rodeo Rd. FS Paseo de los Pueblos,35.638652,-105.991738
+94197,Rodeo Rd. FS Zia Rd.,35.638507,-105.984576
+94198,Camino Carlos Rey FS Camino Artesano,35.641273,-105.98282
+94199,Camino Carlos Rey NS Calle Anna Jean,35.644333,-105.983341
+94200,Camino Carlos Rey OPS Vereda de Pueblo,35.646526,-105.983992
+94201,Camino Carlos Rey NS Alamosa Dr.,35.649524,-105.98454
+94202,Siringo Rd. FS Camino Carlos Rey,35.652027,-105.984422
+94203,Siringo Rd. NS San Lorenzo Dr.,35.652006,-105.981821
+94205,Siringo Rd. FS Yucca St.,35.652064,-105.973157
+94207,Siringo Rd. OPS 5th St.,35.652018,-105.967082
+94208,Siringo Rd. NS Calle Lorca,35.651998,-105.964207
+94209,Siringo Rd. FS Calle Ensenada,35.651927,-105.960575
+94211,Pacheco St. FS Siringo Rd.,35.652688,-105.958315
+94214,Pacheco St. NS St. Michael's Dr.,35.658898,-105.959165
+94215,Pacheco St. NS San Mateo Rd.,35.66138,-105.959567
+94216,St. Francis Dr. FS San Mateo Rd. ,35.663295,-105.956101
+94217,St. Francis Dr. OPS Camino del Monte Rey,35.66558,-105.955943
+94218,St. Francis Dr. NS Columbia St. ,35.668047,-105.955881
+94219,St. Francis Dr. NS Alta Vista St. ,35.670813,-105.95508
+94220,St. Francis Dr. NS Cordova Rd.,35.673707,-105.953631
+94222,Guadalupe St. FS Montezuma Ave.,35.685097,-105.945475
+94223,Guadalupe St. NS W. Alameda St.,35.686978,-105.94419
+94224,E. Alameda St. NS Galisteo St.,35.685908,-105.941918
+94225,Don Gaspar Ave. FS W. De Vargas St.,35.684586,-105.940423
+94227,Don Gaspar Ave. NS W. Booth St.,35.67967,-105.941527
+94228,Don Gaspar Ave. FS W. Berger St.,35.676673,-105.942183
+94229,Don Gaspar Ave. NS W. Coronado Rd.,35.675608,-105.942392
+94230,Don Gaspar Ave. NS Cordova Rd. ,35.670933,-105.943317
+94233,Cordova Rd. FS Wells Fargo Bank,35.673452,-105.951401
+94237,Galisteo St. NS San Mateo Rd.,35.6638,-105.9485
+94238,#1640 Hospital Dr.,35.66053,-105.948613
+94239,St. Vincent Hospital,35.658586,-105.945855
+94240,St. Michael's Dr. FS Galisteo St. ,35.658839,-105.952323
+94241,St. Michael's Dr. NS Pacheco St. ,35.659506,-105.958829
+94242,St. Michael's Dr. NS Calle Lorca,35.659664,-105.963304
+94243,St. Michael's Dr. NS 5th St.,35.659532,-105.969366
+94244,St. Michael's Dr. NS Llano St.,35.659455,-105.972176
+94245,St. Michael's Dr. OPS College of SF,35.660585,-105.975472
+94248,Osage Ave. NS Rosina St.,35.664005,-105.977786
+94249,St. Michael's Dr. @ College of Santa Fe,35.660354,-105.975838
+94250,St. Michael's Dr. NS Llano St.,35.659183,-105.973208
+94251,St. Michael's Dr. NS 5th St.,35.659155,-105.969909
+94252,St. Michael's Dr. NS Calle Lorca,35.659245,-105.963948
+94253,St. Michael's Dr. NS Pacheco St.,35.659193,-105.959755
+94254,St. Michael's Dr. NS Galisteo St.,35.658514,-105.952336
+94255,"Hospital Dr. @ Medical, Dental Center",35.659456,-105.948325
+94261,Cordova Rd. OPS Wells Fargo Bank,35.673063,-105.951149
+94263,Galisteo St. FS Cordova Rd.,35.671873,-105.945481
+94264,Galisteo St. OPS Lomita St.,35.674092,-105.945058
+94265,Galisteo St. NS W. Berger St.,35.677088,-105.94413
+94267,Galisteo St. FS Paseo Peralta,35.681143,-105.943329
+94268,Galisteo St. NS Cerrillos Rd.,35.684669,-105.942037
+94277,E. Alameda St. NS Park Entrance,35.680424,-105.919001
+94278,Camino Cabra NS Cristo Rey St.,35.678803,-105.91649
+94279,Camino Cabra FS Camino San Acacio,35.677493,-105.91595
+94280,Camino Cabra FS Camino San Acacio,35.6733,-105.913812
+94281,Camino de Cruz Blanca NS Calle Rumolo,35.670316,-105.91589
+94282,Camino de Cruz Blanca @ S.F. Prep. School,35.670059,-105.920071
+94283,Camino Del Monte Sol FS Camino de Cruz Blanca,35.669762,-105.922356
+94284,Camino Del Monte Sol NS Old Santa Fe Trail,35.668149,-105.922732
+96001,Agua Fria FS Guadalupe St.,35.686715,-105.945279
+96004,Agua Fria NS Siler Rd.,35.663529,-105.997037
+96005,Agua Fria NS County Rd. 68A,35.659151,-106.010578
+96014,Airport Rd. OPS Cedar Creek Apts.,35.634104,-106.05525
+96015,Airport Rd. FS Country Club Rd.,35.634721,-106.050998
+96016,Paseo del Sol  NS Milagros,35.634106,-106.043828
+96017,Paseo del Sol NS Casa Milagro,35.632339,-106.043466
+96018,Paseo del Sol NS Entrada Milagro,35.629537,-106.042644
+96019,Paseo del Sol  NS Chamisa,35.628308,-106.043099
+96023,Paseo del Sol OPS Chamisa,35.628298,-106.04289
+96024,Paseo del Sol OPS Entrada Milagro,35.629407,-106.042465
+96025,Paseo del Sol  OPS Callejon Milagro,35.631161,-106.043056
+96026,Agua Fria NS Lopez Lane,35.655047,-106.022594
+96027,Airport Rd. NS S. Meadows Rd.,35.636772,-106.035799
+96029,Santa Fe Place Transit Center,35.63495,-106.013127
+96030,Perimeter Rd. OPS Kettle Restaurant,35.63572,-106.0192
+96031,Airport Rd. OPS Paseo del Sol,35.635936,-106.044734
+96033,Agua Fria FS Camino de Chelly,35.67091,-105.983245
+96034,Montezuma Ave. NS Sandoval St. ,35.684697,-105.944815
+96036,Guadalupe St. OPS Read St.,35.683192,-105.947153
+96042,Cam Alire NS Alto St.,35.68314,-105.965264
+96053,W. Alameda St. OPS Solana Center,35.688396,-105.958648
+96056,Grant Ave. FS Catron St.,35.690764,-105.939893
+96058,W. Alameda St. @ Solana Center,35.688537,-105.958709
+96059,Camino Alire FS Paseo de Conquistador,35.683758,-105.966265
+96060,Camino Alire FS Camino La Canada,35.683016,-105.965353
+96066,Guadalupe St. FS Paseo de Peralta,35.681955,-105.948274
+96067,Guadalupe St. NS Read St.,35.683082,-105.947051
+96068,Camino Carlos Rey FS Calle Serena,35.639303,-105.982615
+96070,Pacheco St. @ Post Office Building,35.654771,-105.958339
+96071,Don Diego Ave. NS Camino de los Marque,35.67294,-105.948486
+96072,Don Diego Ave. FS Buena Vista ,35.678802,-105.947901
+96074,Don Diego Ave. FS Buena Vista,35.678557,-105.948096
+96075,Don Diego Ave. NS Camino de los Marque,35.673494,-105.948504
+96076,San Mateo OPS NMSTHD,35.662038,-105.958672
+96077,Pacheco St. OPS Post Office Building,35.654821,-105.958728
+96078,San Mateo Rd. @ NMSTHD Building,35.661646,-105.958583
+96079,Agua Fria Rd. @ Frenchy's Park,35.672166,-105.981555
+96080,Osage Ave. NS Osage Circle,35.669452,-105.980529
+96081,Osage Ave. FS Otowi Rd. ,35.667068,-105.978897
+96082,Botulph Rd. NS Brunn School Rd. ,35.657732,-105.948406
+96083,Botulph Rd. OPS Calle Ojo Feliz,35.653063,-105.948364
+96087,Galisteo St. NS San Mateo Rd.,35.663491,-105.948513
+96088,Galisteo St. NS Galisteo Lane,35.667827,-105.946629
+96089,Galisteo St. FS Santa Fe Ave.,35.680712,-105.943245
+96090,Don Gaspar Ave. NS Paseo de Peralta,35.682177,-105.940946
+96091,Don Gaspar Ave. FS W. Barcelona Rd.,35.672088,-105.943091
+96092,Galisteo St. FS Cordova Rd.,35.671079,-105.945815
+96093,Galisteo St. FS Columbia St.,35.668191,-105.946643
+96099,Botulph Rd. FS Botulph Lane,35.656361,-105.948142
+96100,Osage Ave. FS Rosina St.,35.664052,-105.977637
+96101,Osage Ave. NS Otowi Rd.,35.667223,-105.978857
+96102,Osage Ave. NS San Ildefonso Rd. ,35.668958,-105.980259
+96114,Zia Rd. FS Capshaw Jr. High School,35.645942,-105.951495
+96115,Zia Rd. FS Villa Real Apts.,35.646966,-105.953846
+96116,Sawmill Rd. NS Enclave Apts.,35.642075,-105.955294
+96118,Sawmill Rd. @ rancho Vizcaya,35.642298,-105.954957
+96121,Rodeo Rd. @ BLM Building,35.638803,-105.961759
+96122,Rodeo Rd. FS Galisteo St.,35.63891,-105.964374
+96123,Rodeo Rd. FS Paseo de Tularosa,35.638708,-105.96692
+96124,Rodeo Rd. FS Camino Cabestro,35.638027,-105.969112
+96125,Rodeo Rd. FS Camino Cimmarron,35.637347,-105.971557
+96126,Rodeo Rd. NS Yucca St.,35.63731,-105.97339
+96127,Rodeo Rd. FS Avenida del Sol,35.63767,-105.976316
+96128,Rodeo Rd. NS Camino Carlos Rey,35.638493,-105.982065
+96130,Camino Carlos Rey OPS Calle Serena,35.639271,-105.98278
+96131,Rodeo Rd. FS Camino Carlos Rey ,35.638181,-105.982066
+96132,Rodeo Rd. FS Calle Melecio,35.637927,-105.979827
+96133,Rodeo Rd. FS Calle Delfino,35.637589,-105.977461
+96134,Rodeo Rd. NS Yucca St. ,35.637145,-105.974052
+96135,Rodeo Rd. FS Calle de Don Quixote,35.637242,-105.970845
+96136,Rodeo Rd. FS Calle Dulcinea,35.638211,-105.967558
+96138,Rodeo Rd. NS Rodeo Business Park,35.638554,-105.961313
+96155,Camino Cabra NS Camino Ribera,35.675501,-105.915024
+96156,Camino Cabra OPS Atalaya School,35.672531,-105.913506
+96158,Calle Picacho NS Camino de Cruz Blanca,35.669235,-105.909868
+96159,Camino de Cruz Blanca OPS St. John's College,35.66913,-105.913493
+96160,Old Santa Fe Trail NS Camino Lejo,35.668254,-105.924438
+96176,Cerrillos Rd. @ Fairfield Inn,35.63789,-106.01788
+96183,Cerrillos NS Cristos Rd.,35.620028,-106.028096
+96184,Cerrillos Rd. NS Santa Fe Auto Park,35.629524,-106.022238
+96186,Siringo Rd. FS San Lorenzo Dr. ,35.652225,-105.981973
+96187,Camino Carlos Rey FS Siringo Rd.,35.651693,-105.985025
+96188,Camino Carlos Rey OPS Via Apts.,35.646767,-105.984328
+96189,Camino Carlos Rey NS Camino del Bosque,35.641428,-105.983201
+96192,Cerrillos Rd. @ Travel Lodge,35.646924,-106.005022
+96193,Cerrillos Rd. FS Avenida de las Americas,35.648257,-106.002823
+96194,Cerrillos Rd. NS Camino Consuelo,35.651516,-105.997554
+96195,Cerrillos Rd. Budget Car Rental,35.66359,-105.974872
+96196,Cerrillos Rd. @ Walmart,35.651587,-105.99812
+96196.5,Rodeo Rd FS plaza blanca,35.638698,-105.990234
+96197,Cerrillos Rd. FS Ave. de las America's,35.648282,-106.003477
+97005,Richards Ave. FS Catholic Church,35.605603,-106.001408
+97006,SFCC Rd. NS Child Devel. Center Rd.,35.603504,-106.001517
+97007,Richards Ave. OPS Catholic Church,35.605498,-106.001002
+97008,Airport Rd. NS Calle Atajo,35.638878,-106.022893
+97009,Airport Rd. NS San Felipe,35.635019,-106.051636
+97010,Agua Fria FS Trailer Park,35.657034,-106.018232
+97011,Agua Fria FS Henry Lynch Rd.,35.660991,-106.002899
+97012,Agua Fria OPS Trailer Park,35.657075,-106.018442
+97013,Airport Rd. @ Police Detention Center,35.638598,-106.02258
+97015,Camino Lejo @ Museums,35.664671,-105.92628
+97016,Pacheco St. NS Plaza Del Sur,35.657035,-105.958908
+97017,Pacheco St. FS Plaza Del Sur,35.657139,-105.959165
+97018,"Hospital Dr. OPS Medical, Dental Center",35.659497,-105.94855
+97020,Rodeo Rd. NS Legacy Ct.,35.639038,-106.006251
+97022,Cerrillos Rd. @ Walgreens,35.649678,-106.000448
+97023,Cerrillos FS Cristos Rd.,35.630231,-106.023424
+97024,Cerrillos FS Ocate Rd.,35.620559,-106.029174
+97039,Siringo Rd. NS Brother Rd,35.65193,-105.952819
+97047,E. Alameda St. NS Don Gaspar Ave.,35.68518,-105.939978
+97048,W. Alameda St. NS Galisteo St.,35.685676,-105.941367
+97054,Airport Rd . Country Club Apt.,35.636665,-106.038947
+97057,Zafarano @ Target,35.640555,-106.011827
+97058,Zafarano OPS Target,35.640208,-106.010985
+99001,Jaguar FS South Meadow Rd.,35.628028,-106.032471
+99002,Jaguar FS Avenida Contenta,35.627563,-106.038798
+99003,Jaguar NS Paseo del Sol,35.626417,-106.040655
+99004,Jaguar FSPaseo del Sol,35.626336,-106.040457
+99005,Jaguar NS Avenida Contenta,35.627381,-106.038759
+99100,Cerrillos Rd. FS El Rey,35.664674,-105.973043
+990100,Cerrillos FS Zafarano,35.642388,-106.01326
+10005,San Felipe @ Southwestern College,35.635945,-106.052173
+10006,San Felipe OPS Southwestern College,35.635962,-106.052
+11002,Cerrillos NS Herrera: Super Walmart,35.61729,-106.03087
+10004,Camino Lejo OPS Spanish Museums,35.66633,-105.92507
+2000002,Sandoval St. FS W. San Francisco St.,35.68792,-105.94174
+96157,Calle Picacho OPS Rio Grand School,35.67148,-105.91319
+94130,Cerrillos Rd. OPS Design Center,35.68362,-105.94374
+11001,Herrera: Super Walmart @ Cerrillos,35.6175,-106.0311
+96181,Fashion Outlet,35.61328,-106.0328
+2026,E. Alameda St. NS Palace Rd.,35.68068,-105.92355

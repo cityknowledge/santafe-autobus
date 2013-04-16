@@ -1,0 +1,726 @@
+route_id,service_id,trip_id,trip_headsign,direction_id
+1,WD,1WDO1,Agua Fria  Outbound,0
+1,WD,1WDO2,Agua Fria  Outbound,0
+1,WD,1WDO3,Agua Fria  Outbound,0
+1,WD,1WDO4,Agua Fria  Outbound,0
+1,WD,1WDO5,Agua Fria  Outbound,0
+1,WD,1WDO6,Agua Fria  Outbound,0
+1,WD,1WDO7,Agua Fria  Outbound,0
+1,WD,1WDO8,Agua Fria  Outbound,0
+1,WD,1WDO9,Agua Fria  Outbound,0
+1,WD,1WDO10,Agua Fria  Outbound,0
+1,WD,1WDO11,Agua Fria  Outbound,0
+1,WD,1WDO12,Agua Fria  Outbound,0
+1,WD,1WDO13,Agua Fria  Outbound,0
+1,WD,1WDO14,Agua Fria  Outbound,0
+1,WD,1WDO15,Agua Fria  Outbound,0
+1,WD,1WDO16,Agua Fria  Outbound,0
+1,WD,1WDO17,Agua Fria  Outbound,0
+1,WD,1WDO18,Agua Fria  Outbound,0
+1,WD,1WDO19,Agua Fria  Outbound,0
+1,WD,1WDO20,Agua Fria  Outbound,0
+1,WD,1WDO21,Agua Fria  Outbound,0
+1,WD,1WDO22,Agua Fria  Outbound,0
+1,WD,1WDO23,Agua Fria  Outbound,0
+1,WD,1WDO24,Agua Fria  Outbound,0
+1,WD,1WDO25,Agua Fria  Outbound,0
+1,WD,1WDO26,Agua Fria  Outbound,0
+1,WD,1WDO27,Agua Fria  Outbound,0
+1,WD,1WDO28,Agua Fria  Outbound,0
+1,WD,1WDI1,Agua Fria  Inbound,1
+1,WD,1WDI2,Agua Fria  Inbound,1
+1,WD,1WDI3,Agua Fria  Inbound,1
+1,WD,1WDI4,Agua Fria  Inbound,1
+1,WD,1WDI5,Agua Fria  Inbound,1
+1,WD,1WDI6,Agua Fria  Inbound,1
+1,WD,1WDI7,Agua Fria  Inbound,1
+1,WD,1WDI8,Agua Fria  Inbound,1
+1,WD,1WDI9,Agua Fria  Inbound,1
+1,WD,1WDI10,Agua Fria  Inbound,1
+1,WD,1WDI11,Agua Fria  Inbound,1
+1,WD,1WDI12,Agua Fria  Inbound,1
+1,WD,1WDI13,Agua Fria  Inbound,1
+1,WD,1WDI14,Agua Fria  Inbound,1
+1,WD,1WDI15,Agua Fria  Inbound,1
+1,WD,1WDI16,Agua Fria  Inbound,1
+1,WD,1WDI17,Agua Fria  Inbound,1
+1,WD,1WDI18,Agua Fria  Inbound,1
+1,WD,1WDI19,Agua Fria  Inbound,1
+1,WD,1WDI20,Agua Fria  Inbound,1
+1,WD,1WDI21,Agua Fria  Inbound,1
+1,WD,1WDI22,Agua Fria  Inbound,1
+1,WD,1WDI23,Agua Fria  Inbound,1
+1,WD,1WDI24,Agua Fria  Inbound,1
+1,WD,1WDI25,Agua Fria  Inbound,1
+1,WD,1WDI26,Agua Fria  Inbound,1
+1,WD,1WDI27,Agua Fria  Inbound,1
+1,WD,1WDI28,Agua Fria  Inbound,1
+1,WD,1WDI29,Agua Fria  Inbound,1
+1,SA,1SAO1,Agua Fria  Outbound,0
+1,SA,1SAO2,Agua Fria  Outbound,0
+1,SA,1SAO3,Agua Fria  Outbound,0
+1,SA,1SAO4,Agua Fria  Outbound,0
+1,SA,1SAO5,Agua Fria  Outbound,0
+1,SA,1SAO6,Agua Fria  Outbound,0
+1,SA,1SAO7,Agua Fria  Outbound,0
+1,SA,1SAO8,Agua Fria  Outbound,0
+1,SA,1SAO9,Agua Fria  Outbound,0
+1,SA,1SAO10,Agua Fria  Outbound,0
+1,SA,1SAO11,Agua Fria  Outbound,0
+1,SA,1SAI1,Agua Fria  Inbound,1
+1,SA,1SAI2,Agua Fria  Inbound,1
+1,SA,1SAI3,Agua Fria  Inbound,1
+1,SA,1SAI4,Agua Fria  Inbound,1
+1,SA,1SAI5,Agua Fria  Inbound,1
+1,SA,1SAI6,Agua Fria  Inbound,1
+1,SA,1SAI7,Agua Fria  Inbound,1
+1,SA,1SAI8,Agua Fria  Inbound,1
+1,SA,1SAI9,Agua Fria  Inbound,1
+1,SA,1SAI10,Agua Fria  Inbound,1
+1,SA,1SAI11,Agua Fria  Inbound,1
+1,SA,1SAI12,Agua Fria  Inbound,1
+1,SU,1SUO1,Agua Fria  Outbound,0
+1,SU,1SUO2,Agua Fria  Outbound,0
+1,SU,1SUO3,Agua Fria  Outbound,0
+1,SU,1SUO4,Agua Fria  Outbound,0
+1,SU,1SUO5,Agua Fria  Outbound,0
+1,SU,1SUO6,Agua Fria  Outbound,0
+1,SU,1SUO7,Agua Fria  Outbound,0
+1,SU,1SUO8,Agua Fria  Outbound,0
+1,SU,1SUO9,Agua Fria  Outbound,0
+1,SU,1SUO10,Agua Fria  Outbound,0
+1,SU,1SUI1,Agua Fria  Inbound,1
+1,SU,1SUI2,Agua Fria  Inbound,1
+1,SU,1SUI3,Agua Fria  Inbound,1
+1,SU,1SUI4,Agua Fria  Inbound,1
+1,SU,1SUI5,Agua Fria  Inbound,1
+1,SU,1SUI6,Agua Fria  Inbound,1
+1,SU,1SUI7,Agua Fria  Inbound,1
+1,SU,1SUI8,Agua Fria  Inbound,1
+1,SU,1SUI9,Agua Fria  Inbound,1
+2,WD,2WDO1,Cerrillos Road  Outbound,0
+2,WD,2WDO2,Cerrillos Road  Outbound,0
+2,WD,2WDO3,Cerrillos Road  Outbound,0
+2,WD,2WDO4,Cerrillos Road  Outbound,0
+2,WD,2WDO5,Cerrillos Road  Outbound,0
+2,WD,2WDO6,Cerrillos Road  Outbound,0
+2,WD,2WDO7,Cerrillos Road  Outbound,0
+2,WD,2WDO8,Cerrillos Road  Outbound,0
+2,WD,2WDO9,Cerrillos Road  Outbound,0
+2,WD,2WDO10,Cerrillos Road  Outbound,0
+2,WD,2WDO11,Cerrillos Road  Outbound,0
+2,WD,2WDO12,Cerrillos Road  Outbound,0
+2,WD,2WDO13,Cerrillos Road  Outbound,0
+2,WD,2WDO14,Cerrillos Road  Outbound,0
+2,WD,2WDO15,Cerrillos Road  Outbound,0
+2,WD,2WDO16,Cerrillos Road  Outbound,0
+2,WD,2WDO17,Cerrillos Road  Outbound,0
+2,WD,2WDO18,Cerrillos Road  Outbound,0
+2,WD,2WDO19,Cerrillos Road  Outbound,0
+2,WD,2WDO20,Cerrillos Road  Outbound,0
+2,WD,2WDO21,Cerrillos Road  Outbound,0
+2,WD,2WDO22,Cerrillos Road  Outbound,0
+2,WD,2WDO23,Cerrillos Road  Outbound,0
+2,WD,2WDO24,Cerrillos Road  Outbound,0
+2,WD,2WDO25,Cerrillos Road  Outbound,0
+2,WD,2WDO26,Cerrillos Road  Outbound,0
+2,WD,2WDO27,Cerrillos Road  Outbound,0
+2,WD,2WDO28,Cerrillos Road  Outbound,0
+2,WD,2WDO29,Cerrillos Road  Outbound,0
+2,WD,2WDO30,Cerrillos Road  Outbound,0
+2,WD,2WDO31,Cerrillos Road  Outbound,0
+2,WD,2WDO32,Cerrillos Road  Outbound,0
+2,WD,2WDO33,Cerrillos Road  Outbound,0
+2,WD,2WDO34,Cerrillos Road  Outbound,0
+2,WD,2WDO35,Cerrillos Road  Outbound,0
+2,WD,2WDO36,Cerrillos Road  Outbound,0
+2,WD,2WDO37,Cerrillos Road  Outbound,0
+2,WD,2WDO38,Cerrillos Road  Outbound,0
+2,WD,2WDO39,Cerrillos Road  Outbound,0
+2,WD,2WDO40,Cerrillos Road  Outbound,0
+2,WD,2WDO41,Cerrillos Road  Outbound,0
+2,WD,2WDO42,Cerrillos Road  Outbound,0
+2,WD,2WDO43,Cerrillos Road  Outbound,0
+2,WD,2WDO44,Cerrillos Road  Outbound,0
+2,WD,2WDO45,Cerrillos Road  Outbound,0
+2,WD,2WDO46,Cerrillos Road  Outbound,0
+2,WD,2WDO47,Cerrillos Road  Outbound,0
+2,WD,2WDO48,Cerrillos Road  Outbound,0
+2,WD,2WDO49,Cerrillos Road  Outbound,0
+2,WD,2WDO50,Cerrillos Road  Outbound,0
+2,WD,2WDO51,Cerrillos Road  Outbound,0
+2,WD,2WDO52,Cerrillos Road  Outbound,0
+2,WD,2WDO53,Cerrillos Road  Outbound,0
+2,WD,2WDI1,Cerrillos Road  Inbound,1
+2,WD,2WDI2,Cerrillos Road  Inbound,1
+2,WD,2WDI3,Cerrillos Road  Inbound,1
+2,WD,2WDI4,Cerrillos Road  Inbound,1
+2,WD,2WDI5,Cerrillos Road  Inbound,1
+2,WD,2WDI6,Cerrillos Road  Inbound,1
+2,WD,2WDI7,Cerrillos Road  Inbound,1
+2,WD,2WDI8,Cerrillos Road  Inbound,1
+2,WD,2WDI9,Cerrillos Road  Inbound,1
+2,WD,2WDI10,Cerrillos Road  Inbound,1
+2,WD,2WDI11,Cerrillos Road  Inbound,1
+2,WD,2WDI12,Cerrillos Road  Inbound,1
+2,WD,2WDI13,Cerrillos Road  Inbound,1
+2,WD,2WDI14,Cerrillos Road  Inbound,1
+2,WD,2WDI15,Cerrillos Road  Inbound,1
+2,WD,2WDI16,Cerrillos Road  Inbound,1
+2,WD,2WDI17,Cerrillos Road  Inbound,1
+2,WD,2WDI18,Cerrillos Road  Inbound,1
+2,WD,2WDI19,Cerrillos Road  Inbound,1
+2,WD,2WDI20,Cerrillos Road  Inbound,1
+2,WD,2WDI21,Cerrillos Road  Inbound,1
+2,WD,2WDI22,Cerrillos Road  Inbound,1
+2,WD,2WDI23,Cerrillos Road  Inbound,1
+2,WD,2WDI24,Cerrillos Road  Inbound,1
+2,WD,2WDI25,Cerrillos Road  Inbound,1
+2,WD,2WDI26,Cerrillos Road  Inbound,1
+2,WD,2WDI27,Cerrillos Road  Inbound,1
+2,WD,2WDI28,Cerrillos Road  Inbound,1
+2,WD,2WDI29,Cerrillos Road  Inbound,1
+2,WD,2WDI30,Cerrillos Road  Inbound,1
+2,WD,2WDI31,Cerrillos Road  Inbound,1
+2,WD,2WDI32,Cerrillos Road  Inbound,1
+2,WD,2WDI33,Cerrillos Road  Inbound,1
+2,WD,2WDI34,Cerrillos Road  Inbound,1
+2,WD,2WDI35,Cerrillos Road  Inbound,1
+2,WD,2WDI36,Cerrillos Road  Inbound,1
+2,WD,2WDI37,Cerrillos Road  Inbound,1
+2,WD,2WDI38,Cerrillos Road  Inbound,1
+2,WD,2WDI39,Cerrillos Road  Inbound,1
+2,WD,2WDI40,Cerrillos Road  Inbound,1
+2,WD,2WDI41,Cerrillos Road  Inbound,1
+2,WD,2WDI42,Cerrillos Road  Inbound,1
+2,WD,2WDI43,Cerrillos Road  Inbound,1
+2,WD,2WDI44,Cerrillos Road  Inbound,1
+2,WD,2WDI45,Cerrillos Road  Inbound,1
+2,WD,2WDI46,Cerrillos Road  Inbound,1
+2,WD,2WDI47,Cerrillos Road  Inbound,1
+2,WD,2WDI48,Cerrillos Road  Inbound,1
+2,WD,2WDI49,Cerrillos Road  Inbound,1
+2,WD,2WDI50,Cerrillos Road  Inbound,1
+2,WD,2WDI51,Cerrillos Road  Inbound,1
+2,WD,2WDI52,Cerrillos Road  Inbound,1
+2,WD,2WDI53,Cerrillos Road  Inbound,1
+2,WD,2WDI54,Cerrillos Road  Inbound,1
+2,WD,2WDI55,Cerrillos Road  Inbound,1
+2,SA,2SAO1,Cerrillos Road  Outbound,0
+2,SA,2SAO2,Cerrillos Road  Outbound,0
+2,SA,2SAO3,Cerrillos Road  Outbound,0
+2,SA,2SAO4,Cerrillos Road  Outbound,0
+2,SA,2SAO5,Cerrillos Road  Outbound,0
+2,SA,2SAO6,Cerrillos Road  Outbound,0
+2,SA,2SAO7,Cerrillos Road  Outbound,0
+2,SA,2SAO8,Cerrillos Road  Outbound,0
+2,SA,2SAO9,Cerrillos Road  Outbound,0
+2,SA,2SAO10,Cerrillos Road  Outbound,0
+2,SA,2SAO11,Cerrillos Road  Outbound,0
+2,SA,2SAO12,Cerrillos Road  Outbound,0
+2,SA,2SAO13,Cerrillos Road  Outbound,0
+2,SA,2SAO14,Cerrillos Road  Outbound,0
+2,SA,2SAO15,Cerrillos Road  Outbound,0
+2,SA,2SAO16,Cerrillos Road  Outbound,0
+2,SA,2SAO17,Cerrillos Road  Outbound,0
+2,SA,2SAO18,Cerrillos Road  Outbound,0
+2,SA,2SAO19,Cerrillos Road  Outbound,0
+2,SA,2SAO20,Cerrillos Road  Outbound,0
+2,SA,2SAO21,Cerrillos Road  Outbound,0
+2,SA,2SAO22,Cerrillos Road  Outbound,0
+2,SA,2SAO23,Cerrillos Road  Outbound,0
+2,SA,2SAI1,Cerrillos Road  Inbound,1
+2,SA,2SAI2,Cerrillos Road  Inbound,1
+2,SA,2SAI3,Cerrillos Road  Inbound,1
+2,SA,2SAI4,Cerrillos Road  Inbound,1
+2,SA,2SAI5,Cerrillos Road  Inbound,1
+2,SA,2SAI6,Cerrillos Road  Inbound,1
+2,SA,2SAI7,Cerrillos Road  Inbound,1
+2,SA,2SAI8,Cerrillos Road  Inbound,1
+2,SA,2SAI9,Cerrillos Road  Inbound,1
+2,SA,2SAI10,Cerrillos Road  Inbound,1
+2,SA,2SAI11,Cerrillos Road  Inbound,1
+2,SA,2SAI12,Cerrillos Road  Inbound,1
+2,SA,2SAI13,Cerrillos Road  Inbound,1
+2,SA,2SAI14,Cerrillos Road  Inbound,1
+2,SA,2SAI15,Cerrillos Road  Inbound,1
+2,SA,2SAI16,Cerrillos Road  Inbound,1
+2,SA,2SAI17,Cerrillos Road  Inbound,1
+2,SA,2SAI18,Cerrillos Road  Inbound,1
+2,SA,2SAI19,Cerrillos Road  Inbound,1
+2,SA,2SAI20,Cerrillos Road  Inbound,1
+2,SA,2SAI21,Cerrillos Road  Inbound,1
+2,SA,2SAI22,Cerrillos Road  Inbound,1
+2,SU,2SUO1,Cerrillos Road  Outbound,0
+2,SU,2SUO2,Cerrillos Road  Outbound,0
+2,SU,2SUO3,Cerrillos Road  Outbound,0
+2,SU,2SUO4,Cerrillos Road  Outbound,0
+2,SU,2SUO5,Cerrillos Road  Outbound,0
+2,SU,2SUO6,Cerrillos Road  Outbound,0
+2,SU,2SUO7,Cerrillos Road  Outbound,0
+2,SU,2SUO8,Cerrillos Road  Outbound,0
+2,SU,2SUO9,Cerrillos Road  Outbound,0
+2,SU,2SUO10,Cerrillos Road  Outbound,0
+2,SU,2SUO11,Cerrillos Road  Outbound,0
+2,SU,2SUO12,Cerrillos Road  Outbound,0
+2,SU,2SUO13,Cerrillos Road  Outbound,0
+2,SU,2SUO14,Cerrillos Road  Outbound,0
+2,SU,2SUO15,Cerrillos Road  Outbound,0
+2,SU,2SUO16,Cerrillos Road  Outbound,0
+2,SU,2SUO17,Cerrillos Road  Outbound,0
+2,SU,2SUI1,Cerrillos Road  Inbound,1
+2,SU,2SUI2,Cerrillos Road  Inbound,1
+2,SU,2SUI3,Cerrillos Road  Inbound,1
+2,SU,2SUI4,Cerrillos Road  Inbound,1
+2,SU,2SUI5,Cerrillos Road  Inbound,1
+2,SU,2SUI6,Cerrillos Road  Inbound,1
+2,SU,2SUI7,Cerrillos Road  Inbound,1
+2,SU,2SUI8,Cerrillos Road  Inbound,1
+2,SU,2SUI9,Cerrillos Road  Inbound,1
+2,SU,2SUI10,Cerrillos Road  Inbound,1
+2,SU,2SUI11,Cerrillos Road  Inbound,1
+2,SU,2SUI12,Cerrillos Road  Inbound,1
+2,SU,2SUI13,Cerrillos Road  Inbound,1
+2,SU,2SUI14,Cerrillos Road  Inbound,1
+2,SU,2SUI15,Cerrillos Road  Inbound,1
+2,SU,2SUI16,Cerrillos Road  Inbound,1
+2,SU,2SUI17,Cerrillos Road  Inbound,1
+2,SU,2SUI18,Cerrillos Road  Inbound,1
+2,SU,2SUI19,Cerrillos Road  Inbound,1
+4,WD,4WDO1,Southside  Outbound,0
+4,WD,4WDO2,Southside  Outbound,0
+4,WD,4WDO3,Southside  Outbound,0
+4,WD,4WDO4,Southside  Outbound,0
+4,WD,4WDO5,Southside  Outbound,0
+4,WD,4WDO6,Southside  Outbound,0
+4,WD,4WDO7,Southside  Outbound,0
+4,WD,4WDO8,Southside  Outbound,0
+4,WD,4WDO9,Southside  Outbound,0
+4,WD,4WDO10,Southside  Outbound,0
+4,WD,4WDO11,Southside  Outbound,0
+4,WD,4WDO12,Southside  Outbound,0
+4,WD,4WDO13,Southside  Outbound,0
+4,WD,4WDO14,Southside  Outbound,0
+4,WD,4WDO15,Southside  Outbound,0
+4,WD,4WDO16,Southside  Outbound,0
+4,WD,4WDO17,Southside  Outbound,0
+4,WD,4WDO18,Southside  Outbound,0
+4,WD,4WDO19,Southside  Outbound,0
+4,WD,4WDO20,Southside  Outbound,0
+4,WD,4WDO21,Southside  Outbound,0
+4,WD,4WDO22,Southside  Outbound,0
+4,WD,4WDO23,Southside  Outbound,0
+4,WD,4WDO24,Southside  Outbound,0
+4,WD,4WDO25,Southside  Outbound,0
+4,WD,4WDO26,Southside  Outbound,0
+4,WD,4WDO27,Southside  Outbound,0
+4,WD,4WDO28,Southside  Outbound,0
+4,WD,4WDO29,Southside  Outbound,0
+4,WD,4WDO30,Southside  Outbound,0
+4,WD,4WDO31,Southside  Outbound,0
+4,WD,4WDI1,Southside  Inbound,1
+4,WD,4WDI2,Southside  Inbound,1
+4,WD,4WDI3,Southside  Inbound,1
+4,WD,4WDI4,Southside  Inbound,1
+4,WD,4WDI5,Southside  Inbound,1
+4,WD,4WDI6,Southside  Inbound,1
+4,WD,4WDI7,Southside  Inbound,1
+4,WD,4WDI8,Southside  Inbound,1
+4,WD,4WDI9,Southside  Inbound,1
+4,WD,4WDI10,Southside  Inbound,1
+4,WD,4WDI11,Southside  Inbound,1
+4,WD,4WDI12,Southside  Inbound,1
+4,WD,4WDI13,Southside  Inbound,1
+4,WD,4WDI14,Southside  Inbound,1
+4,WD,4WDI15,Southside  Inbound,1
+4,WD,4WDI16,Southside  Inbound,1
+4,WD,4WDI17,Southside  Inbound,1
+4,WD,4WDI18,Southside  Inbound,1
+4,WD,4WDI19,Southside  Inbound,1
+4,WD,4WDI20,Southside  Inbound,1
+4,WD,4WDI21,Southside  Inbound,1
+4,WD,4WDI22,Southside  Inbound,1
+4,WD,4WDI23,Southside  Inbound,1
+4,WD,4WDI24,Southside  Inbound,1
+4,WD,4WDI25,Southside  Inbound,1
+4,WD,4WDI26,Southside  Inbound,1
+4,WD,4WDI27,Southside  Inbound,1
+4,WD,4WDI28,Southside  Inbound,1
+4,WD,4WDI29,Southside  Inbound,1
+4,WD,4WDI30,Southside  Inbound,1
+4,WD,4WDI31,Southside  Inbound,1
+4,WD,4WDI32,Southside  Inbound,1
+4,SA,4SAO1,Southside  Outbound,0
+4,SA,4SAO2,Southside  Outbound,0
+4,SA,4SAO3,Southside  Outbound,0
+4,SA,4SAO4,Southside  Outbound,0
+4,SA,4SAO5,Southside  Outbound,0
+4,SA,4SAO6,Southside  Outbound,0
+4,SA,4SAO7,Southside  Outbound,0
+4,SA,4SAO8,Southside  Outbound,0
+4,SA,4SAO9,Southside  Outbound,0
+4,SA,4SAO10,Southside  Outbound,0
+4,SA,4SAO11,Southside  Outbound,0
+4,SA,4SAI1,Southside  Inbound,1
+4,SA,4SAI2,Southside  Inbound,1
+4,SA,4SAI3,Southside  Inbound,1
+4,SA,4SAI4,Southside  Inbound,1
+4,SA,4SAI5,Southside  Inbound,1
+4,SA,4SAI6,Southside  Inbound,1
+4,SA,4SAI7,Southside  Inbound,1
+4,SA,4SAI8,Southside  Inbound,1
+4,SA,4SAI9,Southside  Inbound,1
+4,SA,4SAI10,Southside  Inbound,1
+4,SA,4SAI11,Southside  Inbound,1
+4,SU,4SUO1,Southside  Outbound,0
+4,SU,4SUO2,Southside  Outbound,0
+4,SU,4SUO3,Southside  Outbound,0
+4,SU,4SUO4,Southside  Outbound,0
+4,SU,4SUO5,Southside  Outbound,0
+4,SU,4SUO6,Southside  Outbound,0
+4,SU,4SUO7,Southside  Outbound,0
+4,SU,4SUO8,Southside  Outbound,0
+4,SU,4SUO9,Southside  Outbound,0
+4,SU,4SUI1,Southside  Inbound,1
+4,SU,4SUI2,Southside  Inbound,1
+4,SU,4SUI3,Southside  Inbound,1
+4,SU,4SUI4,Southside  Inbound,1
+4,SU,4SUI5,Southside  Inbound,1
+4,SU,4SUI6,Southside  Inbound,1
+4,SU,4SUI7,Southside  Inbound,1
+4,SU,4SUI8,Southside  Inbound,1
+4,SU,4SUI9,Southside  Inbound,1
+5,WD,5WDO1,Crosstown  Outbound,0
+5,WD,5WDO2,Crosstown  Outbound,0
+5,WD,5WDO3,Crosstown  Outbound,0
+5,WD,5WDO4,Crosstown  Outbound,0
+5,WD,5WDO5,Crosstown  Outbound,0
+5,WD,5WDO6,Crosstown  Outbound,0
+5,WD,5WDO7,Crosstown  Outbound,0
+5,WD,5WDO8,Crosstown  Outbound,0
+5,WD,5WDO9,Crosstown  Outbound,0
+5,WD,5WDO10,Crosstown  Outbound,0
+5,WD,5WDO11,Crosstown  Outbound,0
+5,WD,5WDO12,Crosstown  Outbound,0
+5,WD,5WDO13,Crosstown  Outbound,0
+5,WD,5WDI1,Crosstown  Inbound,1
+5,WD,5WDI2,Crosstown  Inbound,1
+5,WD,5WDI3,Crosstown  Inbound,1
+5,WD,5WDI4,Crosstown  Inbound,1
+5,WD,5WDI5,Crosstown  Inbound,1
+5,WD,5WDI6,Crosstown  Inbound,1
+5,WD,5WDI7,Crosstown  Inbound,1
+5,WD,5WDI8,Crosstown  Inbound,1
+5,WD,5WDI9,Crosstown  Inbound,1
+5,WD,5WDI10,Crosstown  Inbound,1
+5,WD,5WDI11,Crosstown  Inbound,1
+5,WD,5WDI12,Crosstown  Inbound,1
+5,WD,5WDI13,Crosstown  Inbound,1
+5,WD,5WDI14,Crosstown  Inbound,1
+5,SA,5SAO1,Crosstown  Outbound,0
+5,SA,5SAO2,Crosstown  Outbound,0
+5,SA,5SAO3,Crosstown  Outbound,0
+5,SA,5SAO4,Crosstown  Outbound,0
+5,SA,5SAO5,Crosstown  Outbound,0
+5,SA,5SAO6,Crosstown  Outbound,0
+5,SA,5SAO7,Crosstown  Outbound,0
+5,SA,5SAO8,Crosstown  Outbound,0
+5,SA,5SAO9,Crosstown  Outbound,0
+5,SA,5SAI1,Crosstown  Inbound,1
+5,SA,5SAI2,Crosstown  Inbound,1
+5,SA,5SAI3,Crosstown  Inbound,1
+5,SA,5SAI4,Crosstown  Inbound,1
+5,SA,5SAI5,Crosstown  Inbound,1
+5,SA,5SAI6,Crosstown  Inbound,1
+5,SA,5SAI7,Crosstown  Inbound,1
+5,SA,5SAI8,Crosstown  Inbound,1
+6,WD,6WDO1,Rodeo Road  Outbound,0
+6,WD,6WDO2,Rodeo Road  Outbound,0
+6,WD,6WDO3,Rodeo Road  Outbound,0
+6,WD,6WDO4,Rodeo Road  Outbound,0
+6,WD,6WDO5,Rodeo Road  Outbound,0
+6,WD,6WDO6,Rodeo Road  Outbound,0
+6,WD,6WDO7,Rodeo Road  Outbound,0
+6,WD,6WDO8,Rodeo Road  Outbound,0
+6,WD,6WDO9,Rodeo Road  Outbound,0
+6,WD,6WDO10,Rodeo Road  Outbound,0
+6,WD,6WDO11,Rodeo Road  Outbound,0
+6,WD,6WDO12,Rodeo Road  Outbound,0
+6,WD,6WDO13,Rodeo Road  Outbound,0
+6,WD,6WDI1,Rodeo Road  Inbound,1
+6,WD,6WDI2,Rodeo Road  Inbound,1
+6,WD,6WDI3,Rodeo Road  Inbound,1
+6,WD,6WDI4,Rodeo Road  Inbound,1
+6,WD,6WDI5,Rodeo Road  Inbound,1
+6,WD,6WDI6,Rodeo Road  Inbound,1
+6,WD,6WDI7,Rodeo Road  Inbound,1
+6,WD,6WDI8,Rodeo Road  Inbound,1
+6,WD,6WDI9,Rodeo Road  Inbound,1
+6,WD,6WDI10,Rodeo Road  Inbound,1
+6,WD,6WDI11,Rodeo Road  Inbound,1
+6,WD,6WDI12,Rodeo Road  Inbound,1
+6,WD,6WDI13,Rodeo Road  Inbound,1
+6,WD,6WDI14,Rodeo Road  Inbound,1
+6,SA,6SAO1,Rodeo Road  Outbound,0
+6,SA,6SAO2,Rodeo Road  Outbound,0
+6,SA,6SAO3,Rodeo Road  Outbound,0
+6,SA,6SAO4,Rodeo Road  Outbound,0
+6,SA,6SAO5,Rodeo Road  Outbound,0
+6,SA,6SAO6,Rodeo Road  Outbound,0
+6,SA,6SAO7,Rodeo Road  Outbound,0
+6,SA,6SAO8,Rodeo Road  Outbound,0
+6,SA,6SAO9,Rodeo Road  Outbound,0
+6,SA,6SAO10,Rodeo Road  Outbound,0
+6,SA,6SAI1,Rodeo Road  Inbound,1
+6,SA,6SAI2,Rodeo Road  Inbound,1
+6,SA,6SAI3,Rodeo Road  Inbound,1
+6,SA,6SAI4,Rodeo Road  Inbound,1
+6,SA,6SAI5,Rodeo Road  Inbound,1
+6,SA,6SAI6,Rodeo Road  Inbound,1
+6,SA,6SAI7,Rodeo Road  Inbound,1
+6,SA,6SAI8,Rodeo Road  Inbound,1
+6,SA,6SAI9,Rodeo Road  Inbound,1
+6,SA,6SAI10,Rodeo Road  Inbound,1
+21,WD,21WDO1,SFCC  Outbound,0
+21,WD,21WDO2,SFCC  Outbound,0
+21,WD,21WDO3,SFCC  Outbound,0
+21,WD,21WDO4,SFCC  Outbound,0
+21,WD,21WDO5,SFCC  Outbound,0
+21,WD,21WDO6,SFCC  Outbound,0
+21,WD,21WDO7,SFCC  Outbound,0
+21,WD,21WDO8,SFCC  Outbound,0
+21,WD,21WDO9,SFCC  Outbound,0
+21,WD,21WDO10,SFCC  Outbound,0
+21,WD,21WDO11,SFCC  Outbound,0
+21,WD,21WDO12,SFCC  Outbound,0
+21,WD,21WDO13,SFCC  Outbound,0
+21,WD,21WDI1,SFCC  Inbound,1
+21,WD,21WDI2,SFCC  Inbound,1
+21,WD,21WDI3,SFCC  Inbound,1
+21,WD,21WDI4,SFCC  Inbound,1
+21,WD,21WDI5,SFCC  Inbound,1
+21,WD,21WDI6,SFCC  Inbound,1
+21,WD,21WDI7,SFCC  Inbound,1
+21,WD,21WDI8,SFCC  Inbound,1
+21,WD,21WDI9,SFCC  Inbound,1
+21,WD,21WDI10,SFCC  Inbound,1
+21,WD,21WDI11,SFCC  Inbound,1
+21,WD,21WDI12,SFCC  Inbound,1
+21,WD,21WDI13,SFCC  Inbound,1
+24,WD,24WDO1,Country Club  Outbound,0
+24,WD,24WDO2,Country Club  Outbound,0
+24,WD,24WDO3,Country Club  Outbound,0
+24,WD,24WDO4,Country Club  Outbound,0
+24,WD,24WDO5,Country Club  Outbound,0
+24,WD,24WDO6,Country Club  Outbound,0
+24,WD,24WDO7,Country Club  Outbound,0
+24,WD,24WDO8,Country Club  Outbound,0
+24,WD,24WDO9,Country Club  Outbound,0
+24,WD,24WDO10,Country Club  Outbound,0
+24,WD,24WDO11,Country Club  Outbound,0
+24,WD,24WDO12,Country Club  Outbound,0
+24,WD,24WDO13,Country Club  Outbound,0
+24,WD,24WDO14,Country Club  Outbound,0
+24,WD,24WDO15,Country Club  Outbound,0
+24,WD,24WDO16,Country Club  Outbound,0
+24,WD,24WDO17,Country Club  Outbound,0
+24,WD,24WDO18,Country Club  Outbound,0
+24,WD,24WDO19,Country Club  Outbound,0
+24,WD,24WDO20,Country Club  Outbound,0
+24,WD,24WDO21,Country Club  Outbound,0
+24,WD,24WDO22,Country Club  Outbound,0
+24,WD,24WDO23,Country Club  Outbound,0
+24,WD,24WDO24,Country Club  Outbound,0
+24,WD,24WDI1,Country Club  Inbound,1
+24,WD,24WDI2,Country Club  Inbound,1
+24,WD,24WDI3,Country Club  Inbound,1
+24,WD,24WDI4,Country Club  Inbound,1
+24,WD,24WDI5,Country Club  Inbound,1
+24,WD,24WDI6,Country Club  Inbound,1
+24,WD,24WDI7,Country Club  Inbound,1
+24,WD,24WDI8,Country Club  Inbound,1
+24,WD,24WDI9,Country Club  Inbound,1
+24,WD,24WDI10,Country Club  Inbound,1
+24,WD,24WDI11,Country Club  Inbound,1
+24,WD,24WDI12,Country Club  Inbound,1
+24,WD,24WDI13,Country Club  Inbound,1
+24,WD,24WDI14,Country Club  Inbound,1
+24,WD,24WDI15,Country Club  Inbound,1
+24,WD,24WDI16,Country Club  Inbound,1
+24,WD,24WDI17,Country Club  Inbound,1
+24,WD,24WDI18,Country Club  Inbound,1
+24,WD,24WDI19,Country Club  Inbound,1
+24,WD,24WDI20,Country Club  Inbound,1
+24,WD,24WDI21,Country Club  Inbound,1
+24,WD,24WDI22,Country Club  Inbound,1
+24,WD,24WDI23,Country Club  Inbound,1
+24,WD,24WDI24,Country Club  Inbound,1
+24,WD,24WDI25,Country Club  Inbound,1
+24,WD,24WDI26,Country Club  Inbound,1
+24,SA,24SAO1,Country Club  Outbound,0
+24,SA,24SAO2,Country Club  Outbound,0
+24,SA,24SAO3,Country Club  Outbound,0
+24,SA,24SAO4,Country Club  Outbound,0
+24,SA,24SAO5,Country Club  Outbound,0
+24,SA,24SAO6,Country Club  Outbound,0
+24,SA,24SAO7,Country Club  Outbound,0
+24,SA,24SAO8,Country Club  Outbound,0
+24,SA,24SAO9,Country Club  Outbound,0
+24,SA,24SAI1,Country Club  Inbound,1
+24,SA,24SAI2,Country Club  Inbound,1
+24,SA,24SAI3,Country Club  Inbound,1
+24,SA,24SAI4,Country Club  Inbound,1
+24,SA,24SAI5,Country Club  Inbound,1
+24,SA,24SAI6,Country Club  Inbound,1
+24,SA,24SAI7,Country Club  Inbound,1
+24,SA,24SAI8,Country Club  Inbound,1
+24,SA,24SAI9,Country Club  Inbound,1
+24,SU,24SUO1,Country Club  Outbound,0
+24,SU,24SUO2,Country Club  Outbound,0
+24,SU,24SUO3,Country Club  Outbound,0
+24,SU,24SUO4,Country Club  Outbound,0
+24,SU,24SUO5,Country Club  Outbound,0
+24,SU,24SUO6,Country Club  Outbound,0
+24,SU,24SUO7,Country Club  Outbound,0
+24,SU,24SUO8,Country Club  Outbound,0
+24,SU,24SUI1,Country Club  Inbound,1
+24,SU,24SUI2,Country Club  Inbound,1
+24,SU,24SUI3,Country Club  Inbound,1
+24,SU,24SUI4,Country Club  Inbound,1
+24,SU,24SUI5,Country Club  Inbound,1
+24,SU,24SUI6,Country Club  Inbound,1
+24,SU,24SUI7,Country Club  Inbound,1
+24,SU,24SUI8,Country Club  Inbound,1
+22,WD,22WDO1,HSD RV Outbound,0
+22,WD,22WDO2,HSD RV Outbound,0
+22,WD,22WDO3,HSD RV Outbound,0
+22,WD,22WDO4,HSD RV Outbound,0
+22,WD,22WDO5,HSD RV Outbound,0
+22,WD,22WDO6,HSD RV Outbound,0
+22,WD,22WDO7,HSD RV Outbound,0
+22,WD,22WDO8,HSD RV Outbound,0
+22,WD,22WDO9,HSD RV Outbound,0
+22,WD,22WDO10,HSD RV Outbound,0
+22,WD,22WDO11,HSD RV Outbound,0
+22,WD,22WDI1,HSD RV  Inbound,1
+22,WD,22WDI2,HSD RV  Inbound,1
+22,WD,22WDI3,HSD RV  Inbound,1
+22,WD,22WDI4,HSD RV  Inbound,1
+22,WD,22WDI5,HSD RV  Inbound,1
+22,WD,22WDI6,HSD RV  Inbound,1
+22,WD,22WDI7,HSD RV  Inbound,1
+22,WD,22WDI8,HSD RV  Inbound,1
+22,WD,22WDI9,HSD RV  Inbound,1
+22,WD,22WDI10,HSD RV  Inbound,1
+M,WD,MWDO1,Museum Hill  Outbound,0
+M,WD,MWDO2,Museum Hill  Outbound,0
+M,WD,MWDO3,Museum Hill  Outbound,0
+M,WD,MWDO4,Museum Hill  Outbound,0
+M,WD,MWDO5,Museum Hill  Outbound,0
+M,WD,MWDO6,Museum Hill  Outbound,0
+M,WD,MWDO7,Museum Hill  Outbound,0
+M,WD,MWDO8,Museum Hill  Outbound,0
+M,WD,MWDO9,Museum Hill  Outbound,0
+M,WD,MWDO10,Museum Hill  Outbound,0
+M,WD,MWDO11,Museum Hill  Outbound,0
+M,WD,MWDO12,Museum Hill  Outbound,0
+M,WD,MWDO13,Museum Hill  Outbound,0
+M,WD,MWDI1,Museum Hill  Inbound,1
+M,WD,MWDI2,Museum Hill  Inbound,1
+M,WD,MWDI3,Museum Hill  Inbound,1
+M,WD,MWDI4,Museum Hill  Inbound,1
+M,WD,MWDI5,Museum Hill  Inbound,1
+M,WD,MWDI6,Museum Hill  Inbound,1
+M,WD,MWDI7,Museum Hill  Inbound,1
+M,WD,MWDI8,Museum Hill  Inbound,1
+M,WD,MWDI9,Museum Hill  Inbound,1
+M,WD,MWDI10,Museum Hill  Inbound,1
+M,WD,MWDI11,Museum Hill  Inbound,1
+M,WD,MWDI12,Museum Hill  Inbound,1
+M,WD,MWDI13,Museum Hill  Inbound,1
+M,SA,MSAO1,Museum Hill  Outbound,0
+M,SA,MSAO2,Museum Hill  Outbound,0
+M,SA,MSAO3,Museum Hill  Outbound,0
+M,SA,MSAO4,Museum Hill  Outbound,0
+M,SA,MSAO5,Museum Hill  Outbound,0
+M,SA,MSAO6,Museum Hill  Outbound,0
+M,SA,MSAO7,Museum Hill  Outbound,0
+M,SA,MSAO8,Museum Hill  Outbound,0
+M,SA,MSAI1,Museum Hill  Inbound,1
+M,SA,MSAI2,Museum Hill  Inbound,1
+M,SA,MSAI3,Museum Hill  Inbound,1
+M,SA,MSAI4,Museum Hill  Inbound,1
+M,SA,MSAI5,Museum Hill  Inbound,1
+M,SA,MSAI6,Museum Hill  Inbound,1
+M,SA,MSAI7,Museum Hill  Inbound,1
+M,SA,MSAI8,Museum Hill  Inbound,1
+M,SU,MSUO1,Museum Hill  Outbound,0
+M,SU,MSUO2,Museum Hill  Outbound,0
+M,SU,MSUO3,Museum Hill  Outbound,0
+M,SU,MSUO4,Museum Hill  Outbound,0
+M,SU,MSUO5,Museum Hill  Outbound,0
+M,SU,MSUO6,Museum Hill  Outbound,0
+M,SU,MSUO7,Museum Hill  Outbound,0
+M,SU,MSUO8,Museum Hill  Outbound,0
+M,SU,MSUI1,Museum Hill  Inbound,1
+M,SU,MSUI2,Museum Hill  Inbound,1
+M,SU,MSUI3,Museum Hill  Inbound,1
+M,SU,MSUI4,Museum Hill  Inbound,1
+M,SU,MSUI5,Museum Hill  Inbound,1
+M,SU,MSUI6,Museum Hill  Inbound,1
+M,SU,MSUI7,Museum Hill  Inbound,1
+M,SU,MSUI8,Museum Hill  Inbound,1
+26,WD,26WDO1,Santa Fe Place Outbound,0
+26,WD,26WDO2,Santa Fe Place Outbound,0
+26,WD,26WDO3,Santa Fe Place Outbound,0
+26,WD,26WDO4,Santa Fe Place Outbound,0
+26,WD,26WDO5,Santa Fe Place Outbound,0
+26,WD,26WDO6,Santa Fe Place Outbound,0
+26,WD,26WDO7,Santa Fe Place Outbound,0
+26,WD,26WDO8,Santa Fe Place Outbound,0
+26,WD,26WDO9,Santa Fe Place Outbound,0
+26,WD,26WDO10,Santa Fe Place Outbound,0
+26,WD,26WDI1,Santa Fe Place Inbound,1
+26,WD,26WDI2,Santa Fe Place Inbound,1
+26,WD,26WDI3,Santa Fe Place Inbound,1
+26,WD,26WDI4,Santa Fe Place Inbound,1
+26,WD,26WDI5,Santa Fe Place Inbound,1
+26,WD,26WDI6,Santa Fe Place Inbound,1
+26,WD,26WDI7,Santa Fe Place Inbound,1
+26,WD,26WDI8,Santa Fe Place Inbound,1
+26,WD,26WDI9,Santa Fe Place Inbound,1
+26,WD,26WDI10,Santa Fe Place Inbound,1
+26,SA,26SAO1,Santa Fe Place Outbound,0
+26,SA,26SAO2,Santa Fe Place Outbound,0
+26,SA,26SAO3,Santa Fe Place Outbound,0
+26,SA,26SAO4,Santa Fe Place Outbound,0
+26,SA,26SAO5,Santa Fe Place Outbound,0
+26,SA,26SAO6,Santa Fe Place Outbound,0
+26,SA,26SAO7,Santa Fe Place Outbound,0
+26,SA,26SAO8,Santa Fe Place Outbound,0
+26,SA,26SAO9,Santa Fe Place Outbound,0
+26,SA,26SAI1,Santa Fe Place Inbound,1
+26,SA,26SAI2,Santa Fe Place Inbound,1
+26,SA,26SAI3,Santa Fe Place Inbound,1
+26,SA,26SAI4,Santa Fe Place Inbound,1
+26,SA,26SAI5,Santa Fe Place Inbound,1
+26,SA,26SAI6,Santa Fe Place Inbound,1
+26,SA,26SAI7,Santa Fe Place Inbound,1
+26,SA,26SAI8,Santa Fe Place Inbound,1
+26,SA,26SAI9,Santa Fe Place Inbound,1
+26,SU,26SUO1,Santa Fe Place Outbound,0
+26,SU,26SUO2,Santa Fe Place Outbound,0
+26,SU,26SUO3,Santa Fe Place Outbound,0
+26,SU,26SUO4,Santa Fe Place Outbound,0
+26,SU,26SUO5,Santa Fe Place Outbound,0
+26,SU,26SUO6,Santa Fe Place Outbound,0
+26,SU,26SUO7,Santa Fe Place Outbound,0
+26,SU,26SUO8,Santa Fe Place Outbound,0
+26,SU,26SUI1,Santa Fe Place Inbound,1
+26,SU,26SUI2,Santa Fe Place Inbound,1
+26,SU,26SUI3,Santa Fe Place Inbound,1
+26,SU,26SUI4,Santa Fe Place Inbound,1
+26,SU,26SUI5,Santa Fe Place Inbound,1
+26,SU,26SUI6,Santa Fe Place Inbound,1
+26,SU,26SUI7,Santa Fe Place Inbound,1
+26,SU,26SUI8,Santa Fe Place Inbound,1
