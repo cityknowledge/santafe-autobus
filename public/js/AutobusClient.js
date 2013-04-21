@@ -193,9 +193,9 @@ AutobusClient.prototype.processRoute = function (route) {
     this.persist("route" + route.id, route);
     
     trip = this.getTripForRoute(route.id);
-    if (trip !== null) {
+    // if (trip !== null) {
         this.onRoute(trip);
-    }    
+    // }    
 };
 
 AutobusClient.prototype.routeIdFromEleId = function (eleId) {
