@@ -78,6 +78,17 @@ AutobusClient.prototype.init = function (zoom, lat, lng, mapType, mapOptions) {
     this.map = new google.maps.Map(document.getElementById("map_canvas"), options);
     this.geocoder = new google.maps.Geocoder();
     this.directions = new google.maps.DirectionsService();
+    this.destMarker = new google.maps.Marker();
+    this.destWindow = new InfoBubble({
+        padding: 10,
+        borderRadius: 5,
+        arrowSize: 15,
+        arrowStyle: 0,
+        arrowPosition: 50,
+        maxWidth: 150,
+        borderColor: "#ccc",
+        backgroundColor: "#fff"
+    });
 
     // Set up the acequia client and connect to the server
     this.acequiaClient = new AcequiaClient("autobus_" + Math.random());

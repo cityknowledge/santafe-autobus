@@ -103,7 +103,7 @@ app.addRoutePage = function (rt) {
 
 app.infowindow = new InfoBubble({
     padding: 10,
-    borderRadius: 10,
+    borderRadius: 5,
     arrowSize: 15,
     arrowStyle: 0,
     arrowPosition: 50,
@@ -305,11 +305,13 @@ app.findLocation = function(searchString) {
         if (status == google.maps.GeocoderStatus.OK) {
             self.mapBounds.extend(results[0].geometry.location);
             self.map.fitBounds(self.mapBounds);
-            console.log(self.mapBounds.toString());
-            var marker = new google.maps.Marker({
+            self.destMarker.setOptions({
                 map: self.map,
                 position: results[0].geometry.location
             });
+            console.log(results[0]);
+            self.destWindow.setContent(results[0].formatted_address);
+            self.destWindow.open(self.map, self.destMarker);
         } else {
             alert("Geocode was not successful for the following reason: " + status);
         }
