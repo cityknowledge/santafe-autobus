@@ -70,6 +70,7 @@ app.addRoutePage = function (rt) {
         .attr("data-role", "page")
         .attr("data-theme", "b")
         .attr("id", pageId)
+        .addClass("map-page")
         .appendTo("body");
         
     $("<div></div>")
@@ -94,6 +95,7 @@ app.addRoutePage = function (rt) {
     
     $("<div></div>")
         .attr("data-role", "content")
+        .addClass("map-content")
         .appendTo("#" + pageId);
         
     $("#app-footer").clone().appendTo("#" + pageId);    

@@ -20,14 +20,14 @@
     </head>
     <body>
         <img id="imgAjaxLoader" class="ajaxLoader" src="/images/ajax-loader.gif" />
-        <div data-role="page" data-theme="b" id="home">
+        <div data-role="page" data-theme="b" class="map-page" id="home">
             <div data-theme="b" data-role="header">
                 <h3 id="home-title">
                     Loading...
                 </h3>
             </div>
-            <div data-role="content">
-                <div id="map_canvas" style="width:300px;height:350px;"></div>
+            <div data-role="content" class="map-content">
+                <div id="map_canvas" style="width:100%; height:100%;"></div>
             </div>
             <div data-role="footer"  data-position="fixed" data-theme="b" id="app-footer">		
                     <a href="#home" data-role="button" data-icon="home">Home</a>
@@ -70,13 +70,13 @@
                 	<a href="#payment_page" data-role="button" data-icon="star">Pay</a>
             </div>
         </div>
-        <div data-role="page" data-theme="b" id="where_am_i">
+        <div data-role="page" data-theme="b" class="map-page" id="where_am_i">
             <div data-theme="b" data-role="header">
                 <h3>
                     Where Am I?
                 </h3>
             </div>
-            <div data-role="content">
+            <div data-role="content" class="map-content">
             </div>
             <div data-role="footer"  data-position="fixed" data-theme="b">		
                     <a href="#home" data-role="button" data-icon="home">Home</a>

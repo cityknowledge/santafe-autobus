@@ -34,3 +34,20 @@
     z-index: 100;
     display:none;
 }
+
+.map-page {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+}
+
+.map-content {
+    padding: 0px;
+    position: absolute;
+    top: 42px;
+    left: 0px;
+    right: 0px;
+    bottom: 33px;
+}
