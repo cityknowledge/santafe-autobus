@@ -172,20 +172,34 @@ app.onRoute = function (trip) {
     addMarkersForRoute(stops.outbound, OUTBOUND, this);
     addMarkersForRoute(stops.inbound, INBOUND, this);
 
+    var arrow = {
+      path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW
+    };
+
     routePaths = {
         inbound: new google.maps.Polyline({
             path: routeCoordinatesInbound,
             strokeColor: color,
             strokeOpacity: 1.0,
             strokeWeight: 2,
-            map: this.map
+            map: this.map,
+            icons: [{
+                icon: arrow,
+                repeat: '50px',
+                offset: '25px'
+            }]
         }),
         outbound: new google.maps.Polyline({
             path: routeCoordinatesOutbound,
             strokeColor: color,
             strokeOpacity: 1.0,
             strokeWeight: 2,
-            map: this.map
+            map: this.map,
+            icons: [{
+                icon: arrow,
+                repeat: '50px',
+                offset: '25px'
+            }]
         })
     };
 
