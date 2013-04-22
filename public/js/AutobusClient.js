@@ -20,6 +20,8 @@ var objCallback = function (obj, func) {
  */
 var AutobusClient = function () {
     this.map = null;
+
+    this.mapBounds = null;
     
     this.agency = null;
     
@@ -74,6 +76,8 @@ AutobusClient.prototype.init = function (zoom, lat, lng, mapType, mapOptions) {
         mapTypeId: mapType
     }, mapOptions || {});
     this.map = new google.maps.Map(document.getElementById("map_canvas"), options);
+    this.geocoder = new google.maps.Geocoder();
+    this.directions = new google.maps.DirectionsService();
 
     // Set up the acequia client and connect to the server
     this.acequiaClient = new AcequiaClient("autobus_" + Math.random());
@@ -372,6 +376,7 @@ AutobusClient.prototype.showAllPaths = function () {
             latlngbounds.extend(this.markers[route_id][i].getPosition());
         }
     }
+    this.mapBounds = latlngbounds;
     this.map.fitBounds(latlngbounds);
     this.map.setCenter(latlngbounds.getCenter());
 

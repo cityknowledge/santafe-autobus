@@ -177,6 +177,7 @@ app.onRoute = function (trip) {
     $("#route_" + trip.route_id).css("opacity", "1.0");
     
     this.routePaths[trip.route_id] = routePath;
+    this.showAllPaths();
 };
 
 app.checkRoutes = function () {
@@ -266,7 +267,7 @@ app.displaySinglePath = function (route_id) {
 app.circ = null;
 
 app.centerMap = function (latlng, r) {
-    r = r * 1609.0;
+    r = r * 1609.0; // where does this number come from?
     
     if (!this.circ) {
         this.circ = new google.maps.Circle({
@@ -286,13 +287,34 @@ app.centerMap = function (latlng, r) {
         
     this.map.setCenter(latlng);
     this.map.fitBounds(this.circ.getBounds());
-    this.map.setZoom(this.map.getZoom() + 1);
+    // this.map.setZoom(this.map.getZoom() + 1);
 
     // updates markers
     google.maps.event.trigger(this.map, 'resize');
     
     return this.circ.getBounds();
 };
+
+app.findLocation = function(searchString) {
+    console.log(searchString);
+    var self = this;
+    this.geocoder.geocode({
+        'address': searchString+", Santa Fe, NM",
+        'bounds': this.mapBounds
+    }, function(results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+            self.mapBounds.extend(results[0].geometry.location);
+            self.map.fitBounds(self.mapBounds);
+            console.log(self.mapBounds.toString());
+            var marker = new google.maps.Marker({
+                map: self.map,
+                position: results[0].geometry.location
+            });
+        } else {
+            alert("Geocode was not successful for the following reason: " + status);
+        }
+    });
+}
 
 app.displayWhereIAm = function () {
     
@@ -385,7 +407,12 @@ $(document).ready(function (evt) {
              google.maps.MapTypeId.ROADMAP,
              { mapTypeControl: false
              , streetViewControl: false
-             , zoomControl: false});
+             , zoomControl: false
+             , panControl: false });
+    $("#search_form").submit(function(evt) {
+        app.findLocation($("#search_input").val());
+        return false;
+    });
 });
 
 $(document).bind("pagechange", function (evt, data) {
