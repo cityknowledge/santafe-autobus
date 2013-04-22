@@ -51,3 +51,16 @@
     right: 0px;
     bottom: 33px;
 }
+
+.ui-input-search {
+    width: 65%;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+#inout_fieldset {
+    float: left;
+    position: relative;
+    top: 4px;
+    margin-left: 5px;
+}

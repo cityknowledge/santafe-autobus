@@ -113,8 +113,10 @@ app.infowindow = new InfoBubble({
 });
 
 app.onRoute = function (trip) {
-    var routePath, point, marker, routeCoordinates = [], color, stops, addMarkersForRoute, onclick;
-    
+    var routePath, point, marker, routeCoordinatesInbound = [],
+        routeCoordinatesOutbound = [], color, stops, addMarkersForRoute, onclick;
+    var INBOUND = 1, OUTBOUND = 0;
+
     this.checkRoutes();
     
     this.getNextRoute();
@@ -137,12 +139,13 @@ app.onRoute = function (trip) {
     
     stops = this.getAllStopsForRoute(trip.route_id);
     
-    addMarkersForRoute = function (inOrOut, self) {
+    addMarkersForRoute = function (stops, inbound, self) {
         var i, stop;
-        for (i = 0; i < inOrOut.length; i += 1) {
-            stop = inOrOut[i];
+        for (i = 0; i < stops.length; i += 1) {
+            stop = stops[i];
             point = new google.maps.LatLng(parseFloat(stop.lat), parseFloat(stop.lon));
-            routeCoordinates.push(point);
+            if (inbound) routeCoordinatesInbound.push(point);
+            else routeCoordinatesOutbound.push(point);
 
             marker = new google.maps.Marker({
                 position: point,
@@ -153,7 +156,8 @@ app.onRoute = function (trip) {
                 route_id: trip.route_id
             });
 
-            self.markers[trip.route_id].push(marker);
+            if (inbound) self.markers[trip.route_id].inbound.push(marker);
+            else self.markers[trip.route_id].outbound.push(marker);
 
             google.maps.event.addListener(marker, 'click', onclick(self.infowindow, marker));
         }
@@ -161,23 +165,36 @@ app.onRoute = function (trip) {
     
     color = "#" + this.routes[trip.route_id].color;
     
-    this.markers[trip.route_id] = [];
-    addMarkersForRoute(stops.outbound, this);
-    addMarkersForRoute(stops.inbound, this);
+    this.markers[trip.route_id] = {
+        inbound: [],
+        outbound: []
+    };
+    addMarkersForRoute(stops.outbound, OUTBOUND, this);
+    addMarkersForRoute(stops.inbound, INBOUND, this);
 
-    // TODO:  add two paths for inbound and outbound
-    routePath = new google.maps.Polyline({
-        path: routeCoordinates,
-        strokeColor: color,
-        strokeOpacity: 1.0,
-        strokeWeight: 2,
-        map: this.map
-    });
+    routePaths = {
+        inbound: new google.maps.Polyline({
+            path: routeCoordinatesInbound,
+            strokeColor: color,
+            strokeOpacity: 1.0,
+            strokeWeight: 2,
+            map: this.map
+        }),
+        outbound: new google.maps.Polyline({
+            path: routeCoordinatesOutbound,
+            strokeColor: color,
+            strokeOpacity: 1.0,
+            strokeWeight: 2,
+            map: this.map
+        })
+    };
 
     $("#route_" + trip.route_id).css("opacity", "1.0");
     
-    this.routePaths[trip.route_id] = routePath;
+    this.routePaths[trip.route_id] = routePaths;
     this.showAllPaths();
+    this.toggleInbound();
+    this.displayNearbyStops();
 };
 
 app.checkRoutes = function () {
@@ -254,7 +271,11 @@ app.displaySinglePath = function (route_id) {
         }
     }
 
-    this.routePaths[route_id].getPath().forEach(function (n) {
+    this.routePaths[route_id].inbound.getPath().forEach(function (n) {
+        latlngbounds.extend(n);
+    });
+
+    this.routePaths[route_id].outbound.getPath().forEach(function (n) {
         latlngbounds.extend(n);
     });
 
@@ -262,37 +283,6 @@ app.displaySinglePath = function (route_id) {
     this.map.setCenter(latlngbounds.getCenter());
     
     this.circ.setMap(null);
-};
-
-app.circ = null;
-
-app.centerMap = function (latlng, r) {
-    r = r * 1609.0; // where does this number come from?
-    
-    if (!this.circ) {
-        this.circ = new google.maps.Circle({
-            center: latlng,
-            map: this.map,
-            radius: r,
-            fillOpacity: 0,
-            fillColor: "#cccccc",
-            strokeOpacity: 0.8,
-            strokeColor: "#cccccc"
-        });
-    } else {
-        this.circ.setCenter(latlng);
-        this.circ.setRadius(r);
-        this.circ.setMap(this.map);
-    }
-        
-    this.map.setCenter(latlng);
-    this.map.fitBounds(this.circ.getBounds());
-    // this.map.setZoom(this.map.getZoom() + 1);
-
-    // updates markers
-    google.maps.event.trigger(this.map, 'resize');
-    
-    return this.circ.getBounds();
 };
 
 app.findLocation = function(searchString) {
@@ -303,8 +293,10 @@ app.findLocation = function(searchString) {
         'bounds': this.mapBounds
     }, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
-            self.mapBounds.extend(results[0].geometry.location);
-            self.map.fitBounds(self.mapBounds);
+            console.log(self.mapBounds.toString())
+            self.map.fitBounds(self.mapBounds.extend(results[0].geometry.location));
+            console.log(self.mapBounds.toString())
+            console.log(self.map.getBounds().toString());
             self.destMarker.setOptions({
                 map: self.map,
                 position: results[0].geometry.location
@@ -318,15 +310,40 @@ app.findLocation = function(searchString) {
     });
 }
 
+app.displayNearbyStops = function() {
+
+    var i, route_id, m, stops = [];
+    
+    // Hide any stops that are displayed    
+    for (route_id in this.routes) {
+        this.setMapForMarkers(route_id, null);
+    }
+
+    // Find the stops that are on the map by looping through the markers
+    for (route_id in this.markers) {
+        for (i = 0; i < this.markers[route_id][this.direction].length; i += 1) {
+            m = this.markers[route_id][this.direction][i];
+            if (this.circ.getBounds().contains(m.getPosition())) {
+                stops.push(m);
+            }
+        }
+    }
+    
+    // Display those markers
+    for (i = 0; i < stops.length; i += 1) {
+        stops[i].setMap(this.map);
+    }
+}
+
 app.displayWhereIAm = function () {
     
     var i, bounds, route_id, m, stops = [], routes = {};
 
     // Hide any paths that are displayed    
-    for (route_id in this.routes) {
-        this.setMapForMarkers(route_id, null);
-        this.setMapForPath(route_id, null);
-    }
+    // for (route_id in this.routes) {
+    //     this.setMapForMarkers(route_id, null);
+    //     this.setMapForPath(route_id, null);
+    // }
     
     // Zoom into the map within a radius of half mile
     bounds = this.centerMap(this.currentPositionMarker.getPosition(), 0.35);
@@ -348,11 +365,29 @@ app.displayWhereIAm = function () {
     }
     
     // Display the bus lines
-    for (route_id in routes) {
-        this.setMapForPath(route_id, this.map);
-    }
+    // for (route_id in routes) {
+    //     this.setMapForPath(route_id, this.map);
+    // }
     
 };
+
+app.toggleInbound = function() {
+    this.direction = "inbound";
+    for (route_id in this.routePaths) {
+        this.routePaths[route_id].inbound.setMap(this.map);
+        this.routePaths[route_id].outbound.setMap(null);    
+    }
+    this.displayNearbyStops();
+}
+
+app.toggleOutbound = function() {
+    this.direction = "outbound";
+    for (route_id in this.routePaths) {
+        this.routePaths[route_id].inbound.setMap(null);
+        this.routePaths[route_id].outbound.setMap(this.map);   
+    }
+    this.displayNearbyStops();
+}
 
 app.countdownInterval = null;
 app.selectedBusDateTime = null;
@@ -422,14 +457,15 @@ $(document).bind("pagechange", function (evt, data) {
     switch (data.toPage[0].id) {
     case "home":
         setMapParent(data.toPage[0].id);
-        try {
-            app.showAllPaths();
-            if (app.circ) {
-                app.circ.setMap(null);
-            }
-            app.infowindow.close();
-        } catch (e) {
-        }
+        // try {
+        //     app.showAllPaths();
+        //     if (app.circ) {
+        //         app.circ.setMap(null);
+        //     }
+        //     app.infowindow.close();
+        // } catch (e) {
+        // }
+        app.displayNearbyStops();
         break;
 
     case "where_am_i":

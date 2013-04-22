@@ -34,6 +34,8 @@ var AutobusClient = function () {
     this.markers = {};
     
     this.buses = {};
+
+    this.direction = "inbound";
     
     this.currentPositionMarker = null;
     
@@ -87,8 +89,10 @@ AutobusClient.prototype.init = function (zoom, lat, lng, mapType, mapOptions) {
         arrowPosition: 50,
         maxWidth: 150,
         borderColor: "#ccc",
-        backgroundColor: "#fff"
+        backgroundColor: "#fff",
+        disableAutoPan: true
     });
+    this.circ = null;
 
     // Set up the acequia client and connect to the server
     this.acequiaClient = new AcequiaClient("autobus_" + Math.random());
@@ -169,6 +173,37 @@ AutobusClient.prototype.onBusPosition = function (message) {
     }
 };
 
+AutobusClient.prototype.centerMap = function (latlng, r) {
+    r = r * 1609.0; // where does this number come from?
+    
+    if (!this.circ) {
+        this.circ = new google.maps.Circle({
+            center: latlng,
+            map: this.map,
+            radius: r,
+            fillOpacity: 0,
+            fillColor: "#cccccc",
+            strokeOpacity: 0.8,
+            strokeColor: "#cccccc"
+        });
+    } else {
+        this.circ.setCenter(latlng);
+        this.circ.setRadius(r);
+        this.circ.setMap(this.map);
+    }
+        
+    this.map.setCenter(latlng);
+    this.mapBounds = this.circ.getBounds();
+    this.map.fitBounds(this.mapBounds);
+
+    // this.map.setZoom(this.map.getZoom() + 1);
+
+    // updates markers
+    google.maps.event.trigger(this.map, 'resize');
+    
+    return this.circ.getBounds();
+};
+
 AutobusClient.prototype.onPositionUpdate = function (position) {
     var point = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
     if (!this.currentPositionMarker) {
@@ -178,6 +213,7 @@ AutobusClient.prototype.onPositionUpdate = function (position) {
             title: "You Are Here",
             draggable: true
         });
+        this.centerMap(point, 0.45);
     } else {
         this.currentPositionMarker.setPosition(point);
     }
@@ -362,8 +398,11 @@ AutobusClient.prototype.getNextArrivalsForStop = function (route_id, stop_id, ti
 AutobusClient.prototype.setMapForMarkers = function (route_id, map) {
     var i;
     if (typeof(this.markers[route_id]) !== "undefined") {
-        for (i = 0; i < this.markers[route_id].length; i += 1) {
-            this.markers[route_id][i].setMap(map);
+        for (i = 0; i < this.markers[route_id].inbound.length; i += 1) {
+            this.markers[route_id].inbound[i].setMap(map);
+        }
+        for (i = 0; i < this.markers[route_id].outbound.length; i += 1) {
+            this.markers[route_id].outbound[i].setMap(map);
         }
     }
 };
@@ -375,7 +414,8 @@ AutobusClient.prototype.setMapForPath = function (route_id, map) {
 
 AutobusClient.prototype.setMapForPathOnly = function (route_id, map) {
     if (typeof(this.routePaths[route_id]) !== "undefined") {
-        this.routePaths[route_id].setMap(map);
+        this.routePaths[route_id].inbound.setMap(map);
+        this.routePaths[route_id].outbound.setMap(map);
     }
 };
 
@@ -383,18 +423,20 @@ AutobusClient.prototype.showAllPaths = function () {
     var route_id, i, latlngbounds = new google.maps.LatLngBounds();
 
     for (route_id in this.markers) {
-        for (i = 0; i < this.markers[route_id].length; i += 1) {
-            latlngbounds.extend(this.markers[route_id][i].getPosition());
+        for (i = 0; i < this.markers[route_id].inbound.length; i += 1) {
+            latlngbounds.extend(this.markers[route_id].inbound[i].getPosition());
+        }
+        for (i = 0; i < this.markers[route_id].outbound.length; i += 1) {
+            latlngbounds.extend(this.markers[route_id].outbound[i].getPosition());
         }
     }
-    this.mapBounds = latlngbounds;
-    this.map.fitBounds(latlngbounds);
-    this.map.setCenter(latlngbounds.getCenter());
+    // this.map.fitBounds(latlngbounds);
+    // this.map.setCenter(latlngbounds.getCenter());
 
     for (route_id in this.routes) {
         this.setMapForMarkers(route_id, null);
         this.setMapForPathOnly(route_id, this.map);
     }
-    this.map.setZoom(this.map.getZoom() + 1);
+    // this.map.setZoom(this.map.getZoom() + 1);
 };
 
