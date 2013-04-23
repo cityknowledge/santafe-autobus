@@ -53,7 +53,7 @@
 }
 
 .ui-input-search {
-    width: 65%;
+    width: 37%;
     display: inline-block;
     margin-left: 15px;
 }
@@ -63,4 +63,24 @@
     position: relative;
     top: 4px;
     margin-left: 5px;
+}
+
+#info_panel {
+    display: none;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    padding: 20px;
+    overflow: auto;
+    z-index: 5000;
+}
+
+#trip_panel {
+    display: none;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    padding: 20px;
+    overflow: auto;
+    z-index: 1000;
 }

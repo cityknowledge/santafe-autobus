@@ -116,6 +116,7 @@ app.onRoute = function (trip) {
     var routePath, point, marker, routeCoordinatesInbound = [],
         routeCoordinatesOutbound = [], color, stops, addMarkersForRoute, onclick;
     var INBOUND = 1, OUTBOUND = 0;
+    var self = this;
 
     this.checkRoutes();
     
@@ -127,13 +128,16 @@ app.onRoute = function (trip) {
     
     onclick = function (i, m) {
         return function () {
-            var content, onclick_handler = "\"app.displayNextBuses('" + m.route_id + "','" + m.stop_id + "');\"";
-            content = "<div class='info'>";
-            content += "<div class='info-title'>" + m.title + "</div>";
-            content += "<a href='#next_buses' onclick=" + onclick_handler + ">Next Buses</a>";
-            content += "</div>";
-            i.setContent(content);
-            i.open(this.map, m);
+            // var content, onclick_handler = "\"app.displayNextBuses('" + m.route_id + "','" + m.stop_id + "');\"";
+            // content = "<div class='info'>";
+            // content += "<div class='info-title'>" + m.title + "</div>";
+            // content += "<a href='#next_buses' onclick=" + onclick_handler + ">Next Buses</a>";
+            // // content += "<a onclick=" + onclick_handler + ">Next Buses</a>";
+            // content += "</div>";
+            // i.setContent(content);
+            // i.open(this.map, m);
+            app.displayNextBuses(m.route_id, m.stop_id);
+            self.showInfoPanel();
         };
     };
     
@@ -169,8 +173,9 @@ app.onRoute = function (trip) {
         inbound: [],
         outbound: []
     };
-    addMarkersForRoute(stops.outbound, OUTBOUND, this);
-    addMarkersForRoute(stops.inbound, INBOUND, this);
+    // TODO: Look into why stops.inbound has outbound stops and vice versa
+    addMarkersForRoute(stops.inbound, OUTBOUND, this);
+    addMarkersForRoute(stops.outbound, INBOUND, this);
 
     var arrow = {
       path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW
@@ -221,7 +226,7 @@ app.checkRoutes = function () {
     enableButtons();
 };
 
-app.addNextBusTimes = function (ele_id, times, headsign) {
+app.addNextBusTimes = function (ele_id, times, headsign, route_id, stop_id) {
     var j, count, onclick;
     ele_id = "#" + ele_id;
     
@@ -234,6 +239,8 @@ app.addNextBusTimes = function (ele_id, times, headsign) {
     }
     
     $(ele_id + "-title").html(headsign);
+
+    console.log("HEADSIGN",headsign);
     
     for (j = 0; j < count; j += 1) {
         onclick = "onclick='app.setSelectedBusDateTime(\"" + times[j].time + "\");'";
@@ -257,11 +264,49 @@ app.displayNextBuses = function (route_id, stop_id) {
     
     $("#next-bus-listview-inbound-title~li").remove();
     $("#next-bus-listview-outbound-title~li").remove();
+
+    var newTitle = stop.name;
+    $("#next-bus-listview-inbound-title").text(newTitle+" - Inbound");
+    $("#next-bus-listview-outbound-title").text(newTitle+" - Outbound");
+
+    $("#next-bus-listview-outbound-title").append($("<a>")
+        .attr("data-role","button")
+        .attr("data-icon","delete")
+        .attr("data-theme","b")
+        .attr("data-mini","true")
+        .attr("data-iconpos","notext")
+        .attr("data-inline","true")
+        .attr("href","")
+        .css({
+            position: "absolute",
+            right: "0px",
+            top: "-3px"
+        })
+        .text("Close")
+        .click(app.hideInfoPanel)
+        .button());
+
+    $("#next-bus-listview-inbound-title").append($("<a>")
+        .attr("data-role","button")
+        .attr("data-icon","delete")
+        .attr("data-theme","b")
+        .attr("data-mini","true")
+        .attr("data-iconpos","notext")
+        .attr("data-inline","true")
+        .attr("href","")
+        .css({
+            position: "absolute",
+            right: "0px",
+            top: "-3px"
+        })
+        .text("Close")
+        .click(app.hideInfoPanel)
+        .button());
     
     arrivals = this.getNextArrivalsForStop(route_id, stop_id);
     
-    this.addNextBusTimes("next-bus-listview-inbound", arrivals.times[0], arrivals.headsigns[0]);
-    this.addNextBusTimes("next-bus-listview-outbound", arrivals.times[1], arrivals.headsigns[1]);    
+    this.addNextBusTimes("next-bus-listview-inbound", arrivals.times[0], arrivals.headsigns[0], route_id, stop_id);
+    this.addNextBusTimes("next-bus-listview-outbound", arrivals.times[1], arrivals.headsigns[1], route_id, stop_id);    
 };
 
 app.setSelectedBusDateTime = function (txt) {
@@ -308,9 +353,7 @@ app.findLocation = function(searchString) {
     }, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
             console.log(self.mapBounds.toString())
-            self.map.fitBounds(self.mapBounds.extend(results[0].geometry.location));
-            console.log(self.mapBounds.toString())
-            console.log(self.map.getBounds().toString());
+            self.map.fitBounds(self.circ.getBounds().extend(results[0].geometry.location));
             self.destMarker.setOptions({
                 map: self.map,
                 position: results[0].geometry.location
@@ -346,6 +389,48 @@ app.displayNearbyStops = function() {
     // Display those markers
     for (i = 0; i < stops.length; i += 1) {
         stops[i].setMap(this.map);
+    }
+}
+
+app.scheduleTrip = function(route_id, stop_id, arrivalTime) {
+    // var direction = app.direction == 'inbound' ? 'Inbound' : 'Outbound';
+    // var stop = this.stopForStopId(stop_id);
+    // var minutes = ;
+    // var content =
+    //     direction + ' bus' +
+    //     ' on line ' + route_id +
+    //     ' will arrive at ' + stop.name +
+    //     ' in <span id="#minutes"></span> minutes.' +
+    //     ' You should leave in <span id="countDownText"></span>.';
+    // $("#trip-panel-listview").append(
+    //     $('<li data-theme="c">' + 
+    //        times[j].time + '</a></li>').appendTo(ele_id);
+    // );
+}
+
+app.cancelTrip = function() {
+    
+}
+
+app.showInfoPanel = function() {
+    var info_panel = $("#info_panel");
+    if (!info_panel.is(":visible")) {
+        var newTop = $(document).height() - 75 - info_panel.height();
+        info_panel.show();
+        info_panel.animate({
+            top: newTop +"px"
+        });
+    }
+}
+
+app.hideInfoPanel = function() {
+    var info_panel = $("#info_panel");
+    if (info_panel.is(":visible")) {
+        info_panel.animate({
+            top: $(document).height()+"px"
+        }, function() {
+            info_panel.hide();
+        });
     }
 }
 
@@ -430,6 +515,7 @@ app.decrementCoundownTimer = function () {
         txtTime = pad(hours) + ":" +  pad(minutes) + ":" +  pad(seconds);
     }
             
+    $("#minutes").text(minutes);
     $("#countDownText").html(txtTime);
 };
 
@@ -460,10 +546,16 @@ $(document).ready(function (evt) {
              , streetViewControl: false
              , zoomControl: false
              , panControl: false });
+    
+    // listen for submissions to search field
     $("#search_form").submit(function(evt) {
         app.findLocation($("#search_input").val());
         return false;
     });
+
+    // hide the info panel
+    $("#info_panel").css("top",$(document).height()+"px");
+
 });
 
 $(document).bind("pagechange", function (evt, data) {

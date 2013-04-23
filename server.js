@@ -1,6 +1,7 @@
 /*globals require module console __dirname setTimeout*/
 var express = require('express'),
     csv = require('csv'),
+    busfetcher = require('./busfetcher'),
     GTFS = require("./gtfs");
 var app;
 
@@ -13,6 +14,19 @@ var acequiaServer = null;
 var feedURI = "http://www.gtfs-data-exchange.com/agency/santa-fe-trails/feed";
 var latitude = 35.6660;
 var longitude = -105.9632;
+
+var getBusLocations = function() {
+    busfetcher.fetchBusLocations(function(res) {
+        app.lastBusLocations = res;
+        console.log("Received bus locations.");
+        // broadcast bus locations
+        acequiaServer.send("","busLocations",res);
+    });
+}
+
+var onGetBusLocations = function(message) {
+    acequiaServer.send("","busLocations",app.lastBusLocations,message.from);
+}
 
 var onGetVersion = function (message) {
     var response = {
@@ -55,7 +69,6 @@ var startHTTPServer = function () {
     app.get('/', function (req, res) {
         res.render('/index.html');
     });
-    // app.listen(3000);
 
     var http = require('http'),
         server = http.createServer(app);
@@ -74,8 +87,11 @@ var startHTTPServer = function () {
     acequiaServer.on("getRoutes", onGetRoutes);
     acequiaServer.on("getRoute", onGetRoute);
     acequiaServer.on("getStops", onGetStops);    
-    acequiaServer.on("getVersion", onGetVersion);    
+    acequiaServer.on("getVersion", onGetVersion);
+    acequiaServer.on("getBusLocations", onGetBusLocations);
     acequiaServer.start();
+
+    setInterval(getBusLocations, 15000);
 };
 
 var START = function () {
