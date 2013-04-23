@@ -178,7 +178,7 @@ app.onRoute = function (trip) {
     addMarkersForRoute(stops.outbound, INBOUND, this);
 
     var arrow = {
-      path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW
+      path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW
     };
 
     routePaths = {
