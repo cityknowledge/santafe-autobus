@@ -4,13 +4,13 @@
 
 var disableButtons = function () {
     $("div[data-role=footer]>a").addClass('ui-disabled');
-    $("#imgAjaxLoader").show();
+    $("#ajaxLoader").show();
 };
 
 var enableButtons = function () {
     this.allDataDownloaded = true;
     $("div[data-role=footer]>a").removeClass('ui-disabled');
-    $("#imgAjaxLoader").hide();
+    $("#ajaxLoader").hide();
 };
 
 
@@ -239,13 +239,16 @@ app.addNextBusTimes = function (ele_id, times, headsign, route_id, stop_id) {
     }
     
     $(ele_id + "-title").html(headsign);
-
-    console.log("HEADSIGN",headsign);
     
     for (j = 0; j < count; j += 1) {
-        onclick = "onclick='app.setSelectedBusDateTime(\"" + times[j].time + "\");'";
-        $('<li data-theme="c"><a href="#count-down" data-transition="slide"' + onclick + '>' +
-           times[j].time + '</a></li>').appendTo(ele_id);        
+        // onclick = "onclick='app.setSelectedBusDateTime(\"" + times[j].time + "\");'";
+        // $('<li data-theme="c"><a href="#count-down" data-transition="slide"' + onclick + '>' +
+        //    times[j].time + '</a></li>').appendTo(ele_id);
+        var curTime = times[j].time;
+        $('<li data-theme="c"></li>').append(
+            $('<a href="#">'+curTime+'</a>')
+            .click(function() { app.scheduleTrip(route_id, stop_id, curTime); })
+        ).appendTo(ele_id);
     }
     
     try {
@@ -259,54 +262,58 @@ app.displayNextBuses = function (route_id, stop_id) {
     var arrivals, j, onclick, rt = this.routes[route_id], count, stop;
     
     stop = this.stopForStopId(route_id, stop_id);
-    
+    arrivals = this.getNextArrivalsForStop(route_id, stop_id);
+
     $("#next_bus_title").html("Next Buses for " + rt.id + ": " + rt.desc + "<br/>Stop: " + stop.name);
     
+    $("#next-bus-listview-inbound").hide();
+    $("#next-bus-listview-outbound").hide();
     $("#next-bus-listview-inbound-title~li").remove();
     $("#next-bus-listview-outbound-title~li").remove();
 
     var newTitle = stop.name;
-    $("#next-bus-listview-inbound-title").text(newTitle+" - Inbound");
-    $("#next-bus-listview-outbound-title").text(newTitle+" - Outbound");
 
-    $("#next-bus-listview-outbound-title").append($("<a>")
-        .attr("data-role","button")
-        .attr("data-icon","delete")
-        .attr("data-theme","b")
-        .attr("data-mini","true")
-        .attr("data-iconpos","notext")
-        .attr("data-inline","true")
-        .attr("href","")
-        .css({
-            position: "absolute",
-            right: "0px",
-            top: "-3px"
-        })
-        .text("Close")
-        .click(app.hideInfoPanel)
-        .button());
+    if (this.direction == 'inbound') {
+        $("#next-bus-listview-inbound-title").text(newTitle+" - Inbound");
+        $("#next-bus-listview-inbound-title").append($("<a>")
+            .attr("data-role","button")
+            .attr("data-icon","delete")
+            .attr("data-theme","b")
+            .attr("data-mini","true")
+            .attr("data-iconpos","notext")
+            .attr("data-inline","true")
+            .attr("href","")
+            .css({
+                position: "absolute",
+                right: "0px",
+                top: "-3px"
+            })
+            .text("Close")
+            .click(app.hideInfoPanel)
+            .button());
+        this.addNextBusTimes("next-bus-listview-inbound", arrivals.times[0], arrivals.headsigns[0], route_id, stop_id);
+    }
 
-    $("#next-bus-listview-inbound-title").append($("<a>")
-        .attr("data-role","button")
-        .attr("data-icon","delete")
-        .attr("data-theme","b")
-        .attr("data-mini","true")
-        .attr("data-iconpos","notext")
-        .attr("data-inline","true")
-        .attr("href","")
-        .css({
-            position: "absolute",
-            right: "0px",
-            top: "-3px"
-        })
-        .text("Close")
-        .click(app.hideInfoPanel)
-        .button());
-    
-    arrivals = this.getNextArrivalsForStop(route_id, stop_id);
-    
-    this.addNextBusTimes("next-bus-listview-inbound", arrivals.times[0], arrivals.headsigns[0], route_id, stop_id);
-    this.addNextBusTimes("next-bus-listview-outbound", arrivals.times[1], arrivals.headsigns[1], route_id, stop_id);    
+    else {
+        $("#next-bus-listview-outbound-title").text(newTitle+" - Outbound");
+        $("#next-bus-listview-outbound-title").append($("<a>")
+            .attr("data-role","button")
+            .attr("data-icon","delete")
+            .attr("data-theme","b")
+            .attr("data-mini","true")
+            .attr("data-iconpos","notext")
+            .attr("data-inline","true")
+            .attr("href","")
+            .css({
+                position: "absolute",
+                right: "0px",
+                top: "-3px"
+            })
+            .text("Close")
+            .click(app.hideInfoPanel)
+            .button());
+        this.addNextBusTimes("next-bus-listview-outbound", arrivals.times[1], arrivals.headsigns[1], route_id, stop_id);    
+    }
 };
 
 app.setSelectedBusDateTime = function (txt) {
@@ -393,19 +400,33 @@ app.displayNearbyStops = function() {
 }
 
 app.scheduleTrip = function(route_id, stop_id, arrivalTime) {
-    // var direction = app.direction == 'inbound' ? 'Inbound' : 'Outbound';
-    // var stop = this.stopForStopId(stop_id);
-    // var minutes = ;
-    // var content =
-    //     direction + ' bus' +
-    //     ' on line ' + route_id +
-    //     ' will arrive at ' + stop.name +
-    //     ' in <span id="#minutes"></span> minutes.' +
-    //     ' You should leave in <span id="countDownText"></span>.';
-    // $("#trip-panel-listview").append(
-    //     $('<li data-theme="c">' + 
-    //        times[j].time + '</a></li>').appendTo(ele_id);
-    // );
+    console.log("Scheduling",route_id, stop_id, arrivalTime);
+    app.setSelectedBusDateTime(arrivalTime);
+    app.startCountdownTimer();
+    app.hideInfoPanel();
+    var direction = app.direction == 'inbound' ? 'Inbound' : 'Outbound';
+    var stop = this.stopForStopId(route_id, stop_id);
+    var content =
+        direction + ' bus' +
+        ' on line ' + route_id +
+        ' will arrive at ' + stop.name +
+        ' in <span id="minutes"></span> minutes.' +
+        ' You should leave in:' +
+        '<span id="countDownText"></span>';
+    $("#trip-panel-listview").append($('<li id="'+stop_id+'_trip" data-theme="c">'+content+'</li>'));
+    
+    try {
+        $("#trip-panel-listview").listview('refresh');
+    } catch (e) {
+        // Eat the exception
+    }
+
+    var trip_panel = $("#trip_panel");
+    // var newTop = $(document).height() - 125 - trip_panel.height();
+    trip_panel.show();
+    trip_panel.animate({
+        bottom: "32px"
+    });
 }
 
 app.cancelTrip = function() {
@@ -433,42 +454,6 @@ app.hideInfoPanel = function() {
         });
     }
 }
-
-app.displayWhereIAm = function () {
-    
-    var i, bounds, route_id, m, stops = [], routes = {};
-
-    // Hide any paths that are displayed    
-    // for (route_id in this.routes) {
-    //     this.setMapForMarkers(route_id, null);
-    //     this.setMapForPath(route_id, null);
-    // }
-    
-    // Zoom into the map within a radius of half mile
-    bounds = this.centerMap(this.currentPositionMarker.getPosition(), 0.35);
-    
-    // Find the stops that are on the map by looping through the markers
-    for (route_id in this.markers) {
-        for (i = 0; i < this.markers[route_id].length; i += 1) {
-            m = this.markers[route_id][i];
-            if (bounds.contains(m.getPosition())) {
-                stops.push(m);
-                routes[route_id] = route_id;
-            }
-        }
-    }
-    
-    // Display those markers
-    for (i = 0; i < stops.length; i += 1) {
-        stops[i].setMap(this.map);
-    }
-    
-    // Display the bus lines
-    // for (route_id in routes) {
-    //     this.setMapForPath(route_id, this.map);
-    // }
-    
-};
 
 app.toggleInbound = function() {
     this.direction = "inbound";
@@ -555,6 +540,7 @@ $(document).ready(function (evt) {
 
     // hide the info panel
     $("#info_panel").css("top",$(document).height()+"px");
+    $("#trip_panel").css("bottom",-1*$("#trip_panel").height()+"px");
 
 });
 

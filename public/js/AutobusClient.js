@@ -94,6 +94,8 @@ AutobusClient.prototype.init = function (zoom, lat, lng, mapType, mapOptions) {
     });
     this.circ = null;
 
+    this.initMarkers();
+
     // Set up the acequia client and connect to the server
     this.acequiaClient = new AcequiaClient("autobus_" + Math.random());
     this.acequiaClient.on("version", objCallback(this, "onVersion"));
@@ -107,6 +109,33 @@ AutobusClient.prototype.init = function (zoom, lat, lng, mapType, mapOptions) {
     // Start getting position updates
     this.getCurrentPosition();
 };
+
+AutobusClient.prototype.initMarkers = function() {
+    var scale = 0.8;
+    this.emptyMarkerIcon = {
+        url: "images/location_icon_empty.png",
+        scaledSize: new google.maps.Size(25*scale,40*scale)
+    };
+    this.fullMarkerIcon = {
+        url: "images/location_icon.png",
+        scaledSize: new google.maps.Size(25*scale,40*scale)
+    };
+    this.markerIconBall = {
+        url: "images/location_icon_ball.png",
+        scaledSize: new google.maps.Size(25*scale,40*scale)
+    };
+    this.pseudoPosMarker = new google.maps.Marker({
+        map: this.map,
+        icon: this.markerIconBall,
+        visible: false
+    });
+    this.currentPositionMarker = new google.maps.Marker({
+        map: this.map,
+        icon: this.fullMarkerIcon,
+        zIndex: 500,
+        visible: false
+    });
+}
 
 AutobusClient.prototype.centerMapOnCurrentPositon = function () {
     this.map.setCenter(this.currentPositionMarker.getPosition());
@@ -236,17 +265,21 @@ AutobusClient.prototype.centerMap = function (latlng, r) {
 
 AutobusClient.prototype.onPositionUpdate = function (position) {
     var point = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-    if (!this.currentPositionMarker) {
-        this.currentPositionMarker = new google.maps.Marker({
-            position: point,
-            map: this.map,
-            title: "You Are Here",
-            draggable: true
-        });
+    if (!this.currentPositionMarker.getVisible()) {
+        this.currentPositionMarker.setVisible(true);
         this.centerMap(point, 0.45);
-    } else {
-        this.currentPositionMarker.setPosition(point);
     }
+        // this.currentPositionMarker = new google.maps.Marker({
+        //     position: point,
+        //     map: this.map,
+        //     title: "You Are Here",
+        //     draggable: true
+        // });
+        // this.centerMap(point, 0.45);
+    // } else {
+    this.currentPositionMarker.setPosition(point);
+    
+    // }
     
     setTimeout(objCallback(this, "getCurrentPosition"), 2000);
 };
@@ -410,7 +443,7 @@ AutobusClient.prototype.getNextArrivalsForStop = function (route_id, stop_id, ti
             for (j = 0; j < trips[i].stop_times.length; j += 1) {
                 stop_time = trips[i].stop_times[j];
                 if (stop_time.stop_id === stop_id) {
-                    console.log(stop_time.arrival_time);
+                    // console.log(stop_time.arrival_time);
                     arrival_time = this.dateFromTimeString(stop_time.arrival_time);
                     if (arrival_time > time) {
                         times[k].push({time: stop_time.arrival_time,

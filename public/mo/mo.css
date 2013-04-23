@@ -15,24 +15,34 @@
 }
 
 #countDownText {
+    display: block;
+    margin: 5px 2px;
     background: white;
     border: 1px solid black;
-    border-radius: 7px;
     font-size: 21px;
     font-weight: bold;
-    margin-bottom: 7px;
-    padding:7px;
     text-align:center;
 }
 
-.ajaxLoader {
-    position: fixed;
+#ajaxLoader {
+    position: absolute;
+    text-align: center;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: rgba(255, 255, 255, 0.95);
+    z-index: 900;
+    /*display: none;*/
+}
+
+.ajaxLoaderImg {
+    position: absolute;
     top: 50%;
     left: 50%;
-    margin-top: -24px;
-    margin-left: -24px;
-    z-index: 100;
-    display:none;
+    margin-top: -53px;
+    margin-left: -80px;
+    z-index: 10000;
 }
 
 .map-page {
@@ -58,6 +68,10 @@
     margin-left: 15px;
 }
 
+.ui-header {
+    z-index: 1000;
+}
+
 #inout_fieldset {
     float: left;
     position: relative;
@@ -80,7 +94,6 @@
     position: absolute;
     left: 0px;
     right: 0px;
-    padding: 20px;
     overflow: auto;
     z-index: 1000;
 }

@@ -1,11 +1,11 @@
 route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_color
-1,sftrails,Rt1,Route 1,Agua Fria,3,87CEFA
-2,sftrails,Rt2,Route 2,Cerrillos,3,FF83FA
-4,sftrails,Rt4,Route 4,Southside,3,9F79EE
-5,sftrails,Rt5,Route 5,Crosstown,3,98FB98
-6,sftrails,Rt6,Route 6,Rodeo Road,3,4169E1
-21,sftrails,Rt21,Route 21,SFCC,3,00C957
-22,sftrails,Rt22,Route 22,HSD/Rancho Viejo,3,8B4513
-24,sftrails,Rt24,Route 24,Country Club,3,FFFF00
-26,sftrails,Rt26,Route 26,Santa Fe Place South Cerrillos and Fashion Outlets,3,FFA500
-M,sftrails,RtM,Route M,Museum Hill,3,EE2C2C
+01,sftrails,Rt01,Route 01,Santa Fe Place Transit Center <--> Sheridan Transit Center,3,87CEFA
+02,sftrails,Rt02,Route 02,Santa Fe Place Transit Center <--> Sheridan Transit Center,3,FF83FA
+04,sftrails,Rt04,Route 04,Santa Fe Place Mall - Transit Center <--> Sheridan Transit Center,3,9F79EE
+05,sftrails,Rt05,Route 05,St. Vincent Hospital <--> Sheridan Transit Center,3,98FB98
+06,sftrails,Rt06,Route 06,Santa Fe Place Mall - Transit Center <--> Sheridan Transit Center,3,4169E1
+21,sftrails,Rt21,Route 21,Santa Fe Community College <--> Santa Fe Place Mall - Transit Center,3,00C957
+22,sftrails,Rt22,Route 22,Santa Fe Community College <--> Santa Fe Place Mall - Transit Center,3,8B4513
+24,sftrails,Rt24,Route 24,Plaza del Sol West  NS Airport Rd. <--> Santa Fe Place Transit Center,3,FFFF00
+26,sftrails,Rt26,Route 26,Fashion Outlet Mall <--> Santa Fe Place Mall - Transit Center,3,FFA500
+M,sftrails,RtM,Route M,Camino Lejo @ Museums <--> Sheridan Transit Center,3,EE2C2C

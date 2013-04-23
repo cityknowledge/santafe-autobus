@@ -1,2 +1,2 @@
 agency_id,agency_name,agency_url,agency_timezone,agency_phone,agency_lang
-sftrails,Santa Fe Trails,http://www.santafenm.gov/index.aspx?NID=1244,America/Denver,(505) 955-2001,en
+sftrails,Santa Fe Trails,http://www.santafenm.gov/index.aspx?nid=498,America/Denver,(505) 955-2001,en
