@@ -45,10 +45,6 @@
             </div>
             <div data-role="footer"  data-position="fixed" data-theme="b" id="app-footer">
                 <a data-role="button" data-icon="gear">Settings</a>
-                    <!-- <a href="#home" data-role="button" data-icon="home">Home</a>
-                	<a href="#bus_routes_page" data-role="button" data-icon="grid">Route</a>
-                	<a href="#where_am_i" data-role="button" data-icon="search">Find</a>
-                	<a href="#payment_page" data-role="button" data-icon="star">Pay</a> -->
             </div>
             <div data-theme="b" id="info_panel">
                 <ul data-role="listview" data-divider-theme="b" data-inset="true" id="next-bus-listview-inbound">
@@ -63,11 +59,28 @@
                 </ul>
             </div>
             <div data-theme="b" id="trip_panel">
-                <ul data-role="listview" data-divider-theme="b" data-inset="true" id="trip-panel-listview">
-                    <li data-role="list-divider" role="heading" id="trip-panel-listview-title">
-                        Upcoming trips
-                    </li>
-                </ul>
+                <div class="ui-bar ui-bar-b">
+                    Upcoming trips
+                </div>
+                <div class="trip_panel_bulk">
+                    <div id="trip_content" class="ui-grid-solo" data-theme="b"></div>
+                    <div class="ui-grid-b" data-theme="b">
+                        <div class="ui-block-a">
+                            <fieldset id="mode_fieldset" data-role="controlgroup" data-type="horizontal" >
+                                <input type="radio" name="radio-choice" id="radio-pedestrian" value="choice-1" />
+                                <label for="radio-pedestrian">Walk</label>
+                                <input type="radio" name="radio-choice" id="radio-bicycle" value="choice-2" checked="checked" />
+                                <label for="radio-bicycle">Bike</label>
+                            </fieldset>
+                        </div>
+                        <div class="ui-block-b">
+                            <a data-role="button" data-theme="e" data-mini="true" href="">Request a pickup</a>
+                        </div>
+                        <div class="ui-block-c">
+                            <a data-role="button" data-theme="b" data-mini="true" href="" onClick="app.cancelTrip()">Cancel</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div data-role="page" data-theme="b" id="bus_routes_page">

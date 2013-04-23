@@ -261,6 +261,27 @@ app.addNextBusTimes = function (ele_id, times, headsign, route_id, stop_id) {
 app.displayNextBuses = function (route_id, stop_id) {
     var arrivals, j, onclick, rt = this.routes[route_id], count, stop;
     
+    var CloseButton = function() {
+        return $("<a>")
+            .attr({
+                "data-role":"button",
+                "data-icon":"delete",
+                "data-theme":"b",
+                "data-mini":"true",
+                "data-iconpos":"notext",
+                "data-inline":"true",
+                "href":""
+            })
+            .css({
+                position: "absolute",
+                right: "0px",
+                top: "-3px"
+            })
+            .text("Close")
+            .click(app.hideInfoPanel)
+            .button()
+    }
+
     stop = this.stopForStopId(route_id, stop_id);
     arrivals = this.getNextArrivalsForStop(route_id, stop_id);
 
@@ -275,43 +296,12 @@ app.displayNextBuses = function (route_id, stop_id) {
 
     if (this.direction == 'inbound') {
         $("#next-bus-listview-inbound-title").text(newTitle+" - Inbound");
-        $("#next-bus-listview-inbound-title").append($("<a>")
-            .attr("data-role","button")
-            .attr("data-icon","delete")
-            .attr("data-theme","b")
-            .attr("data-mini","true")
-            .attr("data-iconpos","notext")
-            .attr("data-inline","true")
-            .attr("href","")
-            .css({
-                position: "absolute",
-                right: "0px",
-                top: "-3px"
-            })
-            .text("Close")
-            .click(app.hideInfoPanel)
-            .button());
+        $("#next-bus-listview-inbound-title").append(new CloseButton());
         this.addNextBusTimes("next-bus-listview-inbound", arrivals.times[0], arrivals.headsigns[0], route_id, stop_id);
     }
-
     else {
         $("#next-bus-listview-outbound-title").text(newTitle+" - Outbound");
-        $("#next-bus-listview-outbound-title").append($("<a>")
-            .attr("data-role","button")
-            .attr("data-icon","delete")
-            .attr("data-theme","b")
-            .attr("data-mini","true")
-            .attr("data-iconpos","notext")
-            .attr("data-inline","true")
-            .attr("href","")
-            .css({
-                position: "absolute",
-                right: "0px",
-                top: "-3px"
-            })
-            .text("Close")
-            .click(app.hideInfoPanel)
-            .button());
+        $("#next-bus-listview-outbound-title").append(new CloseButton());
         this.addNextBusTimes("next-bus-listview-outbound", arrivals.times[1], arrivals.headsigns[1], route_id, stop_id);    
     }
 };
@@ -400,6 +390,54 @@ app.displayNearbyStops = function() {
 }
 
 app.scheduleTrip = function(route_id, stop_id, arrivalTime) {
+
+    var TransitModeToggle = function() {
+        var template =
+            '<fieldset id="mode_fieldset" data-role="controlgroup" data-type="horizontal" >' +
+                '<input type="radio" name="radio-choice" id="radio-pedestrian" value="choice-1" onClick="app.toggleInbound()" />' +
+                '<label for="radio-pedestrian">Walk</label>' +
+                '<input type="radio" name="radio-choice" id="radio-bicycle" value="choice-2" checked="checked" onClick="app.toggleOutbound()" />' +
+                '<label for="radio-bicycle">Bike</label>' +
+            '</fieldset>';
+        return $(template);
+    };
+
+    var TripDescription = function() {
+        var template =
+            '<li data-theme="c"></li>';
+        return $(template);
+    }
+
+    var CallButton = function() {
+        return $("<a>")
+            .attr({
+                "data-role":"button",
+                "data-theme":"d",
+                "data-mini":"true",
+                "data-inline":"true",
+                "href":""
+            })
+            .text("Request a pickup")
+    }
+
+    var CloseButton = function() {
+        return $("<a>")
+            .attr({
+                "data-role":"button",
+                "data-icon":"delete",
+                "data-theme":"b",
+                "data-mini":"true",
+                "data-inline":"true",
+                "href":""
+            })
+            .text("Cancel")
+            .click(app.cancelTrip)
+    }
+
+    var ButtonGrid = function() {
+        return $(template);
+    }
+    
     console.log("Scheduling",route_id, stop_id, arrivalTime);
     app.setSelectedBusDateTime(arrivalTime);
     app.startCountdownTimer();
@@ -408,21 +446,16 @@ app.scheduleTrip = function(route_id, stop_id, arrivalTime) {
     var stop = this.stopForStopId(route_id, stop_id);
     var content =
         direction + ' bus' +
-        ' on line ' + route_id +
-        ' will arrive at ' + stop.name +
+        ' on <b>line ' + route_id + '</b>' +
+        ' will arrive at <b>' + stop.name + '</b>' +
         ' in <span id="minutes"></span> minutes.' +
         ' You should leave in:' +
         '<span id="countDownText"></span>';
-    $("#trip-panel-listview").append($('<li id="'+stop_id+'_trip" data-theme="c">'+content+'</li>'));
-    
-    try {
-        $("#trip-panel-listview").listview('refresh');
-    } catch (e) {
-        // Eat the exception
-    }
+
+    $("#trip_content").empty();
+    $("#trip_content").append(content);
 
     var trip_panel = $("#trip_panel");
-    // var newTop = $(document).height() - 125 - trip_panel.height();
     trip_panel.show();
     trip_panel.animate({
         bottom: "32px"
@@ -430,7 +463,14 @@ app.scheduleTrip = function(route_id, stop_id, arrivalTime) {
 }
 
 app.cancelTrip = function() {
-    
+    var trip_panel = $("#trip_panel");
+    var self = this;
+    trip_panel.animate({
+        bottom: -1*trip_panel.height()+"px"
+    }, function() {
+        trip_panel.hide();
+        self.stopCountdownTimer();
+    });
 }
 
 app.showInfoPanel = function() {
@@ -498,6 +538,7 @@ app.decrementCoundownTimer = function () {
         seconds = time % 60;
 
         txtTime = pad(hours) + ":" +  pad(minutes) + ":" +  pad(seconds);
+        // txtTime = pad(hours) + ":" +  pad(minutes) + ":" +  pad(seconds);
     }
             
     $("#minutes").text(minutes);

@@ -17,8 +17,6 @@
 #countDownText {
     display: block;
     margin: 5px 2px;
-    background: white;
-    border: 1px solid black;
     font-size: 21px;
     font-weight: bold;
     text-align:center;
@@ -72,6 +70,14 @@
     z-index: 1000;
 }
 
+#mode_fieldset {
+    
+}
+
+#mode_fieldset .ui-btn-text {
+    font-size: 14px;
+}
+
 #inout_fieldset {
     float: left;
     position: relative;
@@ -96,4 +102,9 @@
     right: 0px;
     overflow: auto;
     z-index: 1000;
+}
+
+.trip_panel_bulk {
+    padding: 5px 10px;
+    background: white;
 }
