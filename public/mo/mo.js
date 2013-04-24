@@ -213,7 +213,7 @@ app.onRoute = function (trip) {
     this.routePaths[trip.route_id] = routePaths;
     this.showAllPaths();
     this.toggleInbound();
-    this.displayNearbyStops();
+    if (this.circ) this.displayNearbyStops();
 };
 
 app.checkRoutes = function () {
@@ -495,6 +495,10 @@ app.hideInfoPanel = function() {
     }
 }
 
+app.setTransportationMode = function(mode) {
+    this.transportationMode = mode;
+}
+
 app.toggleInbound = function() {
     this.direction = "inbound";
     for (route_id in this.routePaths) {
@@ -538,6 +542,7 @@ app.decrementCoundownTimer = function () {
         seconds = time % 60;
 
         txtTime = pad(hours) + ":" +  pad(minutes) + ":" +  pad(seconds);
+        console.log(txtTime);
         // txtTime = pad(hours) + ":" +  pad(minutes) + ":" +  pad(seconds);
     }
             

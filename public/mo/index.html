@@ -67,9 +67,9 @@
                     <div class="ui-grid-b" data-theme="b">
                         <div class="ui-block-a">
                             <fieldset id="mode_fieldset" data-role="controlgroup" data-type="horizontal" >
-                                <input type="radio" name="radio-choice" id="radio-pedestrian" value="choice-1" />
+                                <input type="radio" name="radio-choice" id="radio-pedestrian" value="choice-1" onClick="app.setTransportationMode('walk')" />
                                 <label for="radio-pedestrian">Walk</label>
-                                <input type="radio" name="radio-choice" id="radio-bicycle" value="choice-2" checked="checked" />
+                                <input type="radio" name="radio-choice" id="radio-bicycle" value="choice-2" checked="checked" onClick="app.setTransportationMode('bike')"/>
                                 <label for="radio-bicycle">Bike</label>
                             </fieldset>
                         </div>

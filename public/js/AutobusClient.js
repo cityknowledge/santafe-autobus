@@ -36,6 +36,7 @@ var AutobusClient = function () {
     this.buses = [];
 
     this.direction = "inbound";
+    this.transportationMode = "bike";
     
     this.currentPositionMarker = null;
     
@@ -79,7 +80,10 @@ AutobusClient.prototype.init = function (zoom, lat, lng, mapType, mapOptions) {
     }, mapOptions || {});
     this.map = new google.maps.Map(document.getElementById("map_canvas"), options);
     this.geocoder = new google.maps.Geocoder();
-    this.directions = new google.maps.DirectionsService();
+    this.directionsService = new google.maps.DirectionsService();
+    this.directionsRenderer = new google.maps.DirectionsRenderer({
+        suppressMarkers: true
+    });
     this.destMarker = new google.maps.Marker();
     this.destWindow = new InfoBubble({
         padding: 10,
@@ -268,6 +272,7 @@ AutobusClient.prototype.onPositionUpdate = function (position) {
     if (!this.currentPositionMarker.getVisible()) {
         this.currentPositionMarker.setVisible(true);
         this.centerMap(point, 0.45);
+        this.displayNearbyStops();
     }
         // this.currentPositionMarker = new google.maps.Marker({
         //     position: point,
