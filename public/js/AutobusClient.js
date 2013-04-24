@@ -2,7 +2,7 @@
  *  AutobusClient
  *
  *  Created by Peter R. G. Small on 2012-05-07.
- *  Copyright (c) 2012 PRGSoftware, LLC. All rights reserved.
+ *  (c) 2013 RedfishGroup, LLC and CityKnowledge LLC
  */
 
 /*global $ document google navigator AcequiaClient MapIconMaker setTimeout localStorage
