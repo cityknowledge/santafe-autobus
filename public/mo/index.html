@@ -46,6 +46,9 @@
             <div data-role="footer"  data-position="fixed" data-theme="b" id="app-footer">
                 <a data-role="button" data-icon="gear">Settings</a>
             </div>
+            <div class="map_panel">
+                <div id="directions_panel"></div>
+            </div>
             <div data-theme="b" id="info_panel">
                 <ul data-role="listview" data-divider-theme="b" data-inset="true" id="next-bus-listview-inbound">
                     <li data-role="list-divider" role="heading" id="next-bus-listview-inbound-title">
@@ -67,9 +70,9 @@
                     <div class="ui-grid-b" data-theme="b">
                         <div class="ui-block-a">
                             <fieldset id="mode_fieldset" data-role="controlgroup" data-type="horizontal" >
-                                <input type="radio" name="radio-choice" id="radio-pedestrian" value="choice-1" onClick="app.setTransportationMode('walk')" />
+                                <input type="radio" name="radio-choice" id="radio-pedestrian" value="choice-1" onClick="app.setTravelMode('walk')" />
                                 <label for="radio-pedestrian">Walk</label>
-                                <input type="radio" name="radio-choice" id="radio-bicycle" value="choice-2" checked="checked" onClick="app.setTransportationMode('bike')"/>
+                                <input type="radio" name="radio-choice" id="radio-bicycle" value="choice-2" checked="checked" onClick="app.setTravelMode('bike')"/>
                                 <label for="radio-bicycle">Bike</label>
                             </fieldset>
                         </div>

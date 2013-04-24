@@ -128,14 +128,6 @@ app.onRoute = function (trip) {
     
     onclick = function (i, m) {
         return function () {
-            // var content, onclick_handler = "\"app.displayNextBuses('" + m.route_id + "','" + m.stop_id + "');\"";
-            // content = "<div class='info'>";
-            // content += "<div class='info-title'>" + m.title + "</div>";
-            // content += "<a href='#next_buses' onclick=" + onclick_handler + ">Next Buses</a>";
-            // // content += "<a onclick=" + onclick_handler + ">Next Buses</a>";
-            // content += "</div>";
-            // i.setContent(content);
-            // i.open(this.map, m);
             app.displayNextBuses(m.route_id, m.stop_id);
             self.showInfoPanel();
         };
@@ -177,9 +169,7 @@ app.onRoute = function (trip) {
     addMarkersForRoute(stops.inbound, OUTBOUND, this);
     addMarkersForRoute(stops.outbound, INBOUND, this);
 
-    var arrow = {
-      path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW
-    };
+    var arrow = { path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW };
 
     routePaths = {
         inbound: new google.maps.Polyline({
@@ -187,7 +177,7 @@ app.onRoute = function (trip) {
             strokeColor: color,
             strokeOpacity: 1.0,
             strokeWeight: 2,
-            map: this.map,
+            // map: this.map,
             icons: [{
                 icon: arrow,
                 repeat: '50px',
@@ -199,7 +189,7 @@ app.onRoute = function (trip) {
             strokeColor: color,
             strokeOpacity: 1.0,
             strokeWeight: 2,
-            map: this.map,
+            // map: this.map,
             icons: [{
                 icon: arrow,
                 repeat: '50px',
@@ -211,9 +201,10 @@ app.onRoute = function (trip) {
     $("#route_" + trip.route_id).css("opacity", "1.0");
     
     this.routePaths[trip.route_id] = routePaths;
-    this.showAllPaths();
-    this.toggleInbound();
-    this.displayNearbyStops();
+    this.routePaths[trip.route_id][this.direction].setMap(this.map);
+    // this.showAllPaths();
+    // this.toggleInbound();
+    this.displayRelevantStops();
 };
 
 app.checkRoutes = function () {
@@ -241,9 +232,6 @@ app.addNextBusTimes = function (ele_id, times, headsign, route_id, stop_id) {
     $(ele_id + "-title").html(headsign);
     
     for (j = 0; j < count; j += 1) {
-        // onclick = "onclick='app.setSelectedBusDateTime(\"" + times[j].time + "\");'";
-        // $('<li data-theme="c"><a href="#count-down" data-transition="slide"' + onclick + '>' +
-        //    times[j].time + '</a></li>').appendTo(ele_id);
         var curTime = times[j].time;
         $('<li data-theme="c"></li>').append(
             $('<a href="#">'+curTime+'</a>')
@@ -308,6 +296,7 @@ app.displayNextBuses = function (route_id, stop_id) {
 
 app.setSelectedBusDateTime = function (txt) {
     var timeParts = txt.split(":");
+    console.log(txt, timeParts);
     this.selectedBusDateTime = new Date();
     this.selectedBusDateTime.setHours(parseInt(timeParts[0], 10));
     this.selectedBusDateTime.setMinutes(parseInt(timeParts[1], 10));
@@ -337,8 +326,6 @@ app.displaySinglePath = function (route_id) {
 
     this.map.fitBounds(latlngbounds);
     this.map.setCenter(latlngbounds.getCenter());
-    
-    this.circ.setMap(null);
 };
 
 app.findLocation = function(searchString) {
@@ -350,25 +337,28 @@ app.findLocation = function(searchString) {
     }, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
             console.log(self.mapBounds.toString())
-            self.map.fitBounds(self.circ.getBounds().extend(results[0].geometry.location));
+            var resPos = results[0].geometry.location;
+            self.map.fitBounds(self.proximities.currentLocation.getBounds().extend(results[0].geometry.location));
             self.destMarker.setOptions({
                 map: self.map,
-                position: results[0].geometry.location
+                position: resPos
             });
             console.log(results[0]);
             self.destWindow.setContent(results[0].formatted_address);
             self.destWindow.open(self.map, self.destMarker);
+            self.proximities.destination.setCenter(resPos);
+            self.displayRelevantStops();
         } else {
             alert("Geocode was not successful for the following reason: " + status);
         }
     });
 }
 
-app.displayNearbyStops = function() {
+app.displayRelevantStops = function() {
 
     var i, route_id, m, stops = [];
     
-    // Hide any stops that are displayed    
+    // // Hide any stops that are displayed    
     for (route_id in this.routes) {
         this.setMapForMarkers(route_id, null);
     }
@@ -377,15 +367,14 @@ app.displayNearbyStops = function() {
     for (route_id in this.markers) {
         for (i = 0; i < this.markers[route_id][this.direction].length; i += 1) {
             m = this.markers[route_id][this.direction][i];
-            if (this.circ && this.circ.getBounds().contains(m.getPosition())) {
-                stops.push(m);
+            for (circName in this.proximities) {
+                var bounds = this.proximities[circName].getBounds();
+                if (bounds && bounds.contains(m.getPosition())) {
+                    m.setMap(this.map);
+                    break;
+                }
             }
         }
-    }
-    
-    // Display those markers
-    for (i = 0; i < stops.length; i += 1) {
-        stops[i].setMap(this.map);
     }
 }
 
@@ -455,6 +444,8 @@ app.scheduleTrip = function(route_id, stop_id, arrivalTime) {
     $("#trip_content").empty();
     $("#trip_content").append(content);
 
+    app.getGoogleDirections(new google.maps.LatLng(parseFloat(stop.lat), parseFloat(stop.lon)));
+
     var trip_panel = $("#trip_panel");
     trip_panel.show();
     trip_panel.animate({
@@ -471,32 +462,31 @@ app.cancelTrip = function() {
         trip_panel.hide();
         self.stopCountdownTimer();
     });
+    this.clearGoogleDirections();
 }
 
 app.showInfoPanel = function() {
     var info_panel = $("#info_panel");
-    if (!info_panel.is(":visible")) {
-        var newTop = $(document).height() - 75 - info_panel.height();
-        info_panel.show();
-        info_panel.animate({
-            top: newTop +"px"
-        });
-    }
+    var newTop = $("body").height() - 75 - info_panel.height();
+    info_panel.show();
+    info_panel.animate({
+        top: newTop +"px"
+    });
 }
 
 app.hideInfoPanel = function() {
     var info_panel = $("#info_panel");
     if (info_panel.is(":visible")) {
         info_panel.animate({
-            top: $(document).height()+"px"
+            top: $("body").height()+"px"
         }, function() {
             info_panel.hide();
         });
     }
 }
 
-app.setTransportationMode = function(mode) {
-    this.transportationMode = mode;
+app.setTravelMode = function(mode) {
+    this.travelMode = mode;
 }
 
 app.toggleInbound = function() {
@@ -505,7 +495,7 @@ app.toggleInbound = function() {
         this.routePaths[route_id].inbound.setMap(this.map);
         this.routePaths[route_id].outbound.setMap(null);    
     }
-    this.displayNearbyStops();
+    this.displayRelevantStops();
 }
 
 app.toggleOutbound = function() {
@@ -514,7 +504,7 @@ app.toggleOutbound = function() {
         this.routePaths[route_id].inbound.setMap(null);
         this.routePaths[route_id].outbound.setMap(this.map);   
     }
-    this.displayNearbyStops();
+    this.displayRelevantStops();
 }
 
 app.countdownInterval = null;
@@ -542,7 +532,6 @@ app.decrementCoundownTimer = function () {
         seconds = time % 60;
 
         txtTime = pad(hours) + ":" +  pad(minutes) + ":" +  pad(seconds);
-        console.log(txtTime);
         // txtTime = pad(hours) + ":" +  pad(minutes) + ":" +  pad(seconds);
     }
             
@@ -594,7 +583,7 @@ $(document).bind("pagechange", function (evt, data) {
    
     switch (data.toPage[0].id) {
     case "home":
-        setMapParent(data.toPage[0].id);
+        // setMapParent(data.toPage[0].id);
         // try {
         //     app.showAllPaths();
         //     if (app.circ) {
@@ -603,7 +592,7 @@ $(document).bind("pagechange", function (evt, data) {
         //     app.infowindow.close();
         // } catch (e) {
         // }
-        app.displayNearbyStops();
+        // app.displayNearbyStops();
         break;
 
     case "where_am_i":

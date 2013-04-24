@@ -108,3 +108,20 @@
     padding: 5px 10px;
     background: white;
 }
+
+div.map_panel {
+    position: absolute;
+    left: 5px;
+    top: 47px;
+    margin: 2px;
+    background: rgba(255,255,255,0.9);
+    border: 1px solid rgb(150,150,150);
+}
+
+#directions_panel {
+    width: 197px;
+    max-height: 300px;
+    overflow: auto;
+    padding: 0px 5px 10px 5px;
+    display: none;
+}

@@ -36,7 +36,7 @@ var AutobusClient = function () {
     this.buses = [];
 
     this.direction = "inbound";
-    this.transportationMode = "bike";
+    this.travelMode = "bike";
     
     this.currentPositionMarker = null;
     
@@ -82,7 +82,9 @@ AutobusClient.prototype.init = function (zoom, lat, lng, mapType, mapOptions) {
     this.geocoder = new google.maps.Geocoder();
     this.directionsService = new google.maps.DirectionsService();
     this.directionsRenderer = new google.maps.DirectionsRenderer({
-        suppressMarkers: true
+        map: this.map,
+        suppressMarkers: true,
+        panel: document.getElementById("directions_panel")
     });
     this.destMarker = new google.maps.Marker();
     this.destWindow = new InfoBubble({
@@ -96,7 +98,13 @@ AutobusClient.prototype.init = function (zoom, lat, lng, mapType, mapOptions) {
         backgroundColor: "#fff",
         disableAutoPan: true
     });
-    this.circ = null;
+
+    var defaultRadius = 0.25*1609;
+    this.proximities = { // used to determine which bus stops are worth drawing
+        origin: new google.maps.Circle({ map: this.map, radius: defaultRadius, visible: false }),
+        destination: new google.maps.Circle({ map: this.map, radius: defaultRadius, visible: false }),
+        currentLocation: new google.maps.Circle({ map: this.map, radius: defaultRadius, visible: false })
+    };
 
     this.initMarkers();
 
@@ -214,7 +222,6 @@ AutobusClient.prototype.onBusLocations = function (message) {
             // })
         }));
     }
-    // setTimeout(objCallback(this,"fetchBusLocations"), 15000);
 }
 
 // AutobusClient.prototype.onBusLocation = function (message) {
@@ -237,54 +244,34 @@ AutobusClient.prototype.onBusLocations = function (message) {
 // };
 
 AutobusClient.prototype.centerMap = function (latlng, r) {
-    r = r * 1609.0; // where does this number come from?
+    r = r ? r * 1609.0 : 0.45 * 1609; // 1609 meters per mile
+    latlng = latlng ? latlng : this.proximities.origin.getCenter();
     
-    if (!this.circ) {
-        this.circ = new google.maps.Circle({
-            center: latlng,
-            map: this.map,
-            radius: r,
-            fillOpacity: 0,
-            fillColor: "#cccccc",
-            strokeOpacity: 0.8,
-            strokeColor: "#cccccc"
-        });
-    } else {
-        this.circ.setCenter(latlng);
-        this.circ.setRadius(r);
-        this.circ.setMap(this.map);
-    }
+    var bounds = new google.maps.Circle({ center: latlng, radius: r }).getBounds();
         
-    this.map.setCenter(latlng);
-    this.mapBounds = this.circ.getBounds();
+    // this.map.setCenter(latlng);
+    // this.mapBounds = this.proximityCircle.getBounds();
+    this.mapBounds = bounds;
     this.map.fitBounds(this.mapBounds);
-
-    // this.map.setZoom(this.map.getZoom() + 1);
 
     // updates markers
     google.maps.event.trigger(this.map, 'resize');
-    
-    return this.circ.getBounds();
 };
 
 AutobusClient.prototype.onPositionUpdate = function (position) {
     var point = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-    if (!this.currentPositionMarker.getVisible()) {
+    
+    if (!point.equals(this.currentPositionMarker.getPosition())) {
+        this.proximities.currentLocation.setCenter(point);
+        this.proximities.origin.setCenter(point);
+        this.currentPositionMarker.setPosition(point);
+        this.displayRelevantStops();
+    }
+
+    if (!this.currentPositionMarker.getVisible()) { // first time
         this.currentPositionMarker.setVisible(true);
         this.centerMap(point, 0.45);
-        this.displayNearbyStops();
     }
-        // this.currentPositionMarker = new google.maps.Marker({
-        //     position: point,
-        //     map: this.map,
-        //     title: "You Are Here",
-        //     draggable: true
-        // });
-        // this.centerMap(point, 0.45);
-    // } else {
-    this.currentPositionMarker.setPosition(point);
-    
-    // }
     
     setTimeout(objCallback(this, "getCurrentPosition"), 2000);
 };
@@ -507,4 +494,26 @@ AutobusClient.prototype.showAllPaths = function () {
     }
     // this.map.setZoom(this.map.getZoom() + 1);
 };
+
+AutobusClient.prototype.getGoogleDirections = function(destLatLng) {
+    var self = this;
+    var dirReq = {
+        origin: this.proximities.origin.getCenter(),
+        destination: destLatLng,
+        travelMode: this.travelMode == 'bike' ? google.maps.TravelMode.BICYCLING : google.maps.TravelMode.WALKING
+    }
+    this.directionsService.route(dirReq, function(result, status) {
+        if (status == google.maps.DirectionsStatus.OK) {
+            self.directionsRenderer.setMap(self.map);
+            self.directionsRenderer.setDirections(result);
+            $(self.directionsRenderer.getPanel()).show();
+        }
+    });
+}
+
+AutobusClient.prototype.clearGoogleDirections = function(destLatLng) {
+    this.directionsRenderer.setMap(null);
+    $(this.directionsRenderer.getPanel()).hide();
+    this.centerMap();
+}
 
