@@ -213,7 +213,7 @@ app.onRoute = function (trip) {
     this.routePaths[trip.route_id] = routePaths;
     this.showAllPaths();
     this.toggleInbound();
-    if (this.circ) this.displayNearbyStops();
+    this.displayNearbyStops();
 };
 
 app.checkRoutes = function () {
@@ -377,7 +377,7 @@ app.displayNearbyStops = function() {
     for (route_id in this.markers) {
         for (i = 0; i < this.markers[route_id][this.direction].length; i += 1) {
             m = this.markers[route_id][this.direction][i];
-            if (this.circ.getBounds().contains(m.getPosition())) {
+            if (this.circ && this.circ.getBounds().contains(m.getPosition())) {
                 stops.push(m);
             }
         }
