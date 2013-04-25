@@ -107,6 +107,7 @@ AutobusClient.prototype.init = function (zoom, lat, lng, mapType, mapOptions) {
     };
 
     this.initMarkers();
+    this.initDragEvents();
 
     // Set up the acequia client and connect to the server
     this.acequiaClient = new AcequiaClient("autobus_" + Math.random());
@@ -122,23 +123,42 @@ AutobusClient.prototype.init = function (zoom, lat, lng, mapType, mapOptions) {
     this.getCurrentPosition();
 };
 
+AutobusClient.prototype.initDragEvents = function() {
+    google.maps.event.addListener(this.map, "drag", function() {
+        if (!this.pseudoPosMarker.getVisible()) this.pseudoPosMarker.setVisible(true);
+        var newCenter = this.map.getCenter();
+        this.pseudoPosMarker.setPosition(newCenter);
+        this.proximities.origin.setCenter(newCenter);
+        // this.currentPositionMarker.setIcon(this.emptyMarkerIcon);
+        this.currentPositionMarker.setIcon(this.markerIconBall);
+    }.bind(this));
+
+    google.maps.event.addListener(this.map, "dragend", function() {
+        this.displayRelevantStops();
+    }.bind(this));
+}
+
 AutobusClient.prototype.initMarkers = function() {
-    var scale = 0.8;
+    var scale = 1;
     this.emptyMarkerIcon = {
-        url: "images/location_icon_empty.png",
-        scaledSize: new google.maps.Size(25*scale,40*scale)
+        url: "images/location_icon_empty2.png",
+        anchor: new google.maps.Point(15,15),
+        // scaledSize: new google.maps.Size(25*scale,40*scale)
     };
     this.fullMarkerIcon = {
-        url: "images/location_icon.png",
-        scaledSize: new google.maps.Size(25*scale,40*scale)
+        url: "images/location_icon2.png",
+        anchor: new google.maps.Point(15,15),
+        // scaledSize: new google.maps.Size(25*scale,40*scale)
     };
     this.markerIconBall = {
-        url: "images/location_icon_ball.png",
-        scaledSize: new google.maps.Size(25*scale,40*scale)
+        url: "images/location_icon_ball2.png",
+        anchor: new google.maps.Point(15,15),
+        // scaledSize: new google.maps.Size(25*scale,40*scale)
     };
     this.pseudoPosMarker = new google.maps.Marker({
         map: this.map,
-        icon: this.markerIconBall,
+        // icon: this.markerIconBall,
+        icon: this.emptyMarkerIcon,
         visible: false
     });
     this.currentPositionMarker = new google.maps.Marker({
@@ -249,8 +269,6 @@ AutobusClient.prototype.centerMap = function (latlng, r) {
     
     var bounds = new google.maps.Circle({ center: latlng, radius: r }).getBounds();
         
-    // this.map.setCenter(latlng);
-    // this.mapBounds = this.proximityCircle.getBounds();
     this.mapBounds = bounds;
     this.map.fitBounds(this.mapBounds);
 
@@ -263,9 +281,12 @@ AutobusClient.prototype.onPositionUpdate = function (position) {
     
     if (!point.equals(this.currentPositionMarker.getPosition())) {
         this.proximities.currentLocation.setCenter(point);
-        this.proximities.origin.setCenter(point);
         this.currentPositionMarker.setPosition(point);
         this.displayRelevantStops();
+    }
+
+    if (!this.pseudoPosMarker.getVisible()) {
+        this.proximities.origin.setCenter(point);
     }
 
     if (!this.currentPositionMarker.getVisible()) { // first time
