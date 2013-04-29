@@ -1,7 +1,6 @@
 /*global $ window document google MapIconMaker AutobusClient 
   google console InfoBubble setInterval clearInterval objCallback*/
 
-
 var disableButtons = function () {
     $("div[data-role=footer]>a").addClass('ui-disabled');
     $("#ajaxLoader").show();
@@ -12,8 +11,6 @@ var enableButtons = function () {
     $("div[data-role=footer]>a").removeClass('ui-disabled');
     $("#ajaxLoader").hide();
 };
-
-
 
 var app = new AutobusClient();
 
@@ -559,6 +556,8 @@ var setMapParent = function (pageId, append) {
 };
 
 $(document).ready(function (evt) {
+    // preload the spinner gif
+    $('<img />').attr('src',"images/sftrails-loader.gif").appendTo('body').css('display','none');
     disableButtons();
     app.init(11, 35.6660, -105.9632, 
              google.maps.MapTypeId.ROADMAP,
