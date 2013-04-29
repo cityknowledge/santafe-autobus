@@ -228,11 +228,16 @@ app.addNextBusTimes = function (ele_id, times, headsign, route_id, stop_id) {
     
     $(ele_id + "-title").html(headsign);
     
+    function onclick(time) {
+        return function() { app.scheduleTrip(route_id, stop_id, time); };
+    }
+
     for (j = 0; j < count; j += 1) {
         var curTime = times[j].time;
+        console.log(curTime);
         $('<li data-theme="c"></li>').append(
             $('<a href="#">'+curTime+'</a>')
-            .click(function() { app.scheduleTrip(route_id, stop_id, curTime); })
+            .click(onclick(curTime))
         ).appendTo(ele_id);
     }
     
@@ -434,9 +439,10 @@ app.scheduleTrip = function(route_id, stop_id, arrivalTime) {
         direction + ' bus' +
         ' on <b>line ' + route_id + '</b>' +
         ' will arrive at <b>' + stop.name + '</b>' +
-        ' in <span id="minutes"></span> minutes.' +
-        ' You should leave in:' +
-        '<span id="countDownText"></span>';
+        ' in <span id="minutes"></span> minutes.';
+        // ' in <span id="minutes"></span> minutes.' +
+        // ' You should leave in:' +
+        // '<span id="countDownText"></span>';
 
     $("#trip_content").empty();
     $("#trip_content").append(content);
@@ -517,6 +523,9 @@ app.decrementCoundownTimer = function () {
     
     now = new Date();
     time = app.selectedBusDateTime.getTime() - now.getTime();
+
+    console.log(time);
+
     if (time <= 0) {
         txtTime = "00:00:00";
         this.stopCountdownTimer();
@@ -531,9 +540,10 @@ app.decrementCoundownTimer = function () {
         txtTime = pad(hours) + ":" +  pad(minutes) + ":" +  pad(seconds);
         // txtTime = pad(hours) + ":" +  pad(minutes) + ":" +  pad(seconds);
     }
-            
-    $("#minutes").text(minutes);
-    $("#countDownText").html(txtTime);
+       
+    $("#minutes").text(txtTime);     
+    // $("#minutes").text(minutes);
+    // $("#countDownText").html(txtTime);
 };
 
 app.stopCountdownTimer = function () {
