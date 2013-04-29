@@ -159,6 +159,7 @@ AutobusClient.prototype.initMarkers = function() {
         map: this.map,
         // icon: this.markerIconBall,
         icon: this.emptyMarkerIcon,
+        zIndex: 500,
         visible: false
     });
     this.currentPositionMarker = new google.maps.Marker({
@@ -170,7 +171,11 @@ AutobusClient.prototype.initMarkers = function() {
 }
 
 AutobusClient.prototype.centerMapOnCurrentPositon = function () {
-    this.map.setCenter(this.currentPositionMarker.getPosition());
+    var center = this.currentPositionMarker.getPosition();
+    this.map.panTo(center);
+    this.currentPositionMarker.setIcon(this.fullMarkerIcon);
+    this.pseudoPosMarker.setVisible(false);
+    this.proximities.origin.setCenter(center);
 };
 
 AutobusClient.prototype.getCurrentPosition = function () {

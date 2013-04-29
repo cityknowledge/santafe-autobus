@@ -61,9 +61,9 @@
 }
 
 .ui-input-search {
-    width: 37%;
+    width: 25%;
     display: inline-block;
-    margin-left: 15px;
+    margin-left: 10px;
 }
 
 .ui-header {
@@ -82,7 +82,7 @@
     float: left;
     position: relative;
     top: 4px;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 #info_panel {
