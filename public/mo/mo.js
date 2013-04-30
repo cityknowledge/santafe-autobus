@@ -237,7 +237,7 @@ app.addNextBusTimes = function (ele_id, times, headsign, route_id, stop_id) {
         var timeButton = $('<a href="#" data-icon="false"></a>')
             .append('<span class="time_text">'+curTime+'</span>')
             .append(icons)
-            .click(function() { app.scheduleTrip(route_id, stop_id, curTime); });
+            .click(function() { app.scheduleTrip(route_id, stop_id, curTime, "BICYCLING"); });
         $('<li data-theme="c"></li>')
             .append(timeButton)
             .appendTo(ele_id);
@@ -252,6 +252,9 @@ app.addNextBusTimes = function (ele_id, times, headsign, route_id, stop_id) {
 
 app.evaluateTravelModes = function(destLatLng) {
     var self = this;
+
+    self.directionsOrigin = this.proximities.origin.getCenter();
+    self.directionsDestination = destLatLng;
 
     function updateIcons(mode) {
         var cutoffs = { // if secondsToDepart < cutoffs, you need to hurry
@@ -291,18 +294,26 @@ app.evaluateTravelModes = function(destLatLng) {
         }
     }
 
-    var dirReq = {
+    var bikeReq = {
         origin: this.proximities.origin.getCenter(),
         destination: destLatLng,
         travelMode: google.maps.TravelMode.BICYCLING
     }
-    this.directionsService.route(dirReq, updateIcons("BICYCLING"));
+    this.directionsService.route(bikeReq, updateIcons("BICYCLING"));
 
-    dirReq.travelMode = google.maps.TravelMode.WALKING;
-    this.directionsService.route(dirReq, updateIcons("WALKING"));
+    var walkReq = {
+        origin: this.proximities.origin.getCenter(),
+        destination: destLatLng,
+        travelMode: google.maps.TravelMode.WALKING
+    }
+    this.directionsService.route(walkReq, updateIcons("WALKING"));
 
-    dirReq.travelMode = google.maps.TravelMode.DRIVING;
-    this.directionsService.route(dirReq, updateIcons("DRIVING"));
+    var carReq = {
+        origin: this.proximities.origin.getCenter(),
+        destination: destLatLng,
+        travelMode: google.maps.TravelMode.DRIVING
+    }
+    this.directionsService.route(carReq, updateIcons("DRIVING"));
 }
 
 app.displayNextBuses = function (route_id, stop_id) {
@@ -352,6 +363,7 @@ app.displayNextBuses = function (route_id, stop_id) {
         this.addNextBusTimes("next-bus-listview-outbound", arrivals.times[1], arrivals.headsigns[1], route_id, stop_id);    
     }
 
+    // this.googleDirections = { DRIVING: null, WALKING: null, BICYCLING: null }; // stores directionService routes
     this.evaluateTravelModes(new google.maps.LatLng(parseFloat(stop.lat), parseFloat(stop.lon)));
 };
 
@@ -445,60 +457,13 @@ app.displayRelevantStops = function() {
     }
 }
 
-app.scheduleTrip = function(route_id, stop_id, arrivalTime) {
-
-    var TransitModeToggle = function() {
-        var template =
-            '<fieldset id="mode_fieldset" data-role="controlgroup" data-type="horizontal" >' +
-                '<input type="radio" name="radio-choice" id="radio-pedestrian" value="choice-1" onClick="app.toggleInbound()" />' +
-                '<label for="radio-pedestrian"><img src="images/walking.png" /></label>' +
-                '<input type="radio" name="radio-choice" id="radio-bicycle" value="choice-2" checked="checked" onClick="app.toggleOutbound()" />' +
-                '<label for="radio-bicycle"><img src="images/bicycle.png" /></label>' +
-            '</fieldset>';
-        return $(template);
-    };
-
-    var TripDescription = function() {
-        var template =
-            '<li data-theme="c"></li>';
-        return $(template);
-    }
-
-    var CallButton = function() {
-        return $("<a>")
-            .attr({
-                "data-role":"button",
-                "data-theme":"d",
-                "data-mini":"true",
-                "data-inline":"true",
-                "href":""
-            })
-            .text("Request a pickup")
-    }
-
-    var CloseButton = function() {
-        return $("<a>")
-            .attr({
-                "data-role":"button",
-                "data-icon":"delete",
-                "data-theme":"b",
-                "data-mini":"true",
-                "data-inline":"true",
-                "href":""
-            })
-            .text("Cancel")
-            .click(app.cancelTrip)
-    }
-
-    var ButtonGrid = function() {
-        return $(template);
-    }
+app.scheduleTrip = function(route_id, stop_id, arrivalTime, mode) {
     
     console.log("Scheduling",route_id, stop_id, arrivalTime);
-    app.setSelectedBusDateTime(arrivalTime);
-    app.startCountdownTimer();
-    app.hideInfoPanel();
-    var direction = app.direction == 'inbound' ? 'Inbound' : 'Outbound';
+    this.setSelectedBusDateTime(arrivalTime);
+    this.startCountdownTimer();
+    this.hideInfoPanel();
+    var direction = this.direction == 'inbound' ? 'Inbound' : 'Outbound';
     var stop = this.stopForStopId(route_id, stop_id);
     var content =
         direction + ' bus' +
@@ -509,7 +474,8 @@ app.scheduleTrip = function(route_id, stop_id, arrivalTime) {
     $("#trip_content").empty();
     $("#trip_content").append(content);
 
-    app.getGoogleDirections(new google.maps.LatLng(parseFloat(stop.lat), parseFloat(stop.lon)));
+    // this.showGoogleDirections(mode);
+    app.getGoogleDirections(this.directionsOrigin, this.directionsDestination, this.travelMode);
 
     var trip_panel = $("#trip_panel");
     trip_panel.show();
@@ -552,7 +518,22 @@ app.hideInfoPanel = function() {
 
 app.setTravelMode = function(mode) {
     this.travelMode = mode;
+    app.getGoogleDirections(this.directionsOrigin, this.directionsDestination, mode);
 }
+
+// app.showGoogleDirections = function(mode) {
+//     this.directionsRenderer.setMap(this.map);
+//     this.directionsRenderer.setOptions({
+//         suppressMarkers: true,
+//         suppressInfoWindows: true,
+//         suppressBicyclingLayer: true
+//     });
+//     this.directionsRenderer.setDirections(this.googleDirections[mode]);
+//     // this.directionsRenderer.setOptions({
+//     //     suppressMarkers: true
+//     // });
+//     $(this.directionsRenderer.getPanel()).show();
+// }
 
 app.toggleInbound = function() {
     this.direction = "inbound";

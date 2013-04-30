@@ -36,7 +36,7 @@ var AutobusClient = function () {
     this.buses = [];
 
     this.direction = "inbound";
-    this.travelMode = "bike";
+    this.travelMode = "BICYCLING";
     
     this.currentPositionMarker = null;
     
@@ -521,13 +521,15 @@ AutobusClient.prototype.showAllPaths = function () {
     // this.map.setZoom(this.map.getZoom() + 1);
 };
 
-AutobusClient.prototype.getGoogleDirections = function(destLatLng) {
+AutobusClient.prototype.getGoogleDirections = function(originLatLng, destLatLng, mode) {
     var self = this;
+    console.log(mode, google.maps.TravelMode[mode]);
     var dirReq = {
-        origin: this.proximities.origin.getCenter(),
+        origin: originLatLng,
         destination: destLatLng,
-        travelMode: this.travelMode == 'bike' ? google.maps.TravelMode.BICYCLING : google.maps.TravelMode.WALKING
+        travelMode: mode ? google.maps.TravelMode[mode] : google.maps.TravelMode.BICYCLING
     }
+    console.log("GETTING DIRECTIONS");
     this.directionsService.route(dirReq, function(result, status) {
         if (status == google.maps.DirectionsStatus.OK) {
             self.directionsRenderer.setMap(self.map);
