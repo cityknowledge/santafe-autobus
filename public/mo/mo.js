@@ -227,18 +227,20 @@ app.addNextBusTimes = function (ele_id, times, headsign, route_id, stop_id) {
     }
     
     $(ele_id + "-title").html(headsign);
-    
-    function onclick(time) {
-        return function() { app.scheduleTrip(route_id, stop_id, time); };
-    }
 
     for (j = 0; j < count; j += 1) {
-        var curTime = times[j].time;
-        console.log(curTime);
-        $('<li data-theme="c"></li>').append(
-            $('<a href="#">'+curTime+'</a>')
-            .click(onclick(curTime))
-        ).appendTo(ele_id);
+        var curTime = times[j].time+"";
+        var icons = $('<div class="icon_group"></div>')
+            .append('<img class="travel_icon WALKING" src="images/walking2.png" />')
+            .append('<img class="travel_icon BICYCLING" src="images/bicycle2.png" />')
+            .append('<img class="travel_icon DRIVING" src="images/car.png" />');
+        var timeButton = $('<a href="#" data-icon="false"></a>')
+            .append('<span class="time_text">'+curTime+'</span>')
+            .append(icons)
+            .click(function() { app.scheduleTrip(route_id, stop_id, curTime); });
+        $('<li data-theme="c"></li>')
+            .append(timeButton)
+            .appendTo(ele_id);
     }
     
     try {
@@ -247,6 +249,61 @@ app.addNextBusTimes = function (ele_id, times, headsign, route_id, stop_id) {
         // Eat the exception
     }
 };
+
+app.evaluateTravelModes = function(destLatLng) {
+    var self = this;
+
+    function updateIcons(mode) {
+        var cutoffs = { // if secondsToDepart < cutoffs, you need to hurry
+            DRIVING: { red: 5*60 },
+            BICYCLING: { red: 3*60 },
+            WALKING: { red: 1*60 }
+        };
+
+        return function(result, status) {
+            var travelTime = 0;
+            if (status == google.maps.DirectionsStatus.OK) {
+                var route = result.routes[0];
+                for (var i = 0; i < route.legs.length; i++) {
+                    travelTime += route.legs[i].duration.value;
+                }
+                console.log(mode,"travelTime",travelTime/60);
+
+                var now = new Date();
+                console.log("now",now);
+
+                $("#info_panel a").each(function() {
+                    if ($(this).children(".time_text").length > 0) {
+                        var scheduledTime = self.parseTimeString($(this).children(".time_text").text());
+                        var secondsToDepart = (scheduledTime.getTime() - now.getTime())/1000 - travelTime;
+                        console.log(mode,"minutesToDepart",secondsToDepart/60);
+                        
+                        var icon = $(this).children(".icon_group").children("."+mode);
+                        if (secondsToDepart <= 0) {
+                            icon.addClass("disabled");
+                        }
+                        else if (secondsToDepart <= cutoffs[mode]["red"]) {
+                            icon.addClass("hurried");
+                        }
+                    }
+                });
+            }
+        }
+    }
+
+    var dirReq = {
+        origin: this.proximities.origin.getCenter(),
+        destination: destLatLng,
+        travelMode: google.maps.TravelMode.BICYCLING
+    }
+    this.directionsService.route(dirReq, updateIcons("BICYCLING"));
+
+    dirReq.travelMode = google.maps.TravelMode.WALKING;
+    this.directionsService.route(dirReq, updateIcons("WALKING"));
+
+    dirReq.travelMode = google.maps.TravelMode.DRIVING;
+    this.directionsService.route(dirReq, updateIcons("DRIVING"));
+}
 
 app.displayNextBuses = function (route_id, stop_id) {
     var arrivals, j, onclick, rt = this.routes[route_id], count, stop;
@@ -294,15 +351,23 @@ app.displayNextBuses = function (route_id, stop_id) {
         $("#next-bus-listview-outbound-title").append(new CloseButton());
         this.addNextBusTimes("next-bus-listview-outbound", arrivals.times[1], arrivals.headsigns[1], route_id, stop_id);    
     }
+
+    this.evaluateTravelModes(new google.maps.LatLng(parseFloat(stop.lat), parseFloat(stop.lon)));
 };
 
-app.setSelectedBusDateTime = function (txt) {
+// converts hh:mm:ss to a Date object
+app.parseTimeString = function(txt) {
     var timeParts = txt.split(":");
     console.log(txt, timeParts);
-    this.selectedBusDateTime = new Date();
-    this.selectedBusDateTime.setHours(parseInt(timeParts[0], 10));
-    this.selectedBusDateTime.setMinutes(parseInt(timeParts[1], 10));
-    this.selectedBusDateTime.setSeconds(parseInt(timeParts[2], 10));
+    var dateObj = new Date();
+    dateObj.setHours(parseInt(timeParts[0], 10));
+    dateObj.setMinutes(parseInt(timeParts[1], 10));
+    dateObj.setSeconds(parseInt(timeParts[2], 10));
+    return dateObj;
+}
+
+app.setSelectedBusDateTime = function (txt) {
+    this.selectedBusDateTime = this.parseTimeString(txt);
 };
 
 app.displaySinglePath = function (route_id) {
@@ -386,9 +451,9 @@ app.scheduleTrip = function(route_id, stop_id, arrivalTime) {
         var template =
             '<fieldset id="mode_fieldset" data-role="controlgroup" data-type="horizontal" >' +
                 '<input type="radio" name="radio-choice" id="radio-pedestrian" value="choice-1" onClick="app.toggleInbound()" />' +
-                '<label for="radio-pedestrian">Walk</label>' +
+                '<label for="radio-pedestrian"><img src="images/walking.png" /></label>' +
                 '<input type="radio" name="radio-choice" id="radio-bicycle" value="choice-2" checked="checked" onClick="app.toggleOutbound()" />' +
-                '<label for="radio-bicycle">Bike</label>' +
+                '<label for="radio-bicycle"><img src="images/bicycle.png" /></label>' +
             '</fieldset>';
         return $(template);
     };
@@ -439,10 +504,7 @@ app.scheduleTrip = function(route_id, stop_id, arrivalTime) {
         direction + ' bus' +
         ' on <b>line ' + route_id + '</b>' +
         ' will arrive at <b>' + stop.name + '</b>' +
-        ' in <span id="minutes"></span> minutes.';
-        // ' in <span id="minutes"></span> minutes.' +
-        // ' You should leave in:' +
-        // '<span id="countDownText"></span>';
+        ' in <span id="minutes"></span>.';
 
     $("#trip_content").empty();
     $("#trip_content").append(content);
@@ -523,8 +585,6 @@ app.decrementCoundownTimer = function () {
     
     now = new Date();
     time = app.selectedBusDateTime.getTime() - now.getTime();
-
-    console.log(time);
 
     if (time <= 0) {
         txtTime = "00:00:00";

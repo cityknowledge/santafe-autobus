@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
         <link rel="stylesheet" href="mo.css" />
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-        <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+        <script src="jquery.mobile-1.1.0-custom.js"></script>
         <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
         <script src="/js/mapiconmaker.js"></script>
         <script src="/js/AutobusClient.js"></script>
@@ -71,10 +71,12 @@
                     <div class="ui-grid-b" data-theme="b">
                         <div class="ui-block-a">
                             <fieldset id="mode_fieldset" data-role="controlgroup" data-type="horizontal" >
+                                <input type="radio" name="radio-choice" id="radio-car" value="choice-0" onClick="app.setTravelMode('car')" />
+                                <label id="car_button" for="radio-car"><img src="images/car-white.png" /></label>
                                 <input type="radio" name="radio-choice" id="radio-pedestrian" value="choice-1" onClick="app.setTravelMode('walk')" />
-                                <label for="radio-pedestrian">Walk</label>
+                                <label id="walking_button" for="radio-pedestrian"><img src="images/walking2-white.png" /></label>
                                 <input type="radio" name="radio-choice" id="radio-bicycle" value="choice-2" checked="checked" onClick="app.setTravelMode('bike')"/>
-                                <label for="radio-bicycle">Bike</label>
+                                <label id="bicycle_button" for="radio-bicycle"><img src="images/bicycle2-white.png" /></label>
                             </fieldset>
                         </div>
                         <div class="ui-block-b">

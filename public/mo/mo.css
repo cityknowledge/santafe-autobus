@@ -70,14 +70,6 @@
     z-index: 1000;
 }
 
-#mode_fieldset {
-    
-}
-
-#mode_fieldset .ui-btn-text {
-    font-size: 14px;
-}
-
 #inout_fieldset {
     float: left;
     position: relative;
@@ -107,6 +99,64 @@
 .trip_panel_bulk {
     padding: 5px 10px;
     background: white;
+}
+
+#trip_content {
+    margin-bottom: 8px;
+}
+
+#mode_fieldset {
+    
+}
+
+#mode_fieldset img {
+    height: 25px;
+}
+
+#bicycle_button .ui-btn-inner {
+    padding: 4px 10px;
+}
+
+#car_button .ui-btn-inner {
+    padding: 4px 14px;
+}
+
+#walking_button .ui-btn-inner {
+    padding: 3px 22px 1px 22px;
+}
+
+#walking_button img {
+    height: 29px;
+}
+
+#info_panel .time_text {
+    display: inline-block;
+    padding: 5px 0px;
+}
+
+#info_panel .icon_group {
+    display: inline-block;
+    margin-left: 20px;
+    vertical-align: bottom;
+}
+
+#info_panel .travel_icon {
+    height: 18px;
+    border-radius: 4px;
+    margin-right: 4px;
+    padding: 5px 10px;
+    border: 1px solid rgb(200,200,200);
+    vertical-align: bottom;
+    background-image: -webkit-linear-gradient(top,rgb(135, 223, 139),rgb(0, 153, 7));
+}
+
+#info_panel .travel_icon.disabled {
+    -webkit-filter: opacity(0.3);
+    background-image: none;
+}
+
+#info_panel .travel_icon.hurried {
+    background-image: -webkit-linear-gradient(top,rgb(255, 211, 36),rgb(204, 167, 50));
 }
 
 div.map_panel {
