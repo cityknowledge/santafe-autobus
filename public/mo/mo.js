@@ -478,10 +478,18 @@ app.scheduleTrip = function(route_id, stop_id, arrivalTime, mode) {
     app.getGoogleDirections(this.directionsOrigin, this.directionsDestination, this.travelMode);
 
     var trip_panel = $("#trip_panel");
-    trip_panel.show();
-    trip_panel.animate({
-        bottom: "32px"
-    });
+    if (!trip_panel.is(":visible")) {
+        trip_panel.show();
+        trip_panel.animate({
+            bottom: "32px"
+        });
+        var map_canvas = $("#map_canvas");
+        var trip_panel_height = trip_panel.height();
+        var map_canvas_height = map_canvas.height();
+        map_canvas.animate({
+            height: (map_canvas_height-trip_panel_height)+"px"
+        });
+    }
 }
 
 app.cancelTrip = function() {
@@ -492,6 +500,9 @@ app.cancelTrip = function() {
     }, function() {
         trip_panel.hide();
         self.stopCountdownTimer();
+    });
+    $("#map_canvas").animate({
+        height: "100%"
     });
     this.clearGoogleDirections();
 }
