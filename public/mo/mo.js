@@ -228,8 +228,12 @@ app.addNextBusTimes = function (ele_id, times, headsign, route_id, stop_id) {
     
     $(ele_id + "-title").html(headsign);
 
+    function onclick(time) {
+        return function() { app.scheduleTrip(route_id, stop_id, time); }
+    }
+
     for (j = 0; j < count; j += 1) {
-        var curTime = times[j].time+"";
+        var curTime = times[j].time;
         var icons = $('<div class="icon_group"></div>')
             .append('<img class="travel_icon WALKING" src="images/walking2.png" />')
             .append('<img class="travel_icon BICYCLING" src="images/bicycle2.png" />')
@@ -237,7 +241,7 @@ app.addNextBusTimes = function (ele_id, times, headsign, route_id, stop_id) {
         var timeButton = $('<a href="#" data-icon="false"></a>')
             .append('<span class="time_text">'+curTime+'</span>')
             .append(icons)
-            .click(function() { app.scheduleTrip(route_id, stop_id, curTime, "BICYCLING"); });
+            .click(onclick(curTime));
         $('<li data-theme="c"></li>')
             .append(timeButton)
             .appendTo(ele_id);
@@ -457,7 +461,7 @@ app.displayRelevantStops = function() {
     }
 }
 
-app.scheduleTrip = function(route_id, stop_id, arrivalTime, mode) {
+app.scheduleTrip = function(route_id, stop_id, arrivalTime) {
     
     console.log("Scheduling",route_id, stop_id, arrivalTime);
     this.setSelectedBusDateTime(arrivalTime);
@@ -474,7 +478,6 @@ app.scheduleTrip = function(route_id, stop_id, arrivalTime, mode) {
     $("#trip_content").empty();
     $("#trip_content").append(content);
 
-    // this.showGoogleDirections(mode);
     app.getGoogleDirections(this.directionsOrigin, this.directionsDestination, this.travelMode);
 
     var trip_panel = $("#trip_panel");
