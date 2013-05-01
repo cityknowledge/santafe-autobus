@@ -64,11 +64,21 @@
             </div>
             <div data-theme="b" id="trip_panel">
                 <div class="ui-bar ui-bar-b">
-                    Upcoming trips
+                    Upcoming trip
                 </div>
                 <div class="trip_panel_bulk">
-                    <div id="trip_content" class="ui-grid-solo" data-theme="b"></div>
-                    <div class="ui-grid-b" data-theme="b">
+                    <div id="trip_content" class="ui-grid-solo" data-theme="b">
+                        <p id="bus_msg"></p>
+                        <p id="departure_msg"></p>
+                        <div class="switch_wrapper">
+                            <label for="flip-min" class="ui-hidden-accessible"></label>
+                            <select name="flip-min" id="flip-min" data-mini="true" data-role="slider">
+                                <option value="off">Alerts Off</option>
+                                <option value="on">Alerts On</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ui-grid-a" data-theme="b">
                         <div class="ui-block-a">
                             <fieldset id="mode_fieldset" data-role="controlgroup" data-type="horizontal" >
                                 <input type="radio" name="radio-choice" id="radio-car" value="choice-0" onClick="app.setTravelMode('DRIVING')" />
@@ -80,9 +90,6 @@
                             </fieldset>
                         </div>
                         <div class="ui-block-b">
-                            <a data-role="button" data-theme="e" data-mini="true" href="">Request a pickup</a>
-                        </div>
-                        <div class="ui-block-c">
                             <a data-role="button" data-theme="b" data-mini="true" href="" onClick="app.cancelTrip()">Cancel</a>
                         </div>
                     </div>

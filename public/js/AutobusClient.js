@@ -356,13 +356,17 @@ AutobusClient.prototype.dateFromTimeString = function (timeString) {
 
     ret = new Date();
     if (hours > 24) {
-        hours = 24 - hours;
-        ret.setDate(ret.getDate() + 1);
+        console.log(timeString);
+        console.log("hours",hours);
+        // hours = 24 - hours;
+        hours = hours - 24;
+        // ret.setDate(ret.getDate() + 1);
+        ret.setTime(ret.getTime() + 86400000);
     }
     ret.setHours(hours);
     ret.setMinutes(parseInt(dd[1], 10));
     ret.setSeconds(parseInt(dd[2], 10));
-
+    console.log(ret);
     return ret;
 };
 
@@ -436,7 +440,7 @@ AutobusClient.prototype.getTripsForRoute = function (route_id) {
 
 AutobusClient.prototype.getNextArrivalsForStop = function (route_id, stop_id, time) {
     var i, j, k, trips = [], stop_time, times = [], headsigns = [], 
-    arrival_time, service_id, direction_id, direction_ids = ["0", "1"];
+    arrival_time, service_id, direction_id, direction_ids = ["0", "1"], minLength = 7;
 
     if (typeof(time) === "undefined") {
         time = new Date();
@@ -461,7 +465,6 @@ AutobusClient.prototype.getNextArrivalsForStop = function (route_id, stop_id, ti
             for (j = 0; j < trips[i].stop_times.length; j += 1) {
                 stop_time = trips[i].stop_times[j];
                 if (stop_time.stop_id === stop_id) {
-                    // console.log(stop_time.arrival_time);
                     arrival_time = this.dateFromTimeString(stop_time.arrival_time);
                     if (arrival_time > time) {
                         times[k].push({time: stop_time.arrival_time,
@@ -470,11 +473,40 @@ AutobusClient.prototype.getNextArrivalsForStop = function (route_id, stop_id, ti
                 }
             }
         }
+
+        var numMissing = minLength - times[k].length;
+        console.log("numMissing",numMissing);
+        if (numMissing > 0) {
+            for (i = 0; i < trips.length; i += 1) {
+                if (service_id !== trips[i].service_id) {
+                    continue;
+                }
+                if (direction_id !== trips[i].direction_id) {
+                    continue;
+                }
+                for (j = 0; j < trips[i].stop_times.length; j += 1) {
+                    stop_time = trips[i].stop_times[j];
+                    if (stop_time.stop_id === stop_id) {
+                        arrival_time = this.dateFromTimeString(this.makeFutureTime(stop_time.arrival_time));
+                        times[k].push({time: stop_time.arrival_time,
+                                      direction: trips[i].direction_id});
+                        if (times[k].length >= minLength) break;
+                    }
+                }
+                if (times[k].length >= minLength) break;
+            }
+        }
     }
     
     return {times:      times,
             headsigns:  headsigns};
 };
+
+AutobusClient.prototype.makeFutureTime = function(str) {
+    var splitStr = str.split(":");
+    splitStr[0] = parseInt(splitStr[0],10)+24;
+    return splitStr.join(":");
+}
 
 AutobusClient.prototype.setMapForMarkers = function (route_id, map) {
     var i;

@@ -257,6 +257,8 @@ app.addNextBusTimes = function (ele_id, times, headsign, route_id, stop_id) {
 app.evaluateTravelModes = function(destLatLng) {
     var self = this;
 
+    self.travelTimes = {};
+
     self.directionsOrigin = this.proximities.origin.getCenter();
     self.directionsDestination = destLatLng;
 
@@ -274,16 +276,14 @@ app.evaluateTravelModes = function(destLatLng) {
                 for (var i = 0; i < route.legs.length; i++) {
                     travelTime += route.legs[i].duration.value;
                 }
-                console.log(mode,"travelTime",travelTime/60);
+                self.travelTimes[mode] = travelTime;
 
                 var now = new Date();
-                console.log("now",now);
 
                 $("#info_panel a").each(function() {
                     if ($(this).children(".time_text").length > 0) {
                         var scheduledTime = self.parseTimeString($(this).children(".time_text").text());
                         var secondsToDepart = (scheduledTime.getTime() - now.getTime())/1000 - travelTime;
-                        console.log(mode,"minutesToDepart",secondsToDepart/60);
                         
                         var icon = $(this).children(".icon_group").children("."+mode);
                         if (secondsToDepart <= 0) {
@@ -438,7 +438,6 @@ app.findLocation = function(searchString) {
 }
 
 app.displayRelevantStops = function() {
-
     var i, route_id, m, stops = [];
     
     // // Hide any stops that are displayed    
@@ -461,12 +460,31 @@ app.displayRelevantStops = function() {
     }
 }
 
+app.showDepartureMessage = function() {
+    function pad(n) {
+        var s = n.toString();
+        return s.length < 2 ? '0' + s : s;
+    }
+
+    var now = new Date();
+    var millisToDeparture = this.selectedBusDateTime.getTime() - now.getTime() - this.travelTimes[this.travelMode]*1000;
+    var departureDate = new Date();
+    departureDate.setTime(now.getTime()+millisToDeparture);
+    var content =
+        'You should begin '+this.travelMode.toLowerCase()+
+        ' at '+departureDate.getHours()+':'+pad(departureDate.getMinutes())+'.';
+
+    $("#trip_content #departure_msg").empty();
+    $("#trip_content #departure_msg").append(content);
+}
+
 app.scheduleTrip = function(route_id, stop_id, arrivalTime) {
-    
+    var self = this;
     console.log("Scheduling",route_id, stop_id, arrivalTime);
     this.setSelectedBusDateTime(arrivalTime);
     this.startCountdownTimer();
     this.hideInfoPanel();
+    this.showDepartureMessage();
     var direction = this.direction == 'inbound' ? 'Inbound' : 'Outbound';
     var stop = this.stopForStopId(route_id, stop_id);
     var content =
@@ -475,10 +493,8 @@ app.scheduleTrip = function(route_id, stop_id, arrivalTime) {
         ' will arrive at <b>' + stop.name + '</b>' +
         ' in <span id="minutes"></span>.';
 
-    $("#trip_content").empty();
-    $("#trip_content").append(content);
-
-    app.getGoogleDirections(this.directionsOrigin, this.directionsDestination, this.travelMode);
+    $("#trip_content #bus_msg").empty();
+    $("#trip_content #bus_msg").append(content);
 
     var trip_panel = $("#trip_panel");
     if (!trip_panel.is(":visible")) {
@@ -491,8 +507,12 @@ app.scheduleTrip = function(route_id, stop_id, arrivalTime) {
         var map_canvas_height = map_canvas.height();
         map_canvas.animate({
             height: (map_canvas_height-trip_panel_height)+"px"
+        }, function() {
+            google.maps.event.trigger(self.map, 'resize');
         });
     }
+
+    app.getGoogleDirections(this.directionsOrigin, this.directionsDestination, this.travelMode);
 }
 
 app.cancelTrip = function() {
@@ -506,6 +526,8 @@ app.cancelTrip = function() {
     });
     $("#map_canvas").animate({
         height: "100%"
+    }, function() {
+        google.maps.event.trigger(self.map, 'resize');
     });
     this.clearGoogleDirections();
 }
@@ -532,7 +554,8 @@ app.hideInfoPanel = function() {
 
 app.setTravelMode = function(mode) {
     this.travelMode = mode;
-    app.getGoogleDirections(this.directionsOrigin, this.directionsDestination, mode);
+    this.getGoogleDirections(this.directionsOrigin, this.directionsDestination, mode);
+    this.showDepartureMessage();
 }
 
 // app.showGoogleDirections = function(mode) {
@@ -579,7 +602,7 @@ app.decrementCoundownTimer = function () {
     };
     
     now = new Date();
-    time = app.selectedBusDateTime.getTime() - now.getTime();
+    time = this.selectedBusDateTime.getTime() - now.getTime();
 
     if (time <= 0) {
         txtTime = "00:00:00";

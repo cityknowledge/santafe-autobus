@@ -105,6 +105,24 @@
     margin-bottom: 8px;
 }
 
+#trip_content p {
+    margin: 0px;
+}
+
+#trip_content #departure_msg {
+    position: relative;
+    display: inline;
+    top: -5px;
+}
+
+.switch_wrapper {
+    display: inline-block;
+}
+
+.switch_wrapper .ui-slider-switch.ui-slider-mini {
+    width: 7em;
+}
+
 #mode_fieldset {
     
 }
