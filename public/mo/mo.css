@@ -123,6 +123,16 @@
     width: 7em;
 }
 
+.upper_right_button {
+    position: absolute;
+    right: 0px;
+    top: -3px;
+}
+
+.van_button img {
+    width: 35px;
+}
+
 #mode_fieldset {
     
 }

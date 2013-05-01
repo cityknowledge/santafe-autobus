@@ -460,6 +460,21 @@ app.displayRelevantStops = function() {
     }
 }
 
+app.requestVan = function() {
+    function pad(n) {
+        var s = n.toString();
+        return s.length < 2 ? '0' + s : s;
+    }
+
+    var content =
+        'A van will pick you up at '+
+        this.selectedBusDateTime.getHours()+':'+pad(this.selectedBusDateTime.getMinutes()-5)+
+        '.';
+
+    $("#trip_content #departure_msg").empty();
+    $("#trip_content #departure_msg").append(content);   
+}
+
 app.showDepartureMessage = function() {
     function pad(n) {
         var s = n.toString();
