@@ -662,7 +662,7 @@ $(document).ready(function (evt) {
     // preload the spinner gif
     $('<img />').attr('src',"images/sftrails-loader.gif").appendTo('body').hide();
     disableButtons();
-    app.init(11, 35.6660, -105.9632, 
+    app.init(15, 35.6660, -105.9632, 
              google.maps.MapTypeId.ROADMAP,
              { mapTypeControl: false
              , streetViewControl: false

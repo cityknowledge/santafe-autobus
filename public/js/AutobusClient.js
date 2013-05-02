@@ -106,7 +106,7 @@ AutobusClient.prototype.init = function (zoom, lat, lng, mapType, mapOptions) {
         currentLocation: new google.maps.Circle({ map: this.map, radius: defaultRadius, visible: false })
     };
 
-    this.initMarkers();
+    this.initPosMarkers();
     this.initDragEvents();
 
     // Set up the acequia client and connect to the server
@@ -138,7 +138,7 @@ AutobusClient.prototype.initDragEvents = function() {
     }.bind(this));
 }
 
-AutobusClient.prototype.initMarkers = function() {
+AutobusClient.prototype.initPosMarkers = function() {
     var scale = 1;
     this.emptyMarkerIcon = {
         url: "images/location_icon_empty2.png",
@@ -269,7 +269,7 @@ AutobusClient.prototype.onBusLocations = function (message) {
 // };
 
 AutobusClient.prototype.centerMap = function (latlng, r) {
-    r = r ? r * 1609.0 : 0.45 * 1609; // 1609 meters per mile
+    r = r ? r * 1609.0 : 0.25 * 1609; // 1609 meters per mile
     latlng = latlng ? latlng : this.proximities.origin.getCenter();
     
     var bounds = new google.maps.Circle({ center: latlng, radius: r }).getBounds();
@@ -296,7 +296,7 @@ AutobusClient.prototype.onPositionUpdate = function (position) {
 
     if (!this.currentPositionMarker.getVisible()) { // first time
         this.currentPositionMarker.setVisible(true);
-        this.centerMap(point, 0.45);
+        this.centerMap(point, 0.25);
     }
     
     setTimeout(objCallback(this, "getCurrentPosition"), 2000);
