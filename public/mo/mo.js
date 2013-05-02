@@ -218,7 +218,7 @@ app.addNextBusTimes = function (ele_id, times, headsign, route_id, stop_id) {
     var j, count, onclick;
     ele_id = "#" + ele_id;
     
-    count = Math.min(7, times.length);
+    count = Math.min(5, times.length);
     
     if (count === 0) {
         $(ele_id).hide();
