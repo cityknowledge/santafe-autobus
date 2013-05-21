@@ -62,6 +62,10 @@ var startHTTPServer = function () {
         res.redirect('/mo');
     });
 
+    app.get('/santafe', function (req, res) {
+        res.redirect('/mo');
+    });
+
     // Configuration
     app.configure(function () {
         app.use(express.bodyParser());
