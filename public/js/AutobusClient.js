@@ -235,7 +235,8 @@ AutobusClient.prototype.onBusLocations = function (message) {
     };
     for (var i=0; i<buses.length; i++) {
         var busInfo = buses[i];
-        var point = new google.maps.LatLng(parseFloat(busInfo.LAT[0]), parseFloat(busInfo.LON[0]));
+        // var point = new google.maps.LatLng(parseFloat(busInfo.LAT[0]), parseFloat(busInfo.LON[0]));
+        var point = new google.maps.LatLng(parseFloat(busInfo.latitude), parseFloat(busInfo.longitude));
         if (this.buses[i]) this.buses[i].setPosition(point);
         else this.buses.push(new google.maps.Marker({
             position: point,
