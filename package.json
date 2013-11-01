@@ -7,9 +7,9 @@
   },
   "dependencies": {
     "acequia": "git://github.com/bennlich/acequia.git",
-    "express": "~2.5.8",
-    "csv": "~0.0.11",
-    "feedparser": "~0.9.6",
+    "express": "~3.0.0",
+    "csv": "~0.3.0",
+    "feedparser": "~0.16.0",
     "zipfile": "~0.3.1",
     "xml2js": "0.2.x"
   }
