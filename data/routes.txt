@@ -1,11 +1,19 @@
-route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_color
-01,sftrails,Rt01,Route 01,Santa Fe Place Transit Center <--> Sheridan Transit Center,3,87CEFA
-02,sftrails,Rt02,Route 02,Santa Fe Place Transit Center <--> Sheridan Transit Center,3,FF83FA
-04,sftrails,Rt04,Route 04,Santa Fe Place Mall - Transit Center <--> Sheridan Transit Center,3,9F79EE
-05,sftrails,Rt05,Route 05,St. Vincent Hospital <--> Sheridan Transit Center,3,98FB98
-06,sftrails,Rt06,Route 06,Santa Fe Place Mall - Transit Center <--> Sheridan Transit Center,3,4169E1
-21,sftrails,Rt21,Route 21,Santa Fe Community College <--> Santa Fe Place Mall - Transit Center,3,00C957
-22,sftrails,Rt22,Route 22,Santa Fe Community College <--> Santa Fe Place Mall - Transit Center,3,8B4513
-24,sftrails,Rt24,Route 24,Plaza del Sol West  NS Airport Rd. <--> Santa Fe Place Transit Center,3,FFFF00
-26,sftrails,Rt26,Route 26,Fashion Outlet Mall <--> Santa Fe Place Mall - Transit Center,3,FFA500
-M,sftrails,RtM,Route M,Camino Lejo @ Museums <--> Sheridan Transit Center,3,EE2C2C
+﻿route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+
+1,actv,L1,Linea 1,Vaporetto,4,,FFFFFF,
+2,actv,L2,Linea 2,Vaporetto,4,,F30000,FFFFFF
+3,actv,L3,Linea 3,Vaporetto,4,,FF8C00,
+4.1,actv,L4.1,Linea 4.1,Circolare,4,,A419D3,
+4.2,actv,L4.2,Linea 4.2,Circolare,4,,A419D3,
+5.1,actv,L5.1,Linea 5.1,Vaporetto,4,,75DAC7,
+5.2,actv,L5.2,Linea 5.2,Vaporetto,4,,75DAC7,
+6,actv,L6,Linea 6,Vaporetto,4,,14A8F3,
+9,actv,L9,Linea 9,Vaporetto,4,,B4C661,
+10,actv,L10,Linea 10,Vaporetto,4,,09DFEF,
+N,actv,LN,Linea N,Notturno,4,,081771,FFFFFF
+
+B,alilaguna,AB,Linea Blu,Vapporetto,4,,148FFA,
+A,alilaguna,AA,Linea Arancio,Vapporetto,4,,EF760C,
+R,alilaguna,AR,Linea Rossa,Vapporetto,4,,ED2600,
+G,alilaguna,AG,Linea Gialla,Vapporetto,4,,EBF342,
+V,alilaguna,AV,Linea Verde,Vapporetto,4,,059C14,

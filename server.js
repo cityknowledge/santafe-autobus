@@ -77,7 +77,7 @@ var startHTTPServer = function () {
     var http = require('http'),
         server = http.createServer(app);
 
-    server.listen(3000);
+    server.listen(3001);
 
     acequiaServer = require("acequia").createServer({
         express_app: app
@@ -95,7 +95,7 @@ var startHTTPServer = function () {
     acequiaServer.on("getBusLocations", onGetBusLocations);
     acequiaServer.start();
 
-    setInterval(getBusLocations, 15000);
+    // setInterval(getBusLocations, 15000);
 };
 
 var START = function () {

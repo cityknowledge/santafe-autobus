@@ -36,7 +36,7 @@ var AutobusClient = function () {
     this.buses = [];
 
     this.direction = "inbound";
-    this.travelMode = "BICYCLING";
+    this.travelMode = "WALKING";
     
     this.currentPositionMarker = null;
     

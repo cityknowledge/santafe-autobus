@@ -1,726 +1,933 @@
-route_id,service_id,trip_id,trip_headsign,direction_id
-01,WD,01WDI01, Agua Fria  Inbound,1
-01,WD,01WDI02, Agua Fria  Inbound,1
-01,WD,01WDI03, Agua Fria  Inbound,1
-01,WD,01WDI04, Agua Fria  Inbound,1
-01,WD,01WDI05, Agua Fria  Inbound,1
-01,WD,01WDI06, Agua Fria  Inbound,1
-01,WD,01WDI07, Agua Fria  Inbound,1
-01,WD,01WDI08, Agua Fria  Inbound,1
-01,WD,01WDI09, Agua Fria  Inbound,1
-01,WD,01WDI10, Agua Fria  Inbound,1
-01,WD,01WDI11, Agua Fria  Inbound,1
-01,WD,01WDI12, Agua Fria  Inbound,1
-01,WD,01WDI13, Agua Fria  Inbound,1
-01,WD,01WDI14, Agua Fria  Inbound,1
-01,WD,01WDI15, Agua Fria  Inbound,1
-01,WD,01WDI16, Agua Fria  Inbound,1
-01,WD,01WDI17, Agua Fria  Inbound,1
-01,WD,01WDI18, Agua Fria  Inbound,1
-01,WD,01WDI19, Agua Fria  Inbound,1
-01,WD,01WDI20, Agua Fria  Inbound,1
-01,WD,01WDI21, Agua Fria  Inbound,1
-01,WD,01WDI22, Agua Fria  Inbound,1
-01,WD,01WDI23, Agua Fria  Inbound,1
-01,WD,01WDI24, Agua Fria  Inbound,1
-01,WD,01WDI25, Agua Fria  Inbound,1
-01,WD,01WDI26, Agua Fria  Inbound,1
-01,WD,01WDI27, Agua Fria  Inbound,1
-01,WD,01WDI28, Agua Fria  Inbound,1
-01,WD,01WDI29, Agua Fria  Inbound,1
-01,SA,01SAI01, Agua Fria  Inbound,1
-01,SA,01SAI02, Agua Fria  Inbound,1
-01,SA,01SAI03, Agua Fria  Inbound,1
-01,SA,01SAI04, Agua Fria  Inbound,1
-01,SA,01SAI05, Agua Fria  Inbound,1
-01,SA,01SAI06, Agua Fria  Inbound,1
-01,SA,01SAI07, Agua Fria  Inbound,1
-01,SA,01SAI08, Agua Fria  Inbound,1
-01,SA,01SAI09, Agua Fria  Inbound,1
-01,SA,01SAI10, Agua Fria  Inbound,1
-01,SA,01SAI11, Agua Fria  Inbound,1
-01,SA,01SAI12, Agua Fria  Inbound,1
-01,SU,01SUI01, Agua Fria  Inbound,1
-01,SU,01SUI02, Agua Fria  Inbound,1
-01,SU,01SUI03, Agua Fria  Inbound,1
-01,SU,01SUI04, Agua Fria  Inbound,1
-01,SU,01SUI05, Agua Fria  Inbound,1
-01,SU,01SUI06, Agua Fria  Inbound,1
-01,SU,01SUI07, Agua Fria  Inbound,1
-01,SU,01SUI08, Agua Fria  Inbound,1
-01,SU,01SUI09, Agua Fria  Inbound,1
-01,WD,01WDO01, Agua Fria  Outbound,0
-01,WD,01WDO02, Agua Fria  Outbound,0
-01,WD,01WDO03, Agua Fria  Outbound,0
-01,WD,01WDO04, Agua Fria  Outbound,0
-01,WD,01WDO05, Agua Fria  Outbound,0
-01,WD,01WDO06, Agua Fria  Outbound,0
-01,WD,01WDO07, Agua Fria  Outbound,0
-01,WD,01WDO08, Agua Fria  Outbound,0
-01,WD,01WDO09, Agua Fria  Outbound,0
-01,WD,01WDO10, Agua Fria  Outbound,0
-01,WD,01WDO11, Agua Fria  Outbound,0
-01,WD,01WDO12, Agua Fria  Outbound,0
-01,WD,01WDO13, Agua Fria  Outbound,0
-01,WD,01WDO14, Agua Fria  Outbound,0
-01,WD,01WDO15, Agua Fria  Outbound,0
-01,WD,01WDO16, Agua Fria  Outbound,0
-01,WD,01WDO17, Agua Fria  Outbound,0
-01,WD,01WDO18, Agua Fria  Outbound,0
-01,WD,01WDO19, Agua Fria  Outbound,0
-01,WD,01WDO20, Agua Fria  Outbound,0
-01,WD,01WDO21, Agua Fria  Outbound,0
-01,WD,01WDO22, Agua Fria  Outbound,0
-01,WD,01WDO23, Agua Fria  Outbound,0
-01,WD,01WDO24, Agua Fria  Outbound,0
-01,WD,01WDO25, Agua Fria  Outbound,0
-01,WD,01WDO26, Agua Fria  Outbound,0
-01,WD,01WDO27, Agua Fria  Outbound,0
-01,WD,01WDO28, Agua Fria  Outbound,0
-01,SA,01SAO01, Agua Fria  Outbound,0
-01,SA,01SAO02, Agua Fria  Outbound,0
-01,SA,01SAO03, Agua Fria  Outbound,0
-01,SA,01SAO04, Agua Fria  Outbound,0
-01,SA,01SAO05, Agua Fria  Outbound,0
-01,SA,01SAO06, Agua Fria  Outbound,0
-01,SA,01SAO07, Agua Fria  Outbound,0
-01,SA,01SAO08, Agua Fria  Outbound,0
-01,SA,01SAO09, Agua Fria  Outbound,0
-01,SA,01SAO10, Agua Fria  Outbound,0
-01,SA,01SAO11, Agua Fria  Outbound,0
-01,SU,01SUO01, Agua Fria  Outbound,0
-01,SU,01SUO02, Agua Fria  Outbound,0
-01,SU,01SUO03, Agua Fria  Outbound,0
-01,SU,01SUO04, Agua Fria  Outbound,0
-01,SU,01SUO05, Agua Fria  Outbound,0
-01,SU,01SUO06, Agua Fria  Outbound,0
-01,SU,01SUO07, Agua Fria  Outbound,0
-01,SU,01SUO08, Agua Fria  Outbound,0
-01,SU,01SUO09, Agua Fria  Outbound,0
-01,SU,01SUO10, Agua Fria  Outbound,0
-02,WD,02WDI01, Cerrillos Road  Inbound,1
-02,WD,02WDI02, Cerrillos Road  Inbound,1
-02,WD,02WDI03, Cerrillos Road  Inbound,1
-02,WD,02WDI04, Cerrillos Road  Inbound,1
-02,WD,02WDI05, Cerrillos Road  Inbound,1
-02,WD,02WDI06, Cerrillos Road  Inbound,1
-02,WD,02WDI07, Cerrillos Road  Inbound,1
-02,WD,02WDI08, Cerrillos Road  Inbound,1
-02,WD,02WDI09, Cerrillos Road  Inbound,1
-02,WD,02WDI10, Cerrillos Road  Inbound,1
-02,WD,02WDI11, Cerrillos Road  Inbound,1
-02,WD,02WDI12, Cerrillos Road  Inbound,1
-02,WD,02WDI13, Cerrillos Road  Inbound,1
-02,WD,02WDI14, Cerrillos Road  Inbound,1
-02,WD,02WDI15, Cerrillos Road  Inbound,1
-02,WD,02WDI16, Cerrillos Road  Inbound,1
-02,WD,02WDI17, Cerrillos Road  Inbound,1
-02,WD,02WDI18, Cerrillos Road  Inbound,1
-02,WD,02WDI19, Cerrillos Road  Inbound,1
-02,WD,02WDI20, Cerrillos Road  Inbound,1
-02,WD,02WDI21, Cerrillos Road  Inbound,1
-02,WD,02WDI22, Cerrillos Road  Inbound,1
-02,WD,02WDI23, Cerrillos Road  Inbound,1
-02,WD,02WDI24, Cerrillos Road  Inbound,1
-02,WD,02WDI25, Cerrillos Road  Inbound,1
-02,WD,02WDI26, Cerrillos Road  Inbound,1
-02,WD,02WDI27, Cerrillos Road  Inbound,1
-02,WD,02WDI28, Cerrillos Road  Inbound,1
-02,WD,02WDI29, Cerrillos Road  Inbound,1
-02,WD,02WDI30, Cerrillos Road  Inbound,1
-02,WD,02WDI31, Cerrillos Road  Inbound,1
-02,WD,02WDI32, Cerrillos Road  Inbound,1
-02,WD,02WDI33, Cerrillos Road  Inbound,1
-02,WD,02WDI34, Cerrillos Road  Inbound,1
-02,WD,02WDI35, Cerrillos Road  Inbound,1
-02,WD,02WDI36, Cerrillos Road  Inbound,1
-02,WD,02WDI37, Cerrillos Road  Inbound,1
-02,WD,02WDI38, Cerrillos Road  Inbound,1
-02,WD,02WDI39, Cerrillos Road  Inbound,1
-02,WD,02WDI40, Cerrillos Road  Inbound,1
-02,WD,02WDI41, Cerrillos Road  Inbound,1
-02,WD,02WDI42, Cerrillos Road  Inbound,1
-02,WD,02WDI43, Cerrillos Road  Inbound,1
-02,WD,02WDI44, Cerrillos Road  Inbound,1
-02,WD,02WDI45, Cerrillos Road  Inbound,1
-02,WD,02WDI46, Cerrillos Road  Inbound,1
-02,WD,02WDI47, Cerrillos Road  Inbound,1
-02,WD,02WDI48, Cerrillos Road  Inbound,1
-02,WD,02WDI49, Cerrillos Road  Inbound,1
-02,WD,02WDI50, Cerrillos Road  Inbound,1
-02,WD,02WDI51, Cerrillos Road  Inbound,1
-02,WD,02WDI52, Cerrillos Road  Inbound,1
-02,WD,02WDI53, Cerrillos Road  Inbound,1
-02,WD,02WDI54, Cerrillos Road  Inbound,1
-02,WD,02WDI55, Cerrillos Road  Inbound,1
-02,SA,02SAI01, Cerrillos Road  Inbound,1
-02,SA,02SAI02, Cerrillos Road  Inbound,1
-02,SA,02SAI03, Cerrillos Road  Inbound,1
-02,SA,02SAI04, Cerrillos Road  Inbound,1
-02,SA,02SAI05, Cerrillos Road  Inbound,1
-02,SA,02SAI06, Cerrillos Road  Inbound,1
-02,SA,02SAI07, Cerrillos Road  Inbound,1
-02,SA,02SAI08, Cerrillos Road  Inbound,1
-02,SA,02SAI09, Cerrillos Road  Inbound,1
-02,SA,02SAI10, Cerrillos Road  Inbound,1
-02,SA,02SAI11, Cerrillos Road  Inbound,1
-02,SA,02SAI12, Cerrillos Road  Inbound,1
-02,SA,02SAI13, Cerrillos Road  Inbound,1
-02,SA,02SAI14, Cerrillos Road  Inbound,1
-02,SA,02SAI15, Cerrillos Road  Inbound,1
-02,SA,02SAI16, Cerrillos Road  Inbound,1
-02,SA,02SAI17, Cerrillos Road  Inbound,1
-02,SA,02SAI18, Cerrillos Road  Inbound,1
-02,SA,02SAI19, Cerrillos Road  Inbound,1
-02,SA,02SAI20, Cerrillos Road  Inbound,1
-02,SA,02SAI21, Cerrillos Road  Inbound,1
-02,SA,02SAI22, Cerrillos Road  Inbound,1
-02,SU,02SUI01, Cerrillos Road  Inbound,1
-02,SU,02SUI02, Cerrillos Road  Inbound,1
-02,SU,02SUI03, Cerrillos Road  Inbound,1
-02,SU,02SUI04, Cerrillos Road  Inbound,1
-02,SU,02SUI05, Cerrillos Road  Inbound,1
-02,SU,02SUI06, Cerrillos Road  Inbound,1
-02,SU,02SUI07, Cerrillos Road  Inbound,1
-02,SU,02SUI08, Cerrillos Road  Inbound,1
-02,SU,02SUI09, Cerrillos Road  Inbound,1
-02,SU,02SUI10, Cerrillos Road  Inbound,1
-02,SU,02SUI11, Cerrillos Road  Inbound,1
-02,SU,02SUI12, Cerrillos Road  Inbound,1
-02,SU,02SUI13, Cerrillos Road  Inbound,1
-02,SU,02SUI14, Cerrillos Road  Inbound,1
-02,SU,02SUI15, Cerrillos Road  Inbound,1
-02,SU,02SUI16, Cerrillos Road  Inbound,1
-02,SU,02SUI17, Cerrillos Road  Inbound,1
-02,SU,02SUI18, Cerrillos Road  Inbound,1
-02,SU,02SUI19, Cerrillos Road  Inbound,1
-02,WD,02WDO01, Cerrillos Road  Outbound,0
-02,WD,02WDO02, Cerrillos Road  Outbound,0
-02,WD,02WDO03, Cerrillos Road  Outbound,0
-02,WD,02WDO04, Cerrillos Road  Outbound,0
-02,WD,02WDO05, Cerrillos Road  Outbound,0
-02,WD,02WDO06, Cerrillos Road  Outbound,0
-02,WD,02WDO07, Cerrillos Road  Outbound,0
-02,WD,02WDO08, Cerrillos Road  Outbound,0
-02,WD,02WDO09, Cerrillos Road  Outbound,0
-02,WD,02WDO10, Cerrillos Road  Outbound,0
-02,WD,02WDO11, Cerrillos Road  Outbound,0
-02,WD,02WDO12, Cerrillos Road  Outbound,0
-02,WD,02WDO13, Cerrillos Road  Outbound,0
-02,WD,02WDO14, Cerrillos Road  Outbound,0
-02,WD,02WDO15, Cerrillos Road  Outbound,0
-02,WD,02WDO16, Cerrillos Road  Outbound,0
-02,WD,02WDO17, Cerrillos Road  Outbound,0
-02,WD,02WDO18, Cerrillos Road  Outbound,0
-02,WD,02WDO19, Cerrillos Road  Outbound,0
-02,WD,02WDO20, Cerrillos Road  Outbound,0
-02,WD,02WDO21, Cerrillos Road  Outbound,0
-02,WD,02WDO22, Cerrillos Road  Outbound,0
-02,WD,02WDO23, Cerrillos Road  Outbound,0
-02,WD,02WDO24, Cerrillos Road  Outbound,0
-02,WD,02WDO25, Cerrillos Road  Outbound,0
-02,WD,02WDO26, Cerrillos Road  Outbound,0
-02,WD,02WDO27, Cerrillos Road  Outbound,0
-02,WD,02WDO28, Cerrillos Road  Outbound,0
-02,WD,02WDO29, Cerrillos Road  Outbound,0
-02,WD,02WDO30, Cerrillos Road  Outbound,0
-02,WD,02WDO31, Cerrillos Road  Outbound,0
-02,WD,02WDO32, Cerrillos Road  Outbound,0
-02,WD,02WDO33, Cerrillos Road  Outbound,0
-02,WD,02WDO34, Cerrillos Road  Outbound,0
-02,WD,02WDO35, Cerrillos Road  Outbound,0
-02,WD,02WDO36, Cerrillos Road  Outbound,0
-02,WD,02WDO37, Cerrillos Road  Outbound,0
-02,WD,02WDO38, Cerrillos Road  Outbound,0
-02,WD,02WDO39, Cerrillos Road  Outbound,0
-02,WD,02WDO40, Cerrillos Road  Outbound,0
-02,WD,02WDO41, Cerrillos Road  Outbound,0
-02,WD,02WDO42, Cerrillos Road  Outbound,0
-02,WD,02WDO43, Cerrillos Road  Outbound,0
-02,WD,02WDO44, Cerrillos Road  Outbound,0
-02,WD,02WDO45, Cerrillos Road  Outbound,0
-02,WD,02WDO46, Cerrillos Road  Outbound,0
-02,WD,02WDO47, Cerrillos Road  Outbound,0
-02,WD,02WDO48, Cerrillos Road  Outbound,0
-02,WD,02WDO49, Cerrillos Road  Outbound,0
-02,WD,02WDO50, Cerrillos Road  Outbound,0
-02,WD,02WDO51, Cerrillos Road  Outbound,0
-02,WD,02WDO52, Cerrillos Road  Outbound,0
-02,WD,02WDO53, Cerrillos Road  Outbound,0
-02,SA,02SAO01, Cerrillos Road  Outbound,0
-02,SA,02SAO02, Cerrillos Road  Outbound,0
-02,SA,02SAO03, Cerrillos Road  Outbound,0
-02,SA,02SAO04, Cerrillos Road  Outbound,0
-02,SA,02SAO05, Cerrillos Road  Outbound,0
-02,SA,02SAO06, Cerrillos Road  Outbound,0
-02,SA,02SAO07, Cerrillos Road  Outbound,0
-02,SA,02SAO08, Cerrillos Road  Outbound,0
-02,SA,02SAO09, Cerrillos Road  Outbound,0
-02,SA,02SAO10, Cerrillos Road  Outbound,0
-02,SA,02SAO11, Cerrillos Road  Outbound,0
-02,SA,02SAO12, Cerrillos Road  Outbound,0
-02,SA,02SAO13, Cerrillos Road  Outbound,0
-02,SA,02SAO14, Cerrillos Road  Outbound,0
-02,SA,02SAO15, Cerrillos Road  Outbound,0
-02,SA,02SAO16, Cerrillos Road  Outbound,0
-02,SA,02SAO17, Cerrillos Road  Outbound,0
-02,SA,02SAO18, Cerrillos Road  Outbound,0
-02,SA,02SAO19, Cerrillos Road  Outbound,0
-02,SA,02SAO20, Cerrillos Road  Outbound,0
-02,SA,02SAO21, Cerrillos Road  Outbound,0
-02,SA,02SAO22, Cerrillos Road  Outbound,0
-02,SA,02SAO23, Cerrillos Road  Outbound,0
-02,SU,02SUO01, Cerrillos Road  Outbound,0
-02,SU,02SUO02, Cerrillos Road  Outbound,0
-02,SU,02SUO03, Cerrillos Road  Outbound,0
-02,SU,02SUO04, Cerrillos Road  Outbound,0
-02,SU,02SUO05, Cerrillos Road  Outbound,0
-02,SU,02SUO06, Cerrillos Road  Outbound,0
-02,SU,02SUO07, Cerrillos Road  Outbound,0
-02,SU,02SUO08, Cerrillos Road  Outbound,0
-02,SU,02SUO09, Cerrillos Road  Outbound,0
-02,SU,02SUO10, Cerrillos Road  Outbound,0
-02,SU,02SUO11, Cerrillos Road  Outbound,0
-02,SU,02SUO12, Cerrillos Road  Outbound,0
-02,SU,02SUO13, Cerrillos Road  Outbound,0
-02,SU,02SUO14, Cerrillos Road  Outbound,0
-02,SU,02SUO15, Cerrillos Road  Outbound,0
-02,SU,02SUO16, Cerrillos Road  Outbound,0
-02,SU,02SUO17, Cerrillos Road  Outbound,0
-04,WD,04WDI01, Southside  Inbound,1
-04,WD,04WDI02, Southside  Inbound,1
-04,WD,04WDI03, Southside  Inbound,1
-04,WD,04WDI04, Southside  Inbound,1
-04,WD,04WDI05, Southside  Inbound,1
-04,WD,04WDI06, Southside  Inbound,1
-04,WD,04WDI07, Southside  Inbound,1
-04,WD,04WDI08, Southside  Inbound,1
-04,WD,04WDI09, Southside  Inbound,1
-04,WD,04WDI10, Southside  Inbound,1
-04,WD,04WDI11, Southside  Inbound,1
-04,WD,04WDI12, Southside  Inbound,1
-04,WD,04WDI13, Southside  Inbound,1
-04,WD,04WDI14, Southside  Inbound,1
-04,WD,04WDI15, Southside  Inbound,1
-04,WD,04WDI16, Southside  Inbound,1
-04,WD,04WDI17, Southside  Inbound,1
-04,WD,04WDI18, Southside  Inbound,1
-04,WD,04WDI19, Southside  Inbound,1
-04,WD,04WDI20, Southside  Inbound,1
-04,WD,04WDI21, Southside  Inbound,1
-04,WD,04WDI22, Southside  Inbound,1
-04,WD,04WDI23, Southside  Inbound,1
-04,WD,04WDI24, Southside  Inbound,1
-04,WD,04WDI25, Southside  Inbound,1
-04,WD,04WDI26, Southside  Inbound,1
-04,WD,04WDI27, Southside  Inbound,1
-04,WD,04WDI28, Southside  Inbound,1
-04,WD,04WDI29, Southside  Inbound,1
-04,WD,04WDI30, Southside  Inbound,1
-04,WD,04WDI31, Southside  Inbound,1
-04,WD,04WDI32, Southside  Inbound,1
-04,SA,04SAI01, Southside  Inbound,1
-04,SA,04SAI02, Southside  Inbound,1
-04,SA,04SAI03, Southside  Inbound,1
-04,SA,04SAI04, Southside  Inbound,1
-04,SA,04SAI05, Southside  Inbound,1
-04,SA,04SAI06, Southside  Inbound,1
-04,SA,04SAI07, Southside  Inbound,1
-04,SA,04SAI08, Southside  Inbound,1
-04,SA,04SAI09, Southside  Inbound,1
-04,SA,04SAI10, Southside  Inbound,1
-04,SA,04SAI11, Southside  Inbound,1
-04,SU,04SUI01, Southside  Inbound,1
-04,SU,04SUI02, Southside  Inbound,1
-04,SU,04SUI03, Southside  Inbound,1
-04,SU,04SUI04, Southside  Inbound,1
-04,SU,04SUI05, Southside  Inbound,1
-04,SU,04SUI06, Southside  Inbound,1
-04,SU,04SUI07, Southside  Inbound,1
-04,SU,04SUI08, Southside  Inbound,1
-04,SU,04SUI09, Southside  Inbound,1
-04,WD,04WDO01, Southside  Outbound,0
-04,WD,04WDO02, Southside  Outbound,0
-04,WD,04WDO03, Southside  Outbound,0
-04,WD,04WDO04, Southside  Outbound,0
-04,WD,04WDO05, Southside  Outbound,0
-04,WD,04WDO06, Southside  Outbound,0
-04,WD,04WDO07, Southside  Outbound,0
-04,WD,04WDO08, Southside  Outbound,0
-04,WD,04WDO09, Southside  Outbound,0
-04,WD,04WDO10, Southside  Outbound,0
-04,WD,04WDO11, Southside  Outbound,0
-04,WD,04WDO12, Southside  Outbound,0
-04,WD,04WDO13, Southside  Outbound,0
-04,WD,04WDO14, Southside  Outbound,0
-04,WD,04WDO15, Southside  Outbound,0
-04,WD,04WDO16, Southside  Outbound,0
-04,WD,04WDO17, Southside  Outbound,0
-04,WD,04WDO18, Southside  Outbound,0
-04,WD,04WDO19, Southside  Outbound,0
-04,WD,04WDO20, Southside  Outbound,0
-04,WD,04WDO21, Southside  Outbound,0
-04,WD,04WDO22, Southside  Outbound,0
-04,WD,04WDO23, Southside  Outbound,0
-04,WD,04WDO24, Southside  Outbound,0
-04,WD,04WDO25, Southside  Outbound,0
-04,WD,04WDO26, Southside  Outbound,0
-04,WD,04WDO27, Southside  Outbound,0
-04,WD,04WDO28, Southside  Outbound,0
-04,WD,04WDO29, Southside  Outbound,0
-04,WD,04WDO30, Southside  Outbound,0
-04,WD,04WDO31, Southside  Outbound,0
-04,SA,04SAO01, Southside  Outbound,0
-04,SA,04SAO02, Southside  Outbound,0
-04,SA,04SAO03, Southside  Outbound,0
-04,SA,04SAO04, Southside  Outbound,0
-04,SA,04SAO05, Southside  Outbound,0
-04,SA,04SAO06, Southside  Outbound,0
-04,SA,04SAO07, Southside  Outbound,0
-04,SA,04SAO08, Southside  Outbound,0
-04,SA,04SAO09, Southside  Outbound,0
-04,SA,04SAO10, Southside  Outbound,0
-04,SA,04SAO11, Southside  Outbound,0
-04,SU,04SUO01, Southside  Outbound,0
-04,SU,04SUO02, Southside  Outbound,0
-04,SU,04SUO03, Southside  Outbound,0
-04,SU,04SUO04, Southside  Outbound,0
-04,SU,04SUO05, Southside  Outbound,0
-04,SU,04SUO06, Southside  Outbound,0
-04,SU,04SUO07, Southside  Outbound,0
-04,SU,04SUO08, Southside  Outbound,0
-04,SU,04SUO09, Southside  Outbound,0
-05,WD,05WDI01, Crosstown  Inbound,1
-05,WD,05WDI02, Crosstown  Inbound,1
-05,WD,05WDI03, Crosstown  Inbound,1
-05,WD,05WDI04, Crosstown  Inbound,1
-05,WD,05WDI05, Crosstown  Inbound,1
-05,WD,05WDI06, Crosstown  Inbound,1
-05,WD,05WDI07, Crosstown  Inbound,1
-05,WD,05WDI08, Crosstown  Inbound,1
-05,WD,05WDI09, Crosstown  Inbound,1
-05,WD,05WDI10, Crosstown  Inbound,1
-05,WD,05WDI11, Crosstown  Inbound,1
-05,WD,05WDI12, Crosstown  Inbound,1
-05,WD,05WDI13, Crosstown  Inbound,1
-05,WD,05WDI14, Crosstown  Inbound,1
-05,SA,05SAI01, Crosstown  Inbound,1
-05,SA,05SAI02, Crosstown  Inbound,1
-05,SA,05SAI03, Crosstown  Inbound,1
-05,SA,05SAI04, Crosstown  Inbound,1
-05,SA,05SAI05, Crosstown  Inbound,1
-05,SA,05SAI06, Crosstown  Inbound,1
-05,SA,05SAI07, Crosstown  Inbound,1
-05,SA,05SAI08, Crosstown  Inbound,1
-05,WD,05WDO01, Crosstown  Outbound,0
-05,WD,05WDO02, Crosstown  Outbound,0
-05,WD,05WDO03, Crosstown  Outbound,0
-05,WD,05WDO04, Crosstown  Outbound,0
-05,WD,05WDO05, Crosstown  Outbound,0
-05,WD,05WDO06, Crosstown  Outbound,0
-05,WD,05WDO07, Crosstown  Outbound,0
-05,WD,05WDO08, Crosstown  Outbound,0
-05,WD,05WDO09, Crosstown  Outbound,0
-05,WD,05WDO10, Crosstown  Outbound,0
-05,WD,05WDO11, Crosstown  Outbound,0
-05,WD,05WDO12, Crosstown  Outbound,0
-05,WD,05WDO13, Crosstown  Outbound,0
-05,SA,05SAO01, Crosstown  Outbound,0
-05,SA,05SAO02, Crosstown  Outbound,0
-05,SA,05SAO03, Crosstown  Outbound,0
-05,SA,05SAO04, Crosstown  Outbound,0
-05,SA,05SAO05, Crosstown  Outbound,0
-05,SA,05SAO06, Crosstown  Outbound,0
-05,SA,05SAO07, Crosstown  Outbound,0
-05,SA,05SAO08, Crosstown  Outbound,0
-05,SA,05SAO09, Crosstown  Outbound,0
-06,WD,06WDI01, Rodeo Road  Inbound,1
-06,WD,06WDI02, Rodeo Road  Inbound,1
-06,WD,06WDI03, Rodeo Road  Inbound,1
-06,WD,06WDI04, Rodeo Road  Inbound,1
-06,WD,06WDI05, Rodeo Road  Inbound,1
-06,WD,06WDI06, Rodeo Road  Inbound,1
-06,WD,06WDI07, Rodeo Road  Inbound,1
-06,WD,06WDI08, Rodeo Road  Inbound,1
-06,WD,06WDI09, Rodeo Road  Inbound,1
-06,WD,06WDI10, Rodeo Road  Inbound,1
-06,WD,06WDI11, Rodeo Road  Inbound,1
-06,WD,06WDI12, Rodeo Road  Inbound,1
-06,WD,06WDI13, Rodeo Road  Inbound,1
-06,WD,06WDI14, Rodeo Road  Inbound,1
-06,SA,06SAI01, Rodeo Road  Inbound,1
-06,SA,06SAI02, Rodeo Road  Inbound,1
-06,SA,06SAI03, Rodeo Road  Inbound,1
-06,SA,06SAI04, Rodeo Road  Inbound,1
-06,SA,06SAI05, Rodeo Road  Inbound,1
-06,SA,06SAI06, Rodeo Road  Inbound,1
-06,SA,06SAI07, Rodeo Road  Inbound,1
-06,SA,06SAI08, Rodeo Road  Inbound,1
-06,SA,06SAI09, Rodeo Road  Inbound,1
-06,SA,06SAI10, Rodeo Road  Inbound,1
-06,WD,06WDO01, Rodeo Road  Outbound,0
-06,WD,06WDO02, Rodeo Road  Outbound,0
-06,WD,06WDO03, Rodeo Road  Outbound,0
-06,WD,06WDO04, Rodeo Road  Outbound,0
-06,WD,06WDO05, Rodeo Road  Outbound,0
-06,WD,06WDO06, Rodeo Road  Outbound,0
-06,WD,06WDO07, Rodeo Road  Outbound,0
-06,WD,06WDO08, Rodeo Road  Outbound,0
-06,WD,06WDO09, Rodeo Road  Outbound,0
-06,WD,06WDO10, Rodeo Road  Outbound,0
-06,WD,06WDO11, Rodeo Road  Outbound,0
-06,WD,06WDO12, Rodeo Road  Outbound,0
-06,WD,06WDO13, Rodeo Road  Outbound,0
-06,SA,06SAO01, Rodeo Road  Outbound,0
-06,SA,06SAO02, Rodeo Road  Outbound,0
-06,SA,06SAO03, Rodeo Road  Outbound,0
-06,SA,06SAO04, Rodeo Road  Outbound,0
-06,SA,06SAO05, Rodeo Road  Outbound,0
-06,SA,06SAO06, Rodeo Road  Outbound,0
-06,SA,06SAO07, Rodeo Road  Outbound,0
-06,SA,06SAO08, Rodeo Road  Outbound,0
-06,SA,06SAO09, Rodeo Road  Outbound,0
-06,SA,06SAO10, Rodeo Road  Outbound,0
-21,WD,21WDI01, Santa Fe Community College  Inbound,1
-21,WD,21WDI02, Santa Fe Community College  Inbound,1
-21,WD,21WDI03, Santa Fe Community College  Inbound,1
-21,WD,21WDI04, Santa Fe Community College  Inbound,1
-21,WD,21WDI05, Santa Fe Community College  Inbound,1
-21,WD,21WDI06, Santa Fe Community College  Inbound,1
-21,WD,21WDI07, Santa Fe Community College  Inbound,1
-21,WD,21WDI08, Santa Fe Community College  Inbound,1
-21,WD,21WDI09, Santa Fe Community College  Inbound,1
-21,WD,21WDI10, Santa Fe Community College  Inbound,1
-21,WD,21WDI11, Santa Fe Community College  Inbound,1
-21,WD,21WDI12, Santa Fe Community College  Inbound,1
-21,WD,21WDI13, Santa Fe Community College  Inbound,1
-21,WD,21WDO01, Santa Fe Community College  Outbound,0
-21,WD,21WDO02, Santa Fe Community College  Outbound,0
-21,WD,21WDO03, Santa Fe Community College  Outbound,0
-21,WD,21WDO04, Santa Fe Community College  Outbound,0
-21,WD,21WDO05, Santa Fe Community College  Outbound,0
-21,WD,21WDO06, Santa Fe Community College  Outbound,0
-21,WD,21WDO07, Santa Fe Community College  Outbound,0
-21,WD,21WDO08, Santa Fe Community College  Outbound,0
-21,WD,21WDO09, Santa Fe Community College  Outbound,0
-21,WD,21WDO10, Santa Fe Community College  Outbound,0
-21,WD,21WDO11, Santa Fe Community College  Outbound,0
-21,WD,21WDO12, Santa Fe Community College  Outbound,0
-21,WD,21WDO13, Santa Fe Community College  Outbound,0
-22,WD,22WDI01, HSD/Rancho Viejo  Inbound,1
-22,WD,22WDI02, HSD/Rancho Viejo  Inbound,1
-22,WD,22WDI03, HSD/Rancho Viejo  Inbound,1
-22,WD,22WDI04, HSD/Rancho Viejo  Inbound,1
-22,WD,22WDI05, HSD/Rancho Viejo  Inbound,1
-22,WD,22WDI06, HSD/Rancho Viejo  Inbound,1
-22,WD,22WDI07, HSD/Rancho Viejo  Inbound,1
-22,WD,22WDI08, HSD/Rancho Viejo  Inbound,1
-22,WD,22WDI09, HSD/Rancho Viejo  Inbound,1
-22,WD,22WDI10, HSD/Rancho Viejo  Inbound,1
-22,WD,22WDO01, HSD/Rancho Viejo  Outbound,0
-22,WD,22WDO02, HSD/Rancho Viejo  Outbound,0
-22,WD,22WDO03, HSD/Rancho Viejo  Outbound,0
-22,WD,22WDO04, HSD/Rancho Viejo  Outbound,0
-22,WD,22WDO05, HSD/Rancho Viejo  Outbound,0
-22,WD,22WDO06, HSD/Rancho Viejo  Outbound,0
-22,WD,22WDO07, HSD/Rancho Viejo  Outbound,0
-22,WD,22WDO08, HSD/Rancho Viejo  Outbound,0
-22,WD,22WDO09, HSD/Rancho Viejo  Outbound,0
-22,WD,22WDO10, HSD/Rancho Viejo  Outbound,0
-22,WD,22WDO11, HSD/Rancho Viejo  Outbound,0
-24,WD,24WDI01, Vista Primera  Inbound,1
-24,WD,24WDI02, Vista Primera  Inbound,1
-24,WD,24WDI03, Vista Primera  Inbound,1
-24,WD,24WDI04, Vista Primera  Inbound,1
-24,WD,24WDI05, Vista Primera  Inbound,1
-24,WD,24WDI06, Vista Primera  Inbound,1
-24,WD,24WDI07, Vista Primera  Inbound,1
-24,WD,24WDI08, Vista Primera  Inbound,1
-24,WD,24WDI09, Vista Primera  Inbound,1
-24,WD,24WDI10, Vista Primera  Inbound,1
-24,WD,24WDI11, Vista Primera  Inbound,1
-24,WD,24WDI12, Vista Primera  Inbound,1
-24,WD,24WDI13, Vista Primera  Inbound,1
-24,WD,24WDI14, Vista Primera  Inbound,1
-24,WD,24WDI15, Vista Primera  Inbound,1
-24,WD,24WDI16, Vista Primera  Inbound,1
-24,WD,24WDI17, Vista Primera  Inbound,1
-24,WD,24WDI18, Vista Primera  Inbound,1
-24,WD,24WDI19, Vista Primera  Inbound,1
-24,WD,24WDI20, Vista Primera  Inbound,1
-24,WD,24WDI21, Vista Primera  Inbound,1
-24,WD,24WDI22, Vista Primera  Inbound,1
-24,WD,24WDI23, Vista Primera  Inbound,1
-24,WD,24WDI24, Vista Primera  Inbound,1
-24,WD,24WDI25, Vista Primera  Inbound,1
-24,WD,24WDI26, Vista Primera  Inbound,1
-24,SA,24SAI01, Vista Primera  Inbound,1
-24,SA,24SAI02, Vista Primera  Inbound,1
-24,SA,24SAI03, Vista Primera  Inbound,1
-24,SA,24SAI04, Vista Primera  Inbound,1
-24,SA,24SAI05, Vista Primera  Inbound,1
-24,SA,24SAI06, Vista Primera  Inbound,1
-24,SA,24SAI07, Vista Primera  Inbound,1
-24,SA,24SAI08, Vista Primera  Inbound,1
-24,SA,24SAI09, Vista Primera  Inbound,1
-24,SU,24SUI01, Vista Primera  Inbound,1
-24,SU,24SUI02, Vista Primera  Inbound,1
-24,SU,24SUI03, Vista Primera  Inbound,1
-24,SU,24SUI04, Vista Primera  Inbound,1
-24,SU,24SUI05, Vista Primera  Inbound,1
-24,SU,24SUI06, Vista Primera  Inbound,1
-24,SU,24SUI07, Vista Primera  Inbound,1
-24,SU,24SUI08, Vista Primera  Inbound,1
-24,WD,24WDO01, Vista Primera  Outbound,0
-24,WD,24WDO02, Vista Primera  Outbound,0
-24,WD,24WDO03, Vista Primera  Outbound,0
-24,WD,24WDO04, Vista Primera  Outbound,0
-24,WD,24WDO05, Vista Primera  Outbound,0
-24,WD,24WDO06, Vista Primera  Outbound,0
-24,WD,24WDO07, Vista Primera  Outbound,0
-24,WD,24WDO08, Vista Primera  Outbound,0
-24,WD,24WDO09, Vista Primera  Outbound,0
-24,WD,24WDO10, Vista Primera  Outbound,0
-24,WD,24WDO11, Vista Primera  Outbound,0
-24,WD,24WDO12, Vista Primera  Outbound,0
-24,WD,24WDO13, Vista Primera  Outbound,0
-24,WD,24WDO14, Vista Primera  Outbound,0
-24,WD,24WDO15, Vista Primera  Outbound,0
-24,WD,24WDO16, Vista Primera  Outbound,0
-24,WD,24WDO17, Vista Primera  Outbound,0
-24,WD,24WDO18, Vista Primera  Outbound,0
-24,WD,24WDO19, Vista Primera  Outbound,0
-24,WD,24WDO20, Vista Primera  Outbound,0
-24,WD,24WDO21, Vista Primera  Outbound,0
-24,WD,24WDO22, Vista Primera  Outbound,0
-24,WD,24WDO23, Vista Primera  Outbound,0
-24,WD,24WDO24, Vista Primera  Outbound,0
-24,SA,24SAO01, Vista Primera  Outbound,0
-24,SA,24SAO02, Vista Primera  Outbound,0
-24,SA,24SAO03, Vista Primera  Outbound,0
-24,SA,24SAO04, Vista Primera  Outbound,0
-24,SA,24SAO05, Vista Primera  Outbound,0
-24,SA,24SAO06, Vista Primera  Outbound,0
-24,SA,24SAO07, Vista Primera  Outbound,0
-24,SA,24SAO08, Vista Primera  Outbound,0
-24,SA,24SAO09, Vista Primera  Outbound,0
-24,SU,24SUO01, Vista Primera  Outbound,0
-24,SU,24SUO02, Vista Primera  Outbound,0
-24,SU,24SUO03, Vista Primera  Outbound,0
-24,SU,24SUO04, Vista Primera  Outbound,0
-24,SU,24SUO05, Vista Primera  Outbound,0
-24,SU,24SUO06, Vista Primera  Outbound,0
-24,SU,24SUO07, Vista Primera  Outbound,0
-24,SU,24SUO08, Vista Primera  Outbound,0
-26,WD,26WDI01, South Cerrillos and Fashion Outlets  Inbound,1
-26,WD,26WDI02, South Cerrillos and Fashion Outlets  Inbound,1
-26,WD,26WDI03, South Cerrillos and Fashion Outlets  Inbound,1
-26,WD,26WDI04, South Cerrillos and Fashion Outlets  Inbound,1
-26,WD,26WDI05, South Cerrillos and Fashion Outlets  Inbound,1
-26,WD,26WDI06, South Cerrillos and Fashion Outlets  Inbound,1
-26,WD,26WDI07, South Cerrillos and Fashion Outlets  Inbound,1
-26,WD,26WDI08, South Cerrillos and Fashion Outlets  Inbound,1
-26,WD,26WDI09, South Cerrillos and Fashion Outlets  Inbound,1
-26,WD,26WDI10, South Cerrillos and Fashion Outlets  Inbound,1
-26,SA,26SAI01, South Cerrillos and Fashion Outlets  Inbound,1
-26,SA,26SAI02, South Cerrillos and Fashion Outlets  Inbound,1
-26,SA,26SAI03, South Cerrillos and Fashion Outlets  Inbound,1
-26,SA,26SAI04, South Cerrillos and Fashion Outlets  Inbound,1
-26,SA,26SAI05, South Cerrillos and Fashion Outlets  Inbound,1
-26,SA,26SAI06, South Cerrillos and Fashion Outlets  Inbound,1
-26,SA,26SAI07, South Cerrillos and Fashion Outlets  Inbound,1
-26,SA,26SAI08, South Cerrillos and Fashion Outlets  Inbound,1
-26,SA,26SAI09, South Cerrillos and Fashion Outlets  Inbound,1
-26,SU,26SUI01, South Cerrillos and Fashion Outlets  Inbound,1
-26,SU,26SUI02, South Cerrillos and Fashion Outlets  Inbound,1
-26,SU,26SUI03, South Cerrillos and Fashion Outlets  Inbound,1
-26,SU,26SUI04, South Cerrillos and Fashion Outlets  Inbound,1
-26,SU,26SUI05, South Cerrillos and Fashion Outlets  Inbound,1
-26,SU,26SUI06, South Cerrillos and Fashion Outlets  Inbound,1
-26,SU,26SUI07, South Cerrillos and Fashion Outlets  Inbound,1
-26,SU,26SUI08, South Cerrillos and Fashion Outlets  Inbound,1
-26,WD,26WDO01, South Cerrillos and Fashion Outlets  Outbound,0
-26,WD,26WDO02, South Cerrillos and Fashion Outlets  Outbound,0
-26,WD,26WDO03, South Cerrillos and Fashion Outlets  Outbound,0
-26,WD,26WDO04, South Cerrillos and Fashion Outlets  Outbound,0
-26,WD,26WDO05, South Cerrillos and Fashion Outlets  Outbound,0
-26,WD,26WDO06, South Cerrillos and Fashion Outlets  Outbound,0
-26,WD,26WDO07, South Cerrillos and Fashion Outlets  Outbound,0
-26,WD,26WDO08, South Cerrillos and Fashion Outlets  Outbound,0
-26,WD,26WDO09, South Cerrillos and Fashion Outlets  Outbound,0
-26,WD,26WDO10, South Cerrillos and Fashion Outlets  Outbound,0
-26,SA,26SAO01, South Cerrillos and Fashion Outlets  Outbound,0
-26,SA,26SAO02, South Cerrillos and Fashion Outlets  Outbound,0
-26,SA,26SAO03, South Cerrillos and Fashion Outlets  Outbound,0
-26,SA,26SAO04, South Cerrillos and Fashion Outlets  Outbound,0
-26,SA,26SAO05, South Cerrillos and Fashion Outlets  Outbound,0
-26,SA,26SAO06, South Cerrillos and Fashion Outlets  Outbound,0
-26,SA,26SAO07, South Cerrillos and Fashion Outlets  Outbound,0
-26,SA,26SAO08, South Cerrillos and Fashion Outlets  Outbound,0
-26,SA,26SAO09, South Cerrillos and Fashion Outlets  Outbound,0
-26,SU,26SUO01, South Cerrillos and Fashion Outlets  Outbound,0
-26,SU,26SUO02, South Cerrillos and Fashion Outlets  Outbound,0
-26,SU,26SUO03, South Cerrillos and Fashion Outlets  Outbound,0
-26,SU,26SUO04, South Cerrillos and Fashion Outlets  Outbound,0
-26,SU,26SUO05, South Cerrillos and Fashion Outlets  Outbound,0
-26,SU,26SUO06, South Cerrillos and Fashion Outlets  Outbound,0
-26,SU,26SUO07, South Cerrillos and Fashion Outlets  Outbound,0
-26,SU,26SUO08, South Cerrillos and Fashion Outlets  Outbound,0
-M,WD,MWDI01, Museum Hill  Inbound,1
-M,WD,MWDI02, Museum Hill  Inbound,1
-M,WD,MWDI03, Museum Hill  Inbound,1
-M,WD,MWDI04, Museum Hill  Inbound,1
-M,WD,MWDI05, Museum Hill  Inbound,1
-M,WD,MWDI06, Museum Hill  Inbound,1
-M,WD,MWDI07, Museum Hill  Inbound,1
-M,WD,MWDI08, Museum Hill  Inbound,1
-M,WD,MWDI09, Museum Hill  Inbound,1
-M,WD,MWDI10, Museum Hill  Inbound,1
-M,WD,MWDI11, Museum Hill  Inbound,1
-M,WD,MWDI12, Museum Hill  Inbound,1
-M,WD,MWDI13, Museum Hill  Inbound,1
-M,SA,MSAI01, Museum Hill  Inbound,1
-M,SA,MSAI02, Museum Hill  Inbound,1
-M,SA,MSAI03, Museum Hill  Inbound,1
-M,SA,MSAI04, Museum Hill  Inbound,1
-M,SA,MSAI05, Museum Hill  Inbound,1
-M,SA,MSAI06, Museum Hill  Inbound,1
-M,SA,MSAI07, Museum Hill  Inbound,1
-M,SA,MSAI08, Museum Hill  Inbound,1
-M,SU,MSUI01, Museum Hill  Inbound,1
-M,SU,MSUI02, Museum Hill  Inbound,1
-M,SU,MSUI03, Museum Hill  Inbound,1
-M,SU,MSUI04, Museum Hill  Inbound,1
-M,SU,MSUI05, Museum Hill  Inbound,1
-M,SU,MSUI06, Museum Hill  Inbound,1
-M,SU,MSUI07, Museum Hill  Inbound,1
-M,SU,MSUI08, Museum Hill  Inbound,1
-M,WD,MWDO01, Museum Hill  Outbound,0
-M,WD,MWDO02, Museum Hill  Outbound,0
-M,WD,MWDO03, Museum Hill  Outbound,0
-M,WD,MWDO04, Museum Hill  Outbound,0
-M,WD,MWDO05, Museum Hill  Outbound,0
-M,WD,MWDO06, Museum Hill  Outbound,0
-M,WD,MWDO07, Museum Hill  Outbound,0
-M,WD,MWDO08, Museum Hill  Outbound,0
-M,WD,MWDO09, Museum Hill  Outbound,0
-M,WD,MWDO10, Museum Hill  Outbound,0
-M,WD,MWDO11, Museum Hill  Outbound,0
-M,WD,MWDO12, Museum Hill  Outbound,0
-M,WD,MWDO13, Museum Hill  Outbound,0
-M,SA,MSAO01, Museum Hill  Outbound,0
-M,SA,MSAO02, Museum Hill  Outbound,0
-M,SA,MSAO03, Museum Hill  Outbound,0
-M,SA,MSAO04, Museum Hill  Outbound,0
-M,SA,MSAO05, Museum Hill  Outbound,0
-M,SA,MSAO06, Museum Hill  Outbound,0
-M,SA,MSAO07, Museum Hill  Outbound,0
-M,SA,MSAO08, Museum Hill  Outbound,0
-M,SU,MSUO01, Museum Hill  Outbound,0
-M,SU,MSUO02, Museum Hill  Outbound,0
-M,SU,MSUO03, Museum Hill  Outbound,0
-M,SU,MSUO04, Museum Hill  Outbound,0
-M,SU,MSUO05, Museum Hill  Outbound,0
-M,SU,MSUO06, Museum Hill  Outbound,0
-M,SU,MSUO07, Museum Hill  Outbound,0
-M,SU,MSUO08, Museum Hill  Outbound,0
+﻿route_id,service_id,trip_id,trip_headsign,direction_id
+1,WD,1WDP001,LIDO,0
+1,WD,1WDP002,LIDO,0
+1,WD,1WDP003,LIDO,0
+1,WD,1WDP004,LIDO,0
+1,WD,1WDP005,LIDO,0
+1,WD,1WDP006,LIDO,0
+1,WD,1WDP007,LIDO,0
+1,WD,1WDP008,LIDO,0
+1,WD,1WDP009,LIDO,0
+1,WD,1WDP010,LIDO,0
+1,WD,1WDP011,LIDO,0
+1,WD,1WDP012,LIDO,0
+1,WD,1WDP013,LIDO,0
+1,WD,1WDP014,LIDO,0
+1,WD,1WDP015,LIDO,0
+1,WD,1WDP016,LIDO,0
+1,WD,1WDP017,LIDO,0
+1,WD,1WDP018,LIDO,0
+1,WD,1WDP019,LIDO,0
+1,WD,1WDP020,LIDO,0
+1,WD,1WDP021,LIDO,0
+1,WD,1WDP022,LIDO,0
+1,WD,1WDP023,LIDO,0
+1,WD,1WDP024,LIDO,0
+1,WD,1WDP025,LIDO,0
+1,WD,1WDP026,LIDO,0
+1,WD,1WDP027,LIDO,0
+1,WD,1WDP028,LIDO,0
+1,WD,1WDP029,LIDO,0
+1,WD,1WDP030,LIDO,0
+1,WD,1WDP031,LIDO,0
+1,WD,1WDP032,LIDO,0
+1,WD,1WDP033,LIDO,0
+1,WD,1WDP034,LIDO,0
+1,WD,1WDP035,LIDO,0
+1,WD,1WDP036,LIDO,0
+1,WD,1WDP037,LIDO,0
+1,WD,1WDP038,LIDO,0
+1,WD,1WDP039,LIDO,0
+1,WD,1WDP040,LIDO,0
+1,WD,1WDP041,LIDO,0
+1,WD,1WDP042,LIDO,0
+1,WD,1WDP043,LIDO,0
+1,WD,1WDP044,LIDO,0
+1,WD,1WDP045,LIDO,0
+1,WD,1WDP046,LIDO,0
+1,WD,1WDP047,LIDO,0
+1,WD,1WDP048,LIDO,0
+1,WD,1WDP049,LIDO,0
+1,WD,1WDP050,LIDO,0
+1,WD,1WDP051,LIDO,0
+1,WD,1WDP052,LIDO,0
+1,WD,1WDP053,LIDO,0
+1,WD,1WDP054,LIDO,0
+1,WD,1WDP055,LIDO,0
+1,WD,1WDP056,LIDO,0
+1,WD,1WDP057,LIDO,0
+1,WD,1WDP058,LIDO,0
+1,WD,1WDP059,LIDO,0
+1,WD,1WDP060,LIDO,0
+1,WD,1WDP061,LIDO,0
+1,WD,1WDP062,LIDO,0
+1,WD,1WDP063,LIDO,0
+1,WD,1WDP064,LIDO,0
+1,WD,1WDP065,LIDO,0
+1,WD,1WDP066,LIDO,0
+1,WD,1WDP067,LIDO,0
+1,WD,1WDP068,LIDO,0
+1,WD,1WDP069,LIDO,0
+1,WD,1WDP070,LIDO,0
+1,WD,1WDP071,LIDO,0
+1,WD,1WDP072,LIDO,0
+1,WD,1WDP073,LIDO,0
+1,WD,1WDP074,LIDO,0
+1,WD,1WDP075,LIDO,0
+1,WD,1WDP076,LIDO,0
+1,WD,1WDP077,LIDO,0
+1,WD,1WDP078,LIDO,0
+1,WD,1WDP079,LIDO,0
+1,WD,1WDP080,LIDO,0
+1,WD,1WDP081,LIDO,0
+1,WD,1WDP082,LIDO,0
+1,WD,1WDP083,LIDO,0
+1,WD,1WDP084,LIDO,0
+1,WD,1WDP085,LIDO,0
+1,WD,1WDP086,LIDO,0
+1,WD,1WDP087,LIDO,0
+1,WD,1WDP088,LIDO,0
+1,WD,1WDP089,LIDO,0
+1,WD,1WDP090,LIDO,0
+1,WD,1WDP091,LIDO,0
+1,WD,1WDP092,LIDO,0
+1,WD,1WDP093,LIDO,0
+1,WD,1WDP094,LIDO,0
+1,WD,1WDP095,LIDO,0
+1,WD,1WDP096,LIDO,0
+1,WD,1WDP097,LIDO,0
+1,WD,1WDP098,LIDO,0
+1,WD,1WDP099,LIDO,0
+1,WD,1WDP100,LIDO,0
+1,WD,1WDP101,LIDO,0
+1,WD,1WDP102,LIDO,0
+1,WD,1WDP103,LIDO,0
+1,WD,1WDP104,LIDO,0
+1,WD,1WDP105,LIDO,0
+1,WD,1WDP106,LIDO,0
+1,WD,1WDP107,LIDO,0
+1,WD,1WDP108,LIDO,0
+1,WD,1WDL001,P_ROMA,1
+1,WD,1WDL002,P_ROMA,1
+1,WD,1WDL003,P_ROMA,1
+1,WD,1WDL004,P_ROMA,1
+1,WD,1WDL005,P_ROMA,1
+1,WD,1WDL006,P_ROMA,1
+1,WD,1WDL007,P_ROMA,1
+1,WD,1WDL008,P_ROMA,1
+1,WD,1WDL009,P_ROMA,1
+1,WD,1WDL010,P_ROMA,1
+1,WD,1WDL011,P_ROMA,1
+1,WD,1WDL012,P_ROMA,1
+1,WD,1WDL013,P_ROMA,1
+1,WD,1WDL014,P_ROMA,1
+1,WD,1WDL015,P_ROMA,1
+1,WD,1WDL016,P_ROMA,1
+1,WD,1WDL017,P_ROMA,1
+1,WD,1WDL018,P_ROMA,1
+1,WD,1WDL019,P_ROMA,1
+1,WD,1WDL020,P_ROMA,1
+1,WD,1WDL021,P_ROMA,1
+1,WD,1WDL022,P_ROMA,1
+1,WD,1WDL023,P_ROMA,1
+1,WD,1WDL024,P_ROMA,1
+1,WD,1WDL025,P_ROMA,1
+1,WD,1WDL026,P_ROMA,1
+1,WD,1WDL027,P_ROMA,1
+1,WD,1WDL028,P_ROMA,1
+1,WD,1WDL029,P_ROMA,1
+1,WD,1WDL030,P_ROMA,1
+1,WD,1WDL031,P_ROMA,1
+1,WD,1WDL032,P_ROMA,1
+1,WD,1WDL033,P_ROMA,1
+1,WD,1WDL034,P_ROMA,1
+1,WD,1WDL035,P_ROMA,1
+1,WD,1WDL036,P_ROMA,1
+1,WD,1WDL037,P_ROMA,1
+1,WD,1WDL038,P_ROMA,1
+1,WD,1WDL039,P_ROMA,1
+1,WD,1WDL040,P_ROMA,1
+1,WD,1WDL041,P_ROMA,1
+1,WD,1WDL042,P_ROMA,1
+1,WD,1WDL043,P_ROMA,1
+1,WD,1WDL044,P_ROMA,1
+1,WD,1WDL045,P_ROMA,1
+1,WD,1WDL046,P_ROMA,1
+1,WD,1WDL047,P_ROMA,1
+1,WD,1WDL048,P_ROMA,1
+1,WD,1WDL049,P_ROMA,1
+1,WD,1WDL050,P_ROMA,1
+1,WD,1WDL051,P_ROMA,1
+1,WD,1WDL052,P_ROMA,1
+1,WD,1WDL053,P_ROMA,1
+1,WD,1WDL054,P_ROMA,1
+1,WD,1WDL055,P_ROMA,1
+1,WD,1WDL056,P_ROMA,1
+1,WD,1WDL057,P_ROMA,1
+1,WD,1WDL058,P_ROMA,1
+1,WD,1WDL059,P_ROMA,1
+1,WD,1WDL060,P_ROMA,1
+1,WD,1WDL061,P_ROMA,1
+1,WD,1WDL062,P_ROMA,1
+1,WD,1WDL063,P_ROMA,1
+1,WD,1WDL064,P_ROMA,1
+1,WD,1WDL065,P_ROMA,1
+1,WD,1WDL066,P_ROMA,1
+1,WD,1WDL067,P_ROMA,1
+1,WD,1WDL068,P_ROMA,1
+1,WD,1WDL069,P_ROMA,1
+1,WD,1WDL070,P_ROMA,1
+1,WD,1WDL071,P_ROMA,1
+1,WD,1WDL072,P_ROMA,1
+1,WD,1WDL073,P_ROMA,1
+1,WD,1WDL074,P_ROMA,1
+1,WD,1WDL075,P_ROMA,1
+1,WD,1WDL076,P_ROMA,1
+1,WD,1WDL077,P_ROMA,1
+1,WD,1WDL078,P_ROMA,1
+1,WD,1WDL079,P_ROMA,1
+1,WD,1WDL080,P_ROMA,1
+1,WD,1WDL081,P_ROMA,1
+1,WD,1WDL082,P_ROMA,1
+1,WD,1WDL083,P_ROMA,1
+1,WD,1WDL084,P_ROMA,1
+1,WD,1WDL085,P_ROMA,1
+1,WD,1WDL086,P_ROMA,1
+1,WD,1WDL087,P_ROMA,1
+1,WD,1WDL088,P_ROMA,1
+1,WD,1WDL089,P_ROMA,1
+1,WD,1WDL090,P_ROMA,1
+1,WD,1WDL091,P_ROMA,1
+1,WD,1WDL092,P_ROMA,1
+1,WD,1WDL093,P_ROMA,1
+1,WD,1WDL094,P_ROMA,1
+1,WD,1WDL095,P_ROMA,1
+1,WD,1WDL096,P_ROMA,1
+1,WD,1WDL097,P_ROMA,1
+1,WD,1WDL098,P_ROMA,1
+1,WD,1WDL099,P_ROMA,1
+1,WD,1WDL100,P_ROMA,1
+1,WD,1WDL101,P_ROMA,1
+1,WD,1WDL102,P_ROMA,1
+1,WD,1WDL103,P_ROMA,1
+
+
+
+2,WD,2WDS001,S_GIARDINETTI,0
+2,WD,2WDS002,S_GIARDINETTI,0
+2,WD,2WDS003,S_GIARDINETTI,0
+2,WD,2WDS004,S_GIARDINETTI,0
+2,WD,2WDS005,S_GIARDINETTI,0
+2,WD,2WDS006,S_GIARDINETTI,0
+2,WD,2WDS007,S_GIARDINETTI,0
+2,WD,2WDS008,S_GIARDINETTI,0
+2,WD,2WDS009,S_GIARDINETTI,0
+2,WD,2WDS010,S_GIARDINETTI,0
+2,WD,2WDS011,S_GIARDINETTI,0
+2,WD,2WDS012,S_GIARDINETTI,0
+2,WD,2WDS013,S_GIARDINETTI,0
+2,WD,2WDS014,S_GIARDINETTI,0
+2,WD,2WDS015,S_GIARDINETTI,0
+2,WD,2WDS016,S_GIARDINETTI,0
+2,WD,2WDS017,S_GIARDINETTI,0
+2,WD,2WDS018,S_GIARDINETTI,0
+2,WD,2WDS019,S_GIARDINETTI,0
+2,WD,2WDS020,S_GIARDINETTI,0
+2,WD,2WDS021,S_GIARDINETTI,0
+2,WD,2WDS022,S_GIARDINETTI,0
+2,WD,2WDS023,S_GIARDINETTI,0
+2,WD,2WDS024,S_GIARDINETTI,0
+2,WD,2WDS025,S_GIARDINETTI,0
+2,WD,2WDS026,S_GIARDINETTI,0
+2,WD,2WDS027,S_GIARDINETTI,0
+2,WD,2WDS028,S_GIARDINETTI,0
+2,WD,2WDS029,S_GIARDINETTI,0
+2,WD,2WDS030,S_GIARDINETTI,0
+2,WD,2WDS031,S_GIARDINETTI,0
+2,WD,2WDS032,S_GIARDINETTI,0
+2,WD,2WDS033,S_GIARDINETTI,0
+2,WD,2WDS034,S_GIARDINETTI,0
+2,WD,2WDS035,S_GIARDINETTI,0
+2,WD,2WDS036,S_GIARDINETTI,0
+2,WD,2WDS037,S_GIARDINETTI,0
+2,WD,2WDS038,S_GIARDINETTI,0
+2,WD,2WDS039,S_GIARDINETTI,0
+2,WD,2WDS040,S_GIARDINETTI,0
+2,WD,2WDS041,S_GIARDINETTI,0
+2,WD,2WDS042,S_GIARDINETTI,0
+2,WD,2WDS043,S_GIARDINETTI,0
+2,WD,2WDS044,S_GIARDINETTI,0
+2,WD,2WDS045,S_GIARDINETTI,0
+2,WD,2WDS046,S_GIARDINETTI,0
+2,WD,2WDS047,S_GIARDINETTI,0
+2,WD,2WDS048,S_GIARDINETTI,0
+2,WD,2WDS049,S_GIARDINETTI,0
+2,WD,2WDS050,S_GIARDINETTI,0
+2,WD,2WDS051,S_GIARDINETTI,0
+2,WD,2WDS052,S_GIARDINETTI,0
+2,WD,2WDS053,S_GIARDINETTI,0
+2,WD,2WDS054,S_GIARDINETTI,0
+2,WD,2WDS055,S_GIARDINETTI,0
+2,WD,2WDS056,S_GIARDINETTI,0
+2,WD,2WDS057,S_GIARDINETTI,0
+2,WD,2WDS058,S_GIARDINETTI,0
+2,WD,2WDS059,S_GIARDINETTI,0
+2,WD,2WDS060,S_GIARDINETTI,0
+2,WD,2WDS061,S_GIARDINETTI,0
+2,WD,2WDS062,S_GIARDINETTI,0
+2,WD,2WDS063,S_GIARDINETTI,0
+2,WD,2WDS064,S_GIARDINETTI,0
+2,WD,2WDS065,S_GIARDINETTI,0
+2,WD,2WDS066,S_GIARDINETTI,0
+2,WD,2WDS067,S_GIARDINETTI,0
+2,WD,2WDS068,S_GIARDINETTI,0
+2,WD,2WDS069,S_GIARDINETTI,0
+2,WD,2WDS070,S_GIARDINETTI,0
+2,WD,2WDS071,S_GIARDINETTI,0
+2,WD,2WDS072,S_GIARDINETTI,0
+2,WD,2WDS073,S_GIARDINETTI,0
+2,WD,2WDS074,S_GIARDINETTI,0
+2,WD,2WDS075,S_GIARDINETTI,0
+2,WD,2WDS076,S_GIARDINETTI,0
+2,WD,2WDS077,S_GIARDINETTI,0
+2,WD,2WDS078,S_GIARDINETTI,0
+2,WD,2WDS079,S_GIARDINETTI,0
+2,WD,2WDS080,S_GIARDINETTI,0
+2,WD,2WDS081,S_GIARDINETTI,0
+2,WD,2WDS082,S_GIARDINETTI,0
+2,WD,2WDS083,S_GIARDINETTI,0
+2,WD,2WDS084,S_GIARDINETTI,0
+2,WD,2WDS085,S_GIARDINETTI,0
+2,WD,2WDS086,S_GIARDINETTI,0
+2,WD,2WDS087,S_GIARDINETTI,0
+2,WD,2WDS088,S_GIARDINETTI,0
+2,WD,2WDS089,S_GIARDINETTI,0
+2,WD,2WDS090,S_GIARDINETTI,0
+2,WD,2WDS091,S_GIARDINETTI,0
+2,WD,2WDS092,S_GIARDINETTI,0
+2,WD,2WDS093,S_GIARDINETTI,0
+2,WD,2WDS094,S_GIARDINETTI,0
+2,WD,2WDS095,S_GIARDINETTI,0
+2,WD,2WDS096,S_GIARDINETTI,0
+2,WD,2WDS097,S_GIARDINETTI,0
+2,WD,2WDS098,S_GIARDINETTI,0
+2,WD,2WDS099,S_GIARDINETTI,0
+2,WD,2WDS100,S_GIARDINETTI,0
+2,WD,2WDS101,S_GIARDINETTI,0
+2,WD,2WDS102,S_GIARDINETTI,0
+2,WD,2WDS103,S_GIARDINETTI,0
+2,WD,2WDS104,S_GIARDINETTI,0
+2,WD,2WDS105,S_GIARDINETTI,0
+2,WD,2WDS106,S_GIARDINETTI,0
+2,WD,2WDS107,S_GIARDINETTI,0
+2,WD,2WDS108,S_GIARDINETTI,0
+2,WD,2WDS109,S_GIARDINETTI,0
+2,WD,2WDS110,S_GIARDINETTI,0
+2,WD,2WDS111,S_GIARDINETTI,0
+2,WD,2WDS112,S_GIARDINETTI,0
+2,WD,2WDS113,S_GIARDINETTI,0
+2,WD,2WDS114,S_GIARDINETTI,0
+2,WD,2WDS115,S_GIARDINETTI,0
+2,WD,2WDS116,S_GIARDINETTI,0
+2,WD,2WDS117,S_GIARDINETTI,0
+2,WD,2WDS118,S_GIARDINETTI,0
+
+
+3,WD,3WDP001,P_ROMA,0
+3,WD,3WDP002,P_ROMA,0
+3,WD,3WDP003,P_ROMA,0
+3,WD,3WDP004,P_ROMA,0
+3,WD,3WDP005,P_ROMA,0
+3,WD,3WDP006,P_ROMA,0
+3,WD,3WDP007,P_ROMA,0
+3,WD,3WDP008,P_ROMA,0
+3,WD,3WDP009,P_ROMA,0
+3,WD,3WDP010,P_ROMA,0
+3,WD,3WDP011,P_ROMA,0
+3,WD,3WDP012,P_ROMA,0
+3,WD,3WDP013,P_ROMA,0
+3,WD,3WDP014,P_ROMA,0
+3,WD,3WDP015,P_ROMA,0
+3,WD,3WDP016,P_ROMA,0
+3,WD,3WDP017,P_ROMA,0
+3,WD,3WDP018,P_ROMA,0
+3,WD,3WDP019,P_ROMA,0
+3,WD,3WDP020,P_ROMA,0
+3,WD,3WDP021,P_ROMA,0
+3,WD,3WDP022,P_ROMA,0
+3,WD,3WDP023,P_ROMA,0
+3,WD,3WDP024,P_ROMA,0
+4.1,WD,41WDM001,MURANO,0
+4.1,WD,41WDM002,MURANO,0
+4.1,WD,41WDM003,MURANO,0
+4.1,WD,41WDM004,MURANO,0
+4.1,WD,41WDM005,MURANO,0
+4.1,WD,41WDM006,MURANO,0
+4.1,WD,41WDM007,MURANO,0
+4.1,WD,41WDM008,MURANO,0
+4.1,WD,41WDM009,MURANO,0
+4.1,WD,41WDM010,MURANO,0
+4.1,WD,41WDM011,MURANO,0
+4.1,WD,41WDM012,MURANO,0
+4.1,WD,41WDM013,MURANO,0
+4.1,WD,41WDM014,MURANO,0
+4.1,WD,41WDM015,MURANO,0
+4.1,WD,41WDM016,MURANO,0
+4.1,WD,41WDM017,MURANO,0
+4.1,WD,41WDM018,MURANO,0
+4.1,WD,41WDM019,MURANO,0
+4.1,WD,41WDM020,MURANO,0
+4.1,WD,41WDM021,MURANO,0
+4.1,WD,41WDM022,MURANO,0
+4.1,WD,41WDM023,MURANO,0
+4.1,WD,41WDM024,MURANO,0
+4.1,WD,41WDM025,MURANO,0
+4.1,WD,41WDM026,MURANO,0
+4.1,WD,41WDM027,MURANO,0
+4.1,WD,41WDM028,MURANO,0
+4.1,WD,41WDM029,MURANO,0
+4.1,WD,41WDM030,MURANO,0
+4.1,WD,41WDM031,MURANO,0
+4.1,WD,41WDM032,MURANO,0
+4.1,WD,41WDM033,MURANO,0
+4.1,WD,41WDM034,MURANO,0
+4.1,WD,41WDM035,MURANO,0
+4.1,WD,41WDM036,MURANO,0
+4.1,WD,41WDM037,MURANO,0
+4.1,WD,41WDM038,MURANO,0
+4.1,WD,41WDM039,MURANO,0
+4.1,WD,41WDM040,MURANO,0
+4.1,WD,41WDM041,MURANO,0
+4.1,WD,41WDM042,MURANO,0
+4.1,WD,41WDM043,MURANO,0
+4.1,WD,41WDM044,MURANO,0
+4.1,WD,41WDM045,MURANO,0
+4.1,WD,41WDM046,MURANO,0
+4.1,WD,41WDM047,MURANO,0
+4.1,WD,41WDM048,MURANO,0
+4.1,WD,41WDM049,MURANO,0
+4.1,WD,41WDM050,MURANO,0
+4.1,WD,41WDM051,MURANO,0
+4.1,WD,41WDM052,MURANO,0
+4.1,WD,41WDM053,MURANO,0
+4.2,WD,42WDM023,MURANO,1
+4.2,WD,42WDM001,MURANO,1
+4.2,WD,42WDM002,MURANO,1
+4.2,WD,42WDM003,MURANO,1
+4.2,WD,42WDM004,MURANO,1
+4.2,WD,42WDM005,MURANO,1
+4.2,WD,42WDM006,MURANO,1
+4.2,WD,42WDM007,MURANO,1
+4.2,WD,42WDM008,MURANO,1
+4.2,WD,42WDM009,MURANO,1
+4.2,WD,42WDM010,MURANO,1
+4.2,WD,42WDM011,MURANO,1
+4.2,WD,42WDM012,MURANO,1
+4.2,WD,42WDM013,MURANO,1
+4.2,WD,42WDM014,MURANO,1
+4.2,WD,42WDM015,MURANO,1
+4.2,WD,42WDM016,MURANO,1
+4.2,WD,42WDM017,MURANO,1
+4.2,WD,42WDM018,MURANO,1
+4.2,WD,42WDM019,MURANO,1
+4.2,WD,42WDM020,MURANO,1
+4.2,WD,42WDM021,MURANO,1
+4.2,WD,42WDM022,MURANO,1
+4.2,WD,42WDM024,MURANO,1
+4.2,WD,42WDM025,MURANO,1
+4.2,WD,42WDM026,MURANO,1
+4.2,WD,42WDM027,MURANO,1
+4.2,WD,42WDM028,MURANO,1
+4.2,WD,42WDM029,MURANO,1
+4.2,WD,42WDM030,MURANO,1
+4.2,WD,42WDM031,MURANO,1
+4.2,WD,42WDM032,MURANO,1
+4.2,WD,42WDM033,MURANO,1
+4.2,WD,42WDM034,MURANO,1
+4.2,WD,42WDM035,MURANO,1
+4.2,WD,42WDM036,MURANO,1
+4.2,WD,42WDM037,MURANO,1
+4.2,WD,42WDM038,MURANO,1
+4.2,WD,42WDM039,MURANO,1
+4.2,WD,42WDM040,MURANO,1
+4.2,WD,42WDM041,MURANO,1
+4.2,WD,42WDM042,MURANO,1
+4.2,WD,42WDM043,MURANO,1
+4.2,WD,42WDM044,MURANO,1
+4.2,WD,42WDM045,MURANO,1
+4.2,WD,42WDM046,MURANO,1
+4.2,WD,42WDM047,MURANO,1
+4.2,WD,42WDM048,MURANO,1
+4.2,WD,42WDM049,MURANO,1
+4.2,WD,42WDM050,MURANO,1
+4.2,WD,42WDM051,MURANO,1
+4.2,WD,42WDM052,MURANO,1
+4.2,WD,42WDM053,MURANO,1
+4.2,WD,42WDM054,MURANO,1
+4.2,WD,42WDM055,MURANO,1
+4.2,WD,42WDM056,MURANO,1
+4.2,WD,42WDM057,MURANO,1
+4.2,WD,42WDM058,MURANO,1
+4.2,WD,42WDM059,MURANO,1
+4.2,WD,42WDM060,MURANO,1
+4.2,WD,42WDM061,MURANO,1
+4.2,WD,42WDM062,MURANO,1
+4.2,WD,42WDM063,MURANO,1
+4.2,WD,42WDM064,MURANO,1
+4.2,WD,42WDM065,MURANO,1
+4.2,WD,42WDM066,MURANO,1
+4.2,WD,42WDM067,MURANO,1
+4.2,WD,42WDM068,MURANO,1
+4.2,WD,42WDM069,MURANO,1
+4.2,WD,42WDM070,MURANO,1
+4.2,WD,42WDM071,MURANO,1
+4.2,WD,42WDM072,MURANO,1
+4.2,WD,42WDM073,MURANO,1
+4.2,WD,42WDM074,MURANO,1
+5.1,WD,51WDLA001,LIDO,0
+5.1,WD,51WDLA002,LIDO,0
+5.1,WD,51WDLA003,LIDO,0
+5.1,WD,51WDLA004,LIDO,0
+5.1,WD,51WDLA005,LIDO,0
+5.1,WD,51WDLA006,LIDO,0
+5.1,WD,51WDLA007,LIDO,0
+5.1,WD,51WDLA008,LIDO,0
+5.1,WD,51WDLA009,LIDO,0
+5.1,WD,51WDLA010,LIDO,0
+5.1,WD,51WDLA011,LIDO,0
+5.1,WD,51WDLA012,LIDO,0
+5.1,WD,51WDLA013,LIDO,0
+5.1,WD,51WDLA014,LIDO,0
+5.1,WD,51WDLA015,LIDO,0
+5.1,WD,51WDLA016,LIDO,0
+5.1,WD,51WDLA017,LIDO,0
+5.1,WD,51WDLA018,LIDO,0
+5.1,WD,51WDLA019,LIDO,0
+5.1,WD,51WDLA020,LIDO,0
+5.1,WD,51WDLA021,LIDO,0
+5.1,WD,51WDLA022,LIDO,0
+5.1,WD,51WDLA023,LIDO,0
+5.1,WD,51WDLA024,LIDO,0
+5.1,WD,51WDLA025,LIDO,0
+5.1,WD,51WDLA026,LIDO,0
+5.1,WD,51WDLA027,LIDO,0
+5.1,WD,51WDLA028,LIDO,0
+5.1,WD,51WDLA029,LIDO,0
+5.1,WD,51WDLA030,LIDO,0
+5.1,WD,51WDLA031,LIDO,0
+5.1,WD,51WDLA032,LIDO,0
+5.1,WD,51WDLA033,LIDO,0
+5.1,WD,51WDLA034,LIDO,0
+5.1,WD,51WDLA035,LIDO,0
+5.1,WD,51WDLA036,LIDO,0
+5.1,WD,51WDLA037,LIDO,0
+5.1,WD,51WDLA038,LIDO,0
+5.1,WD,51WDLA039,LIDO,0
+5.1,WD,51WDLA040,LIDO,0
+5.1,WD,51WDLA041,LIDO,0
+5.1,WD,51WDLA042,LIDO,0
+5.1,WD,51WDLA043,LIDO,0
+5.1,WD,51WDLA044,LIDO,0
+5.1,WD,51WDLA045,LIDO,0
+5.1,WD,51WDLA046,LIDO,0
+5.1,WD,51WDLA047,LIDO,0
+5.1,WD,51WDLA048,LIDO,0
+5.1,WD,51WDLA049,LIDO,0
+5.1,WD,51WDLA050,LIDO,0
+5.1,WD,51WDLA051,LIDO,0
+5.1,WD,51WDLA052,LIDO,0
+5.1,WD,51WDLA053,LIDO,0
+5.1,WD,51WDLA054,LIDO,0
+5.1,WD,51WDLA055,LIDO,0
+5.1,WD,51WDLA056,LIDO,0
+5.1,WD,51WDLA057,LIDO,0
+5.1,WD,51WDLA058,LIDO,0
+5.1,WD,51WDLA059,LIDO,0
+5.2,WD,52WDLB001,LIDO,1
+5.2,WD,52WDLB002,LIDO,1
+5.2,WD,52WDLB003,LIDO,1
+5.2,WD,52WDLB004,LIDO,1
+5.2,WD,52WDLB005,LIDO,1
+5.2,WD,52WDLB006,LIDO,1
+5.2,WD,52WDLB007,LIDO,1
+5.2,WD,52WDLB008,LIDO,1
+5.2,WD,52WDLB009,LIDO,1
+5.2,WD,52WDLB010,LIDO,1
+5.2,WD,52WDLB011,LIDO,1
+5.2,WD,52WDLB012,LIDO,1
+5.2,WD,52WDLB013,LIDO,1
+5.2,WD,52WDLB014,LIDO,1
+5.2,WD,52WDLB015,LIDO,1
+5.2,WD,52WDLB016,LIDO,1
+5.2,WD,52WDLB017,LIDO,1
+5.2,WD,52WDLB018,LIDO,1
+5.2,WD,52WDLB019,LIDO,1
+5.2,WD,52WDLB020,LIDO,1
+5.2,WD,52WDLB021,LIDO,1
+5.2,WD,52WDLB022,LIDO,1
+5.2,WD,52WDLB023,LIDO,1
+5.2,WD,52WDLB024,LIDO,1
+5.2,WD,52WDLB025,LIDO,1
+5.2,WD,52WDLB026,LIDO,1
+5.2,WD,52WDLB027,LIDO,1
+5.2,WD,52WDLB028,LIDO,1
+5.2,WD,52WDLB029,LIDO,1
+5.2,WD,52WDLB030,LIDO,1
+5.2,WD,52WDLB031,LIDO,1
+5.2,WD,52WDLB032,LIDO,1
+5.2,WD,52WDLB033,LIDO,1
+5.2,WD,52WDLB034,LIDO,1
+5.2,WD,52WDLB035,LIDO,1
+5.2,WD,52WDLB036,LIDO,1
+5.2,WD,52WDLB037,LIDO,1
+5.2,WD,52WDLB038,LIDO,1
+5.2,WD,52WDLB039,LIDO,1
+5.2,WD,52WDLB040,LIDO,1
+5.2,WD,52WDLB041,LIDO,1
+5.2,WD,52WDLB042,LIDO,1
+5.2,WD,52WDLB043,LIDO,1
+5.2,WD,52WDLB044,LIDO,1
+5.2,WD,52WDLB045,LIDO,1
+5.2,WD,52WDLB046,LIDO,1
+5.2,WD,52WDLB047,LIDO,1
+5.2,WD,52WDLB048,LIDO,1
+5.2,WD,52WDLB049,LIDO,1
+5.2,WD,52WDLB050,LIDO,1
+5.2,WD,52WDLB051,LIDO,1
+5.2,WD,52WDLB052,LIDO,1
+5.2,WD,52WDLB053,LIDO,1
+5.2,WD,52WDLB054,LIDO,1
+5.2,WD,52WDLB055,LIDO,1
+5.2,WD,52WDLB056,LIDO,1
+5.2,WD,52WDLB057,LIDO,1
+6,WD,6WDP1,LIDO,0
+6,WD,6WDP2,LIDO,0
+6,WD,6WDP3,LIDO,0
+6,WD,6WDP4,LIDO,0
+6,WD,6WDP5,LIDO,0
+6,WD,6WDP6,LIDO,0
+6,WD,6WDP7,LIDO,0
+6,WD,6WDP8,LIDO,0
+6,WD,6WDP9,LIDO,0
+6,WD,6WDP10,LIDO,0
+6,WD,6WDP11,LIDO,0
+6,WD,6WDP12,LIDO,0
+6,WD,6WDP13,LIDO,0
+6,WD,6WDP14,LIDO,0
+6,WD,6WDP15,LIDO,0
+6,WD,6WDP16,LIDO,0
+6,WD,6WDP17,LIDO,0
+6,WD,6WDP18,LIDO,0
+6,WD,6WDP19,LIDO,0
+6,WD,6WDP20,LIDO,0
+6,WD,6WDP21,LIDO,0
+6,WD,6WDP22,LIDO,0
+6,WD,6WDP23,LIDO,0
+6,WD,6WDP24,LIDO,0
+6,WD,6WDP25,LIDO,0
+6,WD,6WDP26,LIDO,0
+6,WD,6WDP27,LIDO,0
+6,WD,6WDP28,LIDO,0
+6,WD,6WDP29,LIDO,0
+6,WD,6WDP30,LIDO,0
+6,WD,6WDP31,LIDO,0
+6,WD,6WDP32,LIDO,0
+6,WD,6WDP33,LIDO,0
+6,WD,6WDP34,LIDO,0
+6,WD,6WDP35,LIDO,0
+6,WD,6WDP36,LIDO,0
+6,WD,6WDP37,LIDO,0
+6,WD,6WDP38,LIDO,0
+6,WD,6WDP39,LIDO,0
+6,WD,6WDP40,LIDO,0
+6,WD,6WDP41,LIDO,0
+6,WD,6WDP42,LIDO,0
+6,WD,6WDP43,LIDO,0
+6,WD,6WDL1,LIDO,1
+6,WD,6WDL2,LIDO,1
+6,WD,6WDL3,LIDO,1
+6,WD,6WDL4,LIDO,1
+6,WD,6WDL5,LIDO,1
+6,WD,6WDL6,LIDO,1
+6,WD,6WDL7,LIDO,1
+6,WD,6WDL8,LIDO,1
+6,WD,6WDL9,LIDO,1
+6,WD,6WDL10,LIDO,1
+6,WD,6WDL11,LIDO,1
+6,WD,6WDL12,LIDO,1
+6,WD,6WDL13,LIDO,1
+6,WD,6WDL14,LIDO,1
+6,WD,6WDL15,LIDO,1
+6,WD,6WDL16,LIDO,1
+6,WD,6WDL17,LIDO,1
+6,WD,6WDL18,LIDO,1
+6,WD,6WDL19,LIDO,1
+6,WD,6WDL20,LIDO,1
+6,WD,6WDL21,LIDO,1
+6,WD,6WDL22,LIDO,1
+6,WD,6WDL23,LIDO,1
+6,WD,6WDL24,LIDO,1
+6,WD,6WDL25,LIDO,1
+6,WD,6WDL26,LIDO,1
+6,WD,6WDL27,LIDO,1
+6,WD,6WDL28,LIDO,1
+6,WD,6WDL29,LIDO,1
+6,WD,6WDL30,LIDO,1
+6,WD,6WDL31,LIDO,1
+6,WD,6WDL32,LIDO,1
+6,WD,6WDL33,LIDO,1
+6,WD,6WDL34,LIDO,1
+6,WD,6WDL35,LIDO,1
+6,WD,6WDL36,LIDO,1
+6,WD,6WDL37,LIDO,1
+6,WD,6WDL38,LIDO,1
+6,WD,6WDL39,LIDO,1
+6,WD,6WDL40,LIDO,1
+6,WD,6WDL41,LIDO,1
+9,WD,9WDB1,TORCELLO,0
+9,WD,9WDB2,TORCELLO,0
+9,WD,9WDB3,TORCELLO,0
+9,WD,9WDB4,TORCELLO,0
+9,WD,9WDB5,TORCELLO,0
+9,WD,9WDB6,TORCELLO,0
+9,WD,9WDB7,TORCELLO,0
+9,WD,9WDB8,TORCELLO,0
+9,WD,9WDB9,TORCELLO,0
+9,WD,9WDB10,TORCELLO,0
+9,WD,9WDB11,TORCELLO,0
+9,WD,9WDB12,TORCELLO,0
+9,WD,9WDB13,TORCELLO,0
+9,WD,9WDB14,TORCELLO,0
+9,WD,9WDB15,TORCELLO,0
+9,WD,9WDB16,TORCELLO,0
+9,WD,9WDB17,TORCELLO,0
+9,WD,9WDB18,TORCELLO,0
+9,WD,9WDB19,TORCELLO,0
+9,WD,9WDB20,TORCELLO,0
+9,WD,9WDB21,TORCELLO,0
+9,WD,9WDB22,TORCELLO,0
+9,WD,9WDB23,TORCELLO,0
+9,WD,9WDB24,TORCELLO,0
+9,WD,9WDB25,TORCELLO,0
+9,WD,9WDB26,TORCELLO,0
+9,WD,9WDB27,TORCELLO,0
+9,WD,9WDB28,TORCELLO,0
+9,WD,9WDT1,BURANO,1
+9,WD,9WDT2,BURANO,1
+9,WD,9WDT3,BURANO,1
+9,WD,9WDT4,BURANO,1
+9,WD,9WDT5,BURANO,1
+9,WD,9WDT6,BURANO,1
+9,WD,9WDT7,BURANO,1
+9,WD,9WDT8,BURANO,1
+9,WD,9WDT9,BURANO,1
+9,WD,9WDT10,BURANO,1
+9,WD,9WDT11,BURANO,1
+9,WD,9WDT12,BURANO,1
+9,WD,9WDT13,BURANO,1
+9,WD,9WDT14,BURANO,1
+9,WD,9WDT15,BURANO,1
+9,WD,9WDT16,BURANO,1
+9,WD,9WDT17,BURANO,1
+9,WD,9WDT18,BURANO,1
+9,WD,9WDT19,BURANO,1
+9,WD,9WDT20,BURANO,1
+9,WD,9WDT21,BURANO,1
+9,WD,9WDT22,BURANO,1
+9,WD,9WDT23,BURANO,1
+9,WD,9WDT24,BURANO,1
+9,WD,9WDT25,BURANO,1
+9,WD,9WDT26,BURANO,1
+9,WD,9WDT27,BURANO,1
+9,WD,9WDT28,BURANO,1
+10,WD,10WDL1,ZATTERE,0
+10,WD,10WDL2,ZATTERE,0
+10,WD,10WDL3,ZATTERE,0
+10,WD,10WDL4,ZATTERE,0
+10,WD,10WDL5,ZATTERE,0
+10,WD,10WDL6,ZATTERE,0
+10,WD,10WDL7,ZATTERE,0
+10,WD,10WDL8,ZATTERE,0
+10,WD,10WDL9,ZATTERE,0
+10,WD,10WDL10,ZATTERE,0
+10,WD,10WDL11,ZATTERE,0
+10,WD,10WDL12,ZATTERE,0
+10,WD,10WDL13,ZATTERE,0
+10,WD,10WDZ1,LIDO,1
+10,WD,10WDZ2,LIDO,1
+10,WD,10WDZ3,LIDO,1
+10,WD,10WDZ4,LIDO,1
+10,WD,10WDZ5,LIDO,1
+10,WD,10WDZ6,LIDO,1
+10,WD,10WDZ7,LIDO,1
+10,WD,10WDZ8,LIDO,1
+10,WD,10WDZ9,LIDO,1
+10,WD,10WDZ10,LIDO,1
+10,WD,10WDZ11,LIDO,1
+10,WD,10WDZ12,LIDO,1
+10,WD,10WDZ13,LIDO,1
+N,WD,NWDL1,S_ZACCARIA,0
+N,WD,NWDL2,S_ZACCARIA,0
+N,WD,NWDL3,S_ZACCARIA,0
+N,WD,NWDL4,S_ZACCARIA,0
+N,WD,NWDL5,S_ZACCARIA,0
+N,WD,NWDL6,S_ZACCARIA,0
+N,WD,NWDL7,S_ZACCARIA,0
+N,WD,NWDL8,S_ZACCARIA,0
+N,WD,NWDL9,S_ZACCARIA,0
+N,WD,NWDL10,S_ZACCARIA,0
+N,WD,NWDL11,S_ZACCARIA,0
+N,WD,NWDL12,S_ZACCARIA,0
+N,WD,NWDL13,S_ZACCARIA,0
+N,WD,NWDL14,S_ZACCARIA,0
+N,WD,NWDL15,S_ZACCARIA,0
+N,WD,NWDZ1,LIDO,1
+N,WD,NWDZ2,LIDO,1
+N,WD,NWDZ3,LIDO,1
+N,WD,NWDZ4,LIDO,1
+N,WD,NWDZ5,LIDO,1
+N,WD,NWDZ6,LIDO,1
+N,WD,NWDZ7,LIDO,1
+N,WD,NWDZ8,LIDO,1
+N,WD,NWDZ9,LIDO,1
+N,WD,NWDZ10,LIDO,1
+N,WD,NWDZ11,LIDO,1
+N,WD,NWDZ12,LIDO,1
+N,WD,NWDZ13,LIDO,1
+N,WD,NWDZ14,LIDO,1
+N,WD,NWDZ15,LIDO,1
+B,WD,ABWDC1,C_Terminal,0
+B,WD,ABWDC2,C_Terminal,0
+B,WD,ABWDC3,C_Terminal,0
+B,WD,ABWDC4,C_Terminal,0
+B,WD,ABWDC5,C_Terminal,0
+B,WD,ABWDC6,C_Terminal,0
+B,WD,ABWDC7,C_Terminal,0
+B,WD,ABWDC8,C_Terminal,0
+B,WD,ABWDC9,C_Terminal,0
+B,WD,ABWDC10,C_Terminal,0
+B,WD,ABWDC11,C_Terminal,0
+B,WD,ABWDC12,C_Terminal,0
+B,WD,ABWDC13,C_Terminal,0
+B,WD,ABWDC14,C_Terminal,0
+B,WD,ABWDC15,C_Terminal,0
+B,WD,ABWDC16,C_Terminal,0
+B,WD,ABWDC17,C_Terminal,0
+B,WD,ABWDC18,C_Terminal,0
+B,WD,ABWDC19,C_Terminal,0
+B,WD,ABWDC20,C_Terminal,0
+B,WD,ABWDC21,C_Terminal,0
+B,WD,ABWDC22,C_Terminal,0
+B,WD,ABWDC23,C_Terminal,0
+B,WD,ABWDC24,C_Terminal,0
+B,WD,ABWDC25,C_Terminal,0
+B,WD,ABWDC26,C_Terminal,0
+B,WD,ABWDC27,C_Terminal,0
+B,WD,ABWDC28,C_Terminal,0
+B,WD,ABWDC29,C_Terminal,0
+B,WD,ABWDC30,C_Terminal,0
+B,WD,ABWDA1,Airport,1
+B,WD,ABWDA2,Airport,1
+B,WD,ABWDA3,Airport,1
+B,WD,ABWDA4,Airport,1
+B,WD,ABWDA5,Airport,1
+B,WD,ABWDA6,Airport,1
+B,WD,ABWDA7,Airport,1
+B,WD,ABWDA8,Airport,1
+B,WD,ABWDA9,Airport,1
+B,WD,ABWDA10,Airport,1
+B,WD,ABWDA11,Airport,1
+B,WD,ABWDA12,Airport,1
+B,WD,ABWDA13,Airport,1
+B,WD,ABWDA14,Airport,1
+B,WD,ABWDA15,Airport,1
+B,WD,ABWDA16,Airport,1
+B,WD,ABWDA17,Airport,1
+B,WD,ABWDA18,Airport,1
+B,WD,ABWDA19,Airport,1
+B,WD,ABWDA20,Airport,1
+B,WD,ABWDA21,Airport,1
+B,WD,ABWDA22,Airport,1
+B,WD,ABWDA23,Airport,1
+B,WD,ABWDA24,Airport,1
+B,WD,ABWDA25,Airport,1
+B,WD,ABWDA26,Airport,1
+B,WD,ABWDA27,Airport,1
+B,WD,ABWDA28,Airport,1
+B,WD,ABWDA29,Airport,1
+B,WD,ABWDA30,Airport,1
+B,WD,ABWDA31,Airport,1
+A,WD,AAWDM1,S_Marco,0
+A,WD,AAWDM2,S_Marco,0
+A,WD,AAWDM3,S_Marco,0
+A,WD,AAWDM4,S_Marco,0
+A,WD,AAWDM5,S_Marco,0
+A,WD,AAWDM6,S_Marco,0
+A,WD,AAWDM7,S_Marco,0
+A,WD,AAWDM8,S_Marco,0
+A,WD,AAWDM9,S_Marco,0
+A,WD,AAWDM10,S_Marco,0
+A,WD,AAWDM11,S_Marco,0
+A,WD,AAWDM12,S_Marco,0
+A,WD,AAWDM13,S_Marco,0
+A,WD,AAWDM14,S_Marco,0
+A,WD,AAWDM15,S_Marco,0
+A,WD,AAWDM16,S_Marco,0
+A,WD,AAWDM17,S_Marco,0
+A,WD,AAWDM18,S_Marco,0
+A,WD,AAWDM19,S_Marco,0
+A,WD,AAWDM20,S_Marco,0
+A,WD,AAWDM21,S_Marco,0
+A,WD,AAWDM22,S_Marco,0
+A,WD,AAWDM23,S_Marco,0
+A,WD,AAWDM24,S_Marco,0
+A,WD,AAWDM25,S_Marco,0
+A,WD,AAWDM26,S_Marco,0
+A,WD,AAWDA1,Airport,1
+A,WD,AAWDA2,Airport,1
+A,WD,AAWDA3,Airport,1
+A,WD,AAWDA4,Airport,1
+A,WD,AAWDA5,Airport,1
+A,WD,AAWDA6,Airport,1
+A,WD,AAWDA7,Airport,1
+A,WD,AAWDA8,Airport,1
+A,WD,AAWDA9,Airport,1
+A,WD,AAWDA10,Airport,1
+A,WD,AAWDA11,Airport,1
+A,WD,AAWDA12,Airport,1
+A,WD,AAWDA13,Airport,1
+A,WD,AAWDA14,Airport,1
+A,WD,AAWDA15,Airport,1
+A,WD,AAWDA16,Airport,1
+A,WD,AAWDA17,Airport,1
+A,WD,AAWDA18,Airport,1
+A,WD,AAWDA19,Airport,1
+A,WD,AAWDA20,Airport,1
+A,WD,AAWDA21,Airport,1
+A,WD,AAWDA22,Airport,1
+A,WD,AAWDA23,Airport,1
+A,WD,AAWDA24,Airport,1
+A,WD,AAWDA25,Airport,1
+A,WD,AAWDA26,Airport,1
+R,WD,ARWDL1,Lido,0
+R,WD,ARWDL2,Lido,0
+R,WD,ARWDL3,Lido,0
+R,WD,ARWDL4,Lido,0
+R,WD,ARWDL5,Lido,0
+R,WD,ARWDL6,Lido,0
+R,WD,ARWDL7,Lido,0
+R,WD,ARWDL8,Lido,0
+R,WD,ARWDL9,Lido,0
+R,WD,ARWDL10,Lido,0
+R,WD,ARWDL11,Lido,0
+R,WD,ARWDA1,Airport,1
+R,WD,ARWDA2,Airport,1
+R,WD,ARWDA3,Airport,1
+R,WD,ARWDA4,Airport,1
+R,WD,ARWDA5,Airport,1
+R,WD,ARWDA6,Airport,1
+R,WD,ARWDA7,Airport,1
+R,WD,ARWDA8,Airport,1
+R,WD,ARWDA9,Airport,1
+R,WD,ARWDA10,Airport,1
+R,WD,ARWDA11,Airport,1

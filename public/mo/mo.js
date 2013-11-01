@@ -235,9 +235,9 @@ app.addNextBusTimes = function (ele_id, times, headsign, route_id, stop_id) {
     for (j = 0; j < count; j += 1) {
         var curTime = times[j].time;
         var icons = $('<div class="icon_group"></div>')
-            .append('<img class="travel_icon WALKING" src="images/walking2.png" />')
-            .append('<img class="travel_icon BICYCLING" src="images/bicycle2.png" />')
-            .append('<img class="travel_icon DRIVING" src="images/car.png" />');
+            .append('<img class="travel_icon WALKING" src="images/walking2.png" />');
+            // .append('<img class="travel_icon BICYCLING" src="images/bicycle2.png" />')
+            // .append('<img class="travel_icon DRIVING" src="images/car.png" />');
         var timeButton = $('<a href="#" data-icon="false"></a>')
             .append('<span class="time_text">'+curTime+'</span>')
             .append(icons)
@@ -662,7 +662,8 @@ $(document).ready(function (evt) {
     // preload the spinner gif
     $('<img />').attr('src',"images/sftrails-loader.gif").appendTo('body').hide();
     disableButtons();
-    app.init(15, 35.6660, -105.9632, 
+    // app.init(15, 35.6660, -105.9632, 
+    app.init(15, 45.438072, 12.332497, 
              google.maps.MapTypeId.ROADMAP,
              { mapTypeControl: false
              , streetViewControl: false
