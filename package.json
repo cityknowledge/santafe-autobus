@@ -10,7 +10,7 @@
     "express": "~3.0.0",
     "csv": "~0.3.0",
     "feedparser": "~0.16.0",
-    "zipfile": "~0.3.1",
+    "zipfile": "~0.4.0",
     "xml2js": "0.2.x"
   }
 }
