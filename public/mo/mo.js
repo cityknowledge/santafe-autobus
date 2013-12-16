@@ -467,7 +467,7 @@ app.requestVan = function() {
     }
 
     var content =
-        'A van will pick you up at '+
+        'A taxi will pick you up at '+
         this.selectedBusDateTime.getHours()+':'+pad(this.selectedBusDateTime.getMinutes()-5)+
         '.';
 
