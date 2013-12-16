@@ -92,7 +92,7 @@ var startHTTPServer = function () {
     acequiaServer.on("getRoute", onGetRoute);
     acequiaServer.on("getStops", onGetStops);    
     acequiaServer.on("getVersion", onGetVersion);
-    acequiaServer.on("getBusLocations", onGetBusLocations);
+    // acequiaServer.on("getBusLocations", onGetBusLocations);
     acequiaServer.start();
 
     // setInterval(getBusLocations, 15000);

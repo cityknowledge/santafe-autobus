@@ -115,7 +115,7 @@ AutobusClient.prototype.init = function (zoom, lat, lng, mapType, mapOptions) {
     this.acequiaClient.on("routes", objCallback(this, "onRoutesMessage"));
     this.acequiaClient.on("route", objCallback(this, "onRouteMessage"));
     this.acequiaClient.on("stops", objCallback(this, "onStops"));
-    this.acequiaClient.on("busLocations", objCallback(this, "onBusLocations"));
+    // this.acequiaClient.on("busLocations", objCallback(this, "onBusLocations"));
     this.acequiaClient.addConnectionChangeHandler(objCallback(this, "onConnected"));
     this.acequiaClient.connect();
     
@@ -211,63 +211,44 @@ AutobusClient.prototype.onVersion = function (message) {
         this.acequiaClient.send("getStops");
     }
 
-    this.fetchBusLocations();
+    // this.fetchBusLocations();
     
     this.setAgencyInfo();
 };
 
-AutobusClient.prototype.fetchBusLocations = function() {
-    if (this.acequiaClient.isConnected()) {
-        this.acequiaClient.send("getBusLocations");
-    }
-}
+// AutobusClient.prototype.fetchBusLocations = function() {
+//     if (this.acequiaClient.isConnected()) {
+//         this.acequiaClient.send("getBusLocations");
+//     }
+// }
 
 AutobusClient.prototype.setAgencyInfo = function () {
     document.title = this.agency.name;
     $("#home-title").html(this.agency.name);
 };
 
-AutobusClient.prototype.onBusLocations = function (message) {
-    var buses = message.body;
-    var busIcon = {
-        anchor: new google.maps.Point(10,10),
-        url: "images/busIcon.png"
-    };
-    for (var i=0; i<buses.length; i++) {
-        var busInfo = buses[i];
-        // var point = new google.maps.LatLng(parseFloat(busInfo.LAT[0]), parseFloat(busInfo.LON[0]));
-        var point = new google.maps.LatLng(parseFloat(busInfo.latitude), parseFloat(busInfo.longitude));
-        if (this.buses[i]) this.buses[i].setPosition(point);
-        else this.buses.push(new google.maps.Marker({
-            position: point,
-            map: this.map,
-            icon: busIcon
-            // icon: MapIconMaker.createLabeledMarkerIcon({
-            //     width: 20, height: 34, label: label, 
-            //     primaryColor: rt.color, labelColor: rt.color
-            // })
-        }));
-    }
-}
-
-// AutobusClient.prototype.onBusLocation = function (message) {
-//     var busInfo = message.body[0], label, rt,
-//         point   = new google.maps.LatLng(parseFloat(busInfo.lat), parseFloat(busInfo.lon));
-    
-//     if (!this.buses[busInfo.route_id]) {
-//         rt = this.routes[busInfo.route_id];
-//         label = rt.id + ": " + rt.desc;
-//         this.buses[busInfo.route_id] = new google.maps.Marker({
+// AutobusClient.prototype.onBusLocations = function (message) {
+//     var buses = message.body;
+//     var busIcon = {
+//         anchor: new google.maps.Point(10,10),
+//         url: "images/busIcon.png"
+//     };
+//     for (var i=0; i<buses.length; i++) {
+//         var busInfo = buses[i];
+//         // var point = new google.maps.LatLng(parseFloat(busInfo.LAT[0]), parseFloat(busInfo.LON[0]));
+//         var point = new google.maps.LatLng(parseFloat(busInfo.latitude), parseFloat(busInfo.longitude));
+//         if (this.buses[i]) this.buses[i].setPosition(point);
+//         else this.buses.push(new google.maps.Marker({
 //             position: point,
 //             map: this.map,
-//             title: label,
-//             icon: MapIconMaker.createLabeledMarkerIcon({width: 20, height: 34, label: label, 
-//                                                         primaryColor: rt.color, labelColor: rt.color})
-//         });
-//     } else {
-//         this.buses[busInfo.route_id].setPosition(point);
+//             icon: busIcon
+//             // icon: MapIconMaker.createLabeledMarkerIcon({
+//             //     width: 20, height: 34, label: label, 
+//             //     primaryColor: rt.color, labelColor: rt.color
+//             // })
+//         }));
 //     }
-// };
+// }
 
 AutobusClient.prototype.centerMap = function (latlng, r) {
     r = r ? r * 1609.0 : 0.25 * 1609; // 1609 meters per mile
@@ -337,17 +318,21 @@ AutobusClient.prototype.routeIdFromEleId = function (eleId) {
 };
 
 AutobusClient.prototype.getServiceId = function (time) {
-    if (typeof(time) === "undefined") {
-        time = new Date();
-    }
+    // if (typeof(time) === "undefined") {
+    //     time = new Date();
+    // }
     
-    if (time.getDay() === 0) {
-        return "SU";
-    } else if (time.getDay() === 6) {
-        return "SA";
-    } else {
-        return "WD";
-    }
+    // if (time.getDay() === 0) {
+    //     return "SU";
+    // } else if (time.getDay() === 6) {
+    //     return "SA";
+    // } else {
+    //     return "WD";
+    // }
+
+    // TODO: generate service_id from calendar.txt
+    
+    return "WS";
 };
 
 AutobusClient.prototype.dateFromTimeString = function (timeString) {

@@ -503,7 +503,7 @@ app.scheduleTrip = function(route_id, stop_id, arrivalTime) {
     var direction = this.direction == 'inbound' ? 'Inbound' : 'Outbound';
     var stop = this.stopForStopId(route_id, stop_id);
     var content =
-        direction + ' bus' +
+        direction + ' vaporetto' +
         ' on <b>line ' + route_id + '</b>' +
         ' will arrive at <b>' + stop.name + '</b>' +
         ' in <span id="minutes"></span>.';
