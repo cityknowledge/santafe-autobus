@@ -51,6 +51,10 @@ var onGetStops = function (message) {
     acequiaServer.send("", "stops", gtfs.getStopsDict(), message.from);
 };
 
+var onGetShapes = function (message) {
+    acequiaServer.send("", "shapes", gtfs.getShapesDict(), message.from);
+};
+
 var onRefresh = function (message) {
     gtfs = GTFS.createGeneralTransitFeed(feedURI, null);    
 };
@@ -90,7 +94,8 @@ var startHTTPServer = function () {
     acequiaServer.on("refresh", onRefresh);    
     acequiaServer.on("getRoutes", onGetRoutes);
     acequiaServer.on("getRoute", onGetRoute);
-    acequiaServer.on("getStops", onGetStops);    
+    acequiaServer.on("getStops", onGetStops);
+    acequiaServer.on("getShapes", onGetShapes);
     acequiaServer.on("getVersion", onGetVersion);
     // acequiaServer.on("getBusLocations", onGetBusLocations);
     acequiaServer.start();

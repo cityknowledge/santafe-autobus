@@ -62,8 +62,14 @@ AutobusClient.prototype.persist = function (key, obj) {
 AutobusClient.prototype.onStops = function (message) {
     this.stops = message.body[0];
     this.persist("stops", this.stops);
-    this.acequiaClient.send("getRoutes");
+    this.acequiaClient.send("getShapes");
 };
+
+AutobusClient.prototype.onShapes = function (message) {
+    this.shapes = message.body[0];
+    this.persist("shapes", this.shapes);
+    this.acequiaClient.send("getRoutes");
+}
 
 AutobusClient.prototype.init = function (zoom, lat, lng, mapType, mapOptions) {
     if (this.initialized) {
@@ -115,6 +121,7 @@ AutobusClient.prototype.init = function (zoom, lat, lng, mapType, mapOptions) {
     this.acequiaClient.on("routes", objCallback(this, "onRoutesMessage"));
     this.acequiaClient.on("route", objCallback(this, "onRouteMessage"));
     this.acequiaClient.on("stops", objCallback(this, "onStops"));
+    this.acequiaClient.on("shapes", objCallback(this, "onShapes"));
     // this.acequiaClient.on("busLocations", objCallback(this, "onBusLocations"));
     this.acequiaClient.addConnectionChangeHandler(objCallback(this, "onConnected"));
     this.acequiaClient.connect();
@@ -203,6 +210,7 @@ AutobusClient.prototype.onVersion = function (message) {
         this.agency = this.retrieve("agency");
         routes = this.retrieve("routes");
         this.stops = this.retrieve("stops");
+        this.shapes = this.retrieve("shapes");
         this.onRoutes(routes);
     } else {
         localStorage.clear();
@@ -359,6 +367,39 @@ AutobusClient.prototype.dateFromTimeString = function (timeString) {
 AutobusClient.prototype.stopForStopId = function (route_id, stop_id) {
     return this.stops[stop_id];
 };
+
+AutobusClient.prototype.getLongestShapesForRoute = function (route_id) {
+    var longestOutboundShape, longestOutboundShapeLength = 0,
+        longestInboundShape, longestInboundShapeLength = 0,
+        service_id = this.getServiceId(),
+        trips = this.routes[route_id].trips;
+
+    for (i = 0; i < trips.length; i += 1) {
+        if (service_id !== trips[i].service_id) {
+            continue;
+        }
+        if (trips[i].shape_id) {
+            var curShape = this.shapes[trips[i].shape_id],
+                curShapeLength = curShape.length;
+
+            if (trips[i].direction_id === "0" && 
+                curShapeLength > longestOutboundShapeLength) {
+                    longestOutboundShapeLength = curShapeLength;
+                    longestOutboundShape = curShape;
+            }
+            else if (trips[i].direction_id === "1" &&
+                curShapeLength > longestInboundShapeLength) {
+                    longestInboundShapeLength = curShapeLength;
+                    longestInboundShape = curShape;
+            }   
+        }
+    }
+    
+    return {
+        outbound: longestOutboundShape,
+        inbound: longestInboundShape
+    };
+}
 
 AutobusClient.prototype.getAllStopsForRoute = function (route_id) {
     // Retrieve all of the stops for a route

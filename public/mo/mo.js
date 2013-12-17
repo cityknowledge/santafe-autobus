@@ -111,7 +111,7 @@ app.infowindow = new InfoBubble({
 
 app.onRoute = function (trip) {
     var routePath, point, marker, routeCoordinatesInbound = [],
-        routeCoordinatesOutbound = [], color, stops, addMarkersForRoute, onclick;
+        routeCoordinatesOutbound = [], color, stops, longestShapes, addMarkersForRoute, onclick;
     var INBOUND = 1, OUTBOUND = 0;
     var self = this;
 
@@ -131,7 +131,7 @@ app.onRoute = function (trip) {
     };
     
     stops = this.getAllStopsForRoute(trip.route_id);
-    
+
     addMarkersForRoute = function (stops, inbound, self) {
         var i, stop;
         for (i = 0; i < stops.length; i += 1) {
@@ -168,28 +168,50 @@ app.onRoute = function (trip) {
 
     var arrow = { path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW };
 
+    longestShapes = this.getLongestShapesForRoute(trip.route_id);
+    paths = {
+        inbound: [],
+        outbound: []
+    };
+
+    // turn shape data into google points
+    for (var i = 0; i < longestShapes.inbound.length; i++) {
+        var point = longestShapes.inbound[i],
+            gPoint = new google.maps.LatLng(parseFloat(point.pt_lat), parseFloat(point.pt_lon));
+
+        paths.inbound.push(gPoint);
+    }
+    for (var i = 0; i < longestShapes.outbound.length; i++) {
+        var point = longestShapes.outbound[i],
+            gPoint = new google.maps.LatLng(parseFloat(point.pt_lat), parseFloat(point.pt_lon));
+        
+        paths.outbound.push(gPoint);
+    }
+
     routePaths = {
         inbound: new google.maps.Polyline({
-            path: routeCoordinatesInbound,
+            // path: routeCoordinatesInbound,
+            path: paths.inbound,
             strokeColor: color,
             strokeOpacity: 1.0,
             strokeWeight: 2,
             // map: this.map,
             icons: [{
                 icon: arrow,
-                repeat: '50px',
+                repeat: '200px',
                 offset: '25px'
             }]
         }),
         outbound: new google.maps.Polyline({
-            path: routeCoordinatesOutbound,
+            // path: routeCoordinatesOutbound,
+            path: paths.outbound,
             strokeColor: color,
             strokeOpacity: 1.0,
             strokeWeight: 2,
             // map: this.map,
             icons: [{
                 icon: arrow,
-                repeat: '50px',
+                repeat: '200px',
                 offset: '25px'
             }]
         })

@@ -10,17 +10,23 @@ var FeedParser = require('feedparser');
 var gis = require("./gis");
 var utils = require("./utils");
 
-var arrayToDict = function (arr) {
+var arrayToDict = function (arr, membersAreArrays) {
     var i, ret = {};
     for (i = 0; i < arr.length; i += 1) {
-        ret[arr[i].id] = arr[i];
+        if (membersAreArrays) {
+            ret[arr[i].id] = ret[arr[i].id] || [];
+            ret[arr[i].id].push(arr[i]);
+        }
+        else {
+            ret[arr[i].id] = arr[i];
+        }
     }
     return ret;
 };
 
 var GTFSReader = function (uri, gtfsobj) {
     this.gtfsobj = gtfsobj;
-    this.version = "0.1";
+    this.version = "0.10";
     
     var parser = new FeedParser();
     // parser.parseUrl(uri, utils.objCallback(this, "onfeed"));
@@ -130,6 +136,13 @@ GeneralTransitFeed.prototype.getRoutes = function (routesOnly) {
 
 GeneralTransitFeed.prototype.getShapes = function () {
     return this.dataset.shapes;
+};
+
+GeneralTransitFeed.prototype.getShapesDict = function () {
+    if (typeof(this.shapesDict) === "undefined") {
+        this.shapesDict = arrayToDict(this.dataset.shapes, true);
+    }
+    return this.shapesDict;
 };
 
 GeneralTransitFeed.prototype.getStops = function () {
