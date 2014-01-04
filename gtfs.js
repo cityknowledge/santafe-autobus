@@ -26,7 +26,7 @@ var arrayToDict = function (arr, membersAreArrays) {
 
 var GTFSReader = function (uri, gtfsobj) {
     this.gtfsobj = gtfsobj;
-    this.version = "0.10";
+    this.version = "0.18";
     
     var parser = new FeedParser();
     // parser.parseUrl(uri, utils.objCallback(this, "onfeed"));
@@ -317,20 +317,118 @@ GeneralTransitFeed.prototype.getNextArrivalsForStop = function (route_id, stop_i
     return ret;
 };
 
+GeneralTransitFeed.prototype.createStopTimesFromFrequency = function (freqIdx, trip_template) {
+    var freq = this.dataset.frequencies[freqIdx],
+        trip_start_time = this.parseTimeString(freq.start_time),
+        trip_end_time = this.parseTimeString(freq.end_time),
+        stop_time_intervals = new Array(trip_template.length),
+        stop_times = [],
+        self = this;
+
+    function stopTimesFromStartTime(trip_start_time) {
+        var stop_times = [],
+            stop_time = {
+                trip_id: freq.trip_id,
+                arrival_time: self.toTimeString(trip_start_time),
+                departure_time: self.toTimeString(trip_start_time)
+            };
+
+        for (var i = 0; i < stop_time_intervals.length; i++) {
+            var arrivalTime = self.parseTimeString(stop_time.arrival_time);
+            arrivalTime.setTime(arrivalTime.getTime() + stop_time_intervals[i].interval);
+            stop_time.arrival_time = self.toTimeString(arrivalTime);
+            stop_time.departure_time = stop_time.arrival_time;
+            stop_time.stop_sequence = stop_time_intervals[i].stop_sequence;
+            stop_time.stop_id = stop_time_intervals[i].stop_id;
+            
+            ret = {};
+            utils.clone(stop_time, ret);
+            stop_times.push(ret);
+        }
+        console.log("stop_times", stop_times);
+        return stop_times;
+    }
+
+    // create stop time intervals from template
+    stop_time_intervals[0] = {
+        interval: 0,
+        stop_id: trip_template[0].stop_id,
+        stop_sequence: trip_template[0].stop_sequence
+    };
+    for (var i = 1; i < trip_template.length; i++) {
+        var arrival = this.parseTimeString(trip_template[i].arrival_time),
+            departure = this.parseTimeString(trip_template[i-1].departure_time);
+        
+        stop_time_intervals[i] = {
+            interval: arrival - departure,
+            stop_id: trip_template[i].stop_id,
+            stop_sequence: trip_template[i].stop_sequence
+        };
+    }
+    console.log("intervals", stop_time_intervals);
+
+    // create stop times
+    if (freq.exact_times) {
+        console.log("Frequencies are exact.");
+        while (trip_start_time < trip_end_time) {
+            stop_times = stop_times.concat(stopTimesFromStartTime(trip_start_time));
+            trip_start_time.setTime(trip_start_time.getTime() + freq.headway_secs*1000);
+        }
+    }
+    else {
+        // frequencies are inexact
+        console.log("Frequencies are inexact.");
+        // see https://developers.google.com/transit/gtfs/reference#frequencies_fields
+    }
+
+    return stop_times;
+};
 
 GeneralTransitFeed.prototype.getStopTimesForTrip = function (trip_id) {
-    var stop_time, stop_times = [], ids = [], i;
+    var stop_time, stop_times = [], trip_template, ids = [], i;
+    
+    // parse stop_times.txt
     for (stop_time in this.dataset.stop_times) {
         if (this.dataset.stop_times[stop_time].trip_id === trip_id) {
             ids.push(this.dataset.stop_times[stop_time].stop_id);
         } 
     }
-    
     for (i = 0; i < ids.length; i += 1) {
         stop_times.push(this.getStopTimeById(trip_id, ids[i]));
     }
+
+    // parse frequencies.txt with stop_times.txt as a template
+    for (freqIdx in this.dataset.frequencies) {
+        if (this.dataset.frequencies[freqIdx].trip_id === trip_id) {
+            console.log("TRIP HAS FREQUENCY");
+            trip_template = stop_times;
+            stop_times = [];
+            stop_times = stop_times.concat(this.createStopTimesFromFrequency(freqIdx, trip_template));
+            break;
+        }
+    }
+
     return stop_times;
 };
+
+// converts hh:mm:ss to a Date object
+GeneralTransitFeed.prototype.parseTimeString = function(txt) {
+    var timeParts = txt.split(":");
+    var dateObj = new Date();
+    dateObj.setHours(parseInt(timeParts[0], 10));
+    dateObj.setMinutes(parseInt(timeParts[1], 10));
+    dateObj.setSeconds(parseInt(timeParts[2], 10));
+    return dateObj;
+}
+
+// converts a Date object to hh:mm:ss
+GeneralTransitFeed.prototype.toTimeString = function(date) {
+    function pad(n) {
+        var s = n.toString();
+        return s.length < 2 ? '0' + s : s;
+    }
+    return date.getHours()+':'+pad(date.getMinutes())+':'+pad(date.getSeconds());
+}
 
 GeneralTransitFeed.prototype.parseFeedFiles = function () {
     
@@ -375,7 +473,7 @@ GeneralTransitFeed.prototype.load = function (feed, cb, self) {
         })
         .on('end', function (count) {
             console.log(feed + ':  number of lines: ' + count);
-            // console.log("out",out);
+            console.log("out",out);
             self.dataset[feed] = out;
             self.checkLoad(cb);
         })
