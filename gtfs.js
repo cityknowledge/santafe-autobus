@@ -345,7 +345,7 @@ GeneralTransitFeed.prototype.createStopTimesFromFrequency = function (freqIdx, t
             utils.clone(stop_time, ret);
             stop_times.push(ret);
         }
-        console.log("stop_times", stop_times);
+        // console.log("stop_times", stop_times);
         return stop_times;
     }
 
@@ -365,7 +365,7 @@ GeneralTransitFeed.prototype.createStopTimesFromFrequency = function (freqIdx, t
             stop_sequence: trip_template[i].stop_sequence
         };
     }
-    console.log("intervals", stop_time_intervals);
+    // console.log("intervals", stop_time_intervals);
 
     // create stop times
     if (freq.exact_times) {
@@ -473,7 +473,7 @@ GeneralTransitFeed.prototype.load = function (feed, cb, self) {
         })
         .on('end', function (count) {
             console.log(feed + ':  number of lines: ' + count);
-            console.log("out",out);
+            // console.log("out",out);
             self.dataset[feed] = out;
             self.checkLoad(cb);
         })
