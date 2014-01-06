@@ -533,7 +533,23 @@ app.scheduleTrip = function(route_id, stop_id, arrivalTime) {
     $("#trip_content #bus_msg").empty();
     $("#trip_content #bus_msg").append(content);
 
-    var trip_panel = $("#trip_panel");
+    this.showTripPanel();    
+
+    app.getGoogleDirections(this.directionsOrigin, this.directionsDestination, this.travelMode);
+}
+
+app.showTrip = function() {
+    this.showTripPanel();
+    $("#bottom-bar-minutes").hide();
+}
+
+app.hideTrip = function() {
+    this.hideTripPanel();
+    $("#bottom-bar-minutes").show();
+}
+
+app.showTripPanel = function() {
+    var self = this, trip_panel = $("#trip_panel");
     if (!trip_panel.is(":visible")) {
         trip_panel.show();
         trip_panel.animate({
@@ -548,24 +564,25 @@ app.scheduleTrip = function(route_id, stop_id, arrivalTime) {
             google.maps.event.trigger(self.map, 'resize');
         });
     }
-
-    app.getGoogleDirections(this.directionsOrigin, this.directionsDestination, this.travelMode);
 }
 
-app.cancelTrip = function() {
-    var trip_panel = $("#trip_panel");
-    var self = this;
+app.hideTripPanel = function() {
+    var self = this, trip_panel = $("#trip_panel");
     trip_panel.animate({
         bottom: -1*trip_panel.height()+"px"
     }, function() {
         trip_panel.hide();
-        self.stopCountdownTimer();
     });
     $("#map_canvas").animate({
         height: "100%"
     }, function() {
         google.maps.event.trigger(self.map, 'resize');
     });
+}
+
+app.cancelTrip = function() {
+    this.hideTripPanel();
+    this.stopCountdownTimer();
     this.clearGoogleDirections();
 }
 
@@ -656,7 +673,8 @@ app.decrementCoundownTimer = function () {
         // txtTime = pad(hours) + ":" +  pad(minutes) + ":" +  pad(seconds);
     }
        
-    $("#minutes").text(txtTime);     
+    $("#minutes").text(txtTime);
+    $("#bottom-bar-minutes").text(txtTime);
     // $("#minutes").text(minutes);
     // $("#countDownText").html(txtTime);
 };

@@ -46,6 +46,7 @@
             </div>
             <div data-role="footer"  data-position="fixed" data-theme="b" id="app-footer">
                 <a data-role="button" data-icon="gear">Settings</a>
+                <div id="bottom-bar-minutes" onclick="app.showTrip()"></div>
             </div>
             <div class="map_panel">
                 <div id="directions_panel"></div>
@@ -64,8 +65,9 @@
             </div>
             <div data-theme="b" id="trip_panel">
                 <div class="ui-bar ui-bar-b">
-                    Upcoming trip
+                    <div style="float: left; margin-top: 7px;">Upcoming trip</div>
                     <a class="upper_right_button" href="" data-role="button" data-inline="true" data-theme="b" data-mini="true" onclick="app.cancelTrip()">Cancel</a>
+                    <a class="upper_right_button" href="" data-role="button" data-inline="true" data-theme="b" data-mini="true" onclick="app.hideTrip()">Hide</a>
                 </div>
                 <div class="trip_panel_bulk">
                     <div id="trip_content" class="ui-grid-solo" data-theme="b">
