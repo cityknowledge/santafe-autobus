@@ -606,6 +606,16 @@ app.hideInfoPanel = function() {
     }
 }
 
+app.toggleDirectionsPanel = function() {
+    var dir_panel = $("#directions_panel");
+    if (dir_panel.is(":visible")) {
+        dir_panel.hide();
+    }
+    else {
+        dir_panel.show();
+    }
+}
+
 app.setTravelMode = function(mode) {
     this.travelMode = mode;
     this.getGoogleDirections(this.directionsOrigin, this.directionsDestination, mode);

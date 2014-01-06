@@ -83,10 +83,7 @@
                     </div>
                     <div class="ui-grid-a">
                         <div class="ui-block-a">
-                            <fieldset id="mode_fieldset" data-role="controlgroup" data-type="horizontal" >
-                                <input type="radio" name="radio-choice" id="radio-pedestrian" value="choice-1" onClick="app.setTravelMode('WALKING')" />
-                                <label id="walking_button" for="radio-pedestrian"><img src="images/walking2-white.png" /></label>
-                            </fieldset>
+                            <a id="ped_button" href="" data-role="button" data-theme="b" data-mini="true" onclick="app.toggleDirectionsPanel()"><img src="images/walking2-white.png" /></a>
                         </div>
                         <div class="ui-block-b">
                             <a class="van_button" href="" data-role="button" data-theme="b" data-mini="true" onclick="app.requestVan()"><img src="images/water-taxi-white.png" /></a>

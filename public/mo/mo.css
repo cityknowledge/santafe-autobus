@@ -156,12 +156,16 @@
     padding: 4px 14px;
 }
 
-#walking_button .ui-btn-inner {
+#ped_button .ui-btn-inner {
     padding: 3px 22px 1px 22px;
 }
 
-#walking_button img {
+#ped_button img {
     height: 29px;
+}
+
+#ped_button {
+    width: 60px;
 }
 
 #info_panel .time_text {
