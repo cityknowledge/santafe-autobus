@@ -437,7 +437,7 @@ app.findLocation = function(searchString) {
     console.log(searchString);
     var self = this;
     this.geocoder.geocode({
-        'address': searchString+", Santa Fe, NM",
+        'address': searchString,
         'bounds': this.mapBounds
     }, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
