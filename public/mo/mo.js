@@ -109,7 +109,7 @@ app.infowindow = new InfoBubble({
     backgroundColor: "#fff"
 });
 
-app.onRoute = function (trip) {
+app.onRoute = function (route_id) {
     var routePath, point, marker, routeCoordinatesInbound = [],
         routeCoordinatesOutbound = [], color, stops, longestShapes, addMarkersForRoute, onclick;
     var INBOUND = 1, OUTBOUND = 0;
@@ -119,7 +119,7 @@ app.onRoute = function (trip) {
     
     this.getNextRoute();
     
-    if (trip === null) {
+    if (route_id === null) {
         return;
     }
     
@@ -130,7 +130,7 @@ app.onRoute = function (trip) {
         };
     };
     
-    stops = this.getAllStopsForRoute(trip.route_id);
+    stops = this.getAllStopsForRoute(route_id);
 
     addMarkersForRoute = function (stops, inbound, self) {
         var i, stop;
@@ -143,22 +143,22 @@ app.onRoute = function (trip) {
             marker = new google.maps.Marker({
                 position: point,
                 map: null,
-                title: trip.route_id + ": " + stop.name,
+                title: route_id + ": " + stop.name,
                 icon: MapIconMaker.createMarkerIcon({width: 20, height: 34, primaryColor: color}),
                 stop_id: stop.id,
-                route_id: trip.route_id
+                route_id: route_id
             });
 
-            if (inbound) self.markers[trip.route_id].inbound.push(marker);
-            else self.markers[trip.route_id].outbound.push(marker);
+            if (inbound) self.markers[route_id].inbound.push(marker);
+            else self.markers[route_id].outbound.push(marker);
 
             google.maps.event.addListener(marker, 'click', onclick(self.infowindow, marker));
         }
     };
     
-    color = "#" + this.routes[trip.route_id].color;
+    color = "#" + this.routes[route_id].color;
     
-    this.markers[trip.route_id] = {
+    this.markers[route_id] = {
         inbound: [],
         outbound: []
     };
@@ -168,24 +168,35 @@ app.onRoute = function (trip) {
 
     var arrow = { path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW };
 
-    longestShapes = this.getLongestShapesForRoute(trip.route_id);
+    longestShapes = this.getLongestShapesForRoute(route_id);
     paths = {
         inbound: [],
         outbound: []
     };
 
-    // turn shape data into google points
-    for (var i = 0; i < longestShapes.inbound.length; i++) {
-        var point = longestShapes.inbound[i],
-            gPoint = new google.maps.LatLng(parseFloat(point.pt_lat), parseFloat(point.pt_lon));
+    if (longestShapes.inbound) {
+        // turn shape data into google points
+        for (var i = 0; i < longestShapes.inbound.length; i++) {
+            var point = longestShapes.inbound[i],
+                gPoint = new google.maps.LatLng(parseFloat(point.pt_lat), parseFloat(point.pt_lon));
 
-        paths.inbound.push(gPoint);
+            paths.inbound.push(gPoint);
+        }        
     }
-    for (var i = 0; i < longestShapes.outbound.length; i++) {
-        var point = longestShapes.outbound[i],
-            gPoint = new google.maps.LatLng(parseFloat(point.pt_lat), parseFloat(point.pt_lon));
-        
-        paths.outbound.push(gPoint);
+    else {
+        paths.inbound = routeCoordinatesInbound;
+    }
+
+    if (longestShapes.outbound) {
+        for (var i = 0; i < longestShapes.outbound.length; i++) {
+            var point = longestShapes.outbound[i],
+                gPoint = new google.maps.LatLng(parseFloat(point.pt_lat), parseFloat(point.pt_lon));
+            
+            paths.outbound.push(gPoint);
+        }
+    }
+    else {
+        paths.outbound = routeCoordinatesOutbound;
     }
 
     routePaths = {
@@ -217,10 +228,10 @@ app.onRoute = function (trip) {
         })
     };
 
-    $("#route_" + trip.route_id).css("opacity", "1.0");
+    $("#route_" + route_id).css("opacity", "1.0");
     
-    this.routePaths[trip.route_id] = routePaths;
-    this.routePaths[trip.route_id][this.direction].setMap(this.map);
+    this.routePaths[route_id] = routePaths;
+    this.routePaths[route_id][this.direction].setMap(this.map);
     // this.showAllPaths();
     // this.toggleInbound();
     this.displayRelevantStops();

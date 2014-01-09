@@ -310,13 +310,13 @@ AutobusClient.prototype.onRouteMessage = function (message) {
 };
 
 AutobusClient.prototype.processRoute = function (route) {
-    var trip;
+    // var trip;
     this.routes[route.id] = route;
     this.persist("route" + route.id, route);
     
-    trip = this.getTripForRoute(route.id);
+    // trip = this.getTripForRoute(route.id);
     // if (trip !== null) {
-        this.onRoute(trip);
+        this.onRoute(route.id);
     // }    
 };
 
