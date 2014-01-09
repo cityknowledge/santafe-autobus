@@ -26,7 +26,7 @@ var arrayToDict = function (arr, membersAreArrays) {
 
 var GTFSReader = function (uri, gtfsobj) {
     this.gtfsobj = gtfsobj;
-    this.version = "0.18";
+    this.version = "0.20";
     
     var parser = new FeedParser();
     // parser.parseUrl(uri, utils.objCallback(this, "onfeed"));
