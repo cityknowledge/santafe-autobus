@@ -1,25 +1,25 @@
 route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_color,route_text_color
-R1415,actv,,Linea 14-14L-15,Vaporetto,4,,
-R16,actv,16,Linea 16,Vaporetto,4,f8ab13,ffffff
-R17,actv,17,Linea 17,Vaporetto,4,7b7b7a,ffffff
-R15,actv,15,Linea 15,Vaporetto,4,db6a11,e0d410
-R12,actv,12,Linea 12,Vaporetto,4,dbd100,000000
-R13,actv,13,Linea 13,Vaporetto,4,3c2f87,ffffff
-R10,actv,10,Linea 10,Vaporetto,4,62c5e8,000000
-R11,actv,11,Linea 11,Vaporetto,4,f5b3c4,000000
-R52,actv,5.2,Linea 5.2,Motoscafo,4,9ed2c1,000000
-RN,actv,N,Linea N,Vaporetto,4,293582,ffffff
-R51,actv,5.1,Linea 5.1,Motoscafo,4,9ed2c1,000000
 R01,actv,1,Linea 1,Vaporetto,4,ffffff,000000
-R03,actv,3,Linea 3,Vaporetto,4,f5a453,000000
 R02,actv,2,Linea 2,Vaporetto,4,e42612,ffffff
-RNLN,actv,,Linea Notturno Laguna Nord,Vaporetto,4,293582,ffffff
-RNM,actv,,Linea Notturno Murano,Vaporetto,4,293582,ffffff
-R06,actv,6,Linea 6,Vaporetto,4,0061ad,ffffff
-R09,actv,9,Linea 9,Vaporetto,4,9c9300,ffffff
+R03,actv,3,Linea 3,Vaporetto,4,f5a453,000000
 R41,actv,4.1,Linea 4.1,Motoscafo,4,b83189,ffffff
 R42,actv,4.2,Linea 4.2,Motoscafo,4,b83189,ffffff
-RABLU,alilaguna,,Linea Alilaguna Blu,Motoscafo,4,1291d0,ffffff
-R22,actv,22,Linea 22,Vaporetto,4,dbd100,006168
-RAARA,alilaguna,,Linea Alilaguna Arancio,Motoscafo,4,eb6328,ffffff
+R51,actv,5.1,Linea 5.1,Motoscafo,4,9ed2c1,000000
+R52,actv,5.2,Linea 5.2,Motoscafo,4,9ed2c1,000000
+R06,actv,6,Linea 6,Vaporetto,4,0061ad,ffffff
+R09,actv,9,Linea 9,Vaporetto,4,9c9300,ffffff
+R10,actv,10,Linea 10,Vaporetto,4,62c5e8,000000
+R11,actv,11,Linea 11,Vaporetto,4,f5b3c4,000000
+R12,actv,12,Linea 12,Vaporetto,4,dbd100,000000
+R13,actv,13,Linea 13,Vaporetto,4,3c2f87,ffffff
+R1415,actv,,Linea 14-14L-15,Vaporetto,4,,
+R15,actv,15,Linea 15,Vaporetto,4,db6a11,e0d410
+R16,actv,16,Linea 16,Vaporetto,4,f8ab13,ffffff
+R17,actv,17,Linea 17,Vaporetto,4,7b7b7a,ffffff
 R20,actv,20,Linea 20,Vaporetto,4,9f9dcd,000000
+R22,actv,22,Linea 22,Vaporetto,4,dbd100,006168
+RN,actv,N,Linea N,Vaporetto,4,293582,ffffff
+RNLN,actv,,Linea Notturno Laguna Nord,Vaporetto,4,293582,ffffff
+RNM,actv,,Linea Notturno Murano,Vaporetto,4,293582,ffffff
+RABLU,alilaguna,,Linea Alilaguna Blu,Motoscafo,4,1291d0,ffffff
+RAARA,alilaguna,,Linea Alilaguna Arancio,Motoscafo,4,eb6328,ffffff

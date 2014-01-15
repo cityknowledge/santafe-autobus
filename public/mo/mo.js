@@ -162,9 +162,9 @@ app.onRoute = function (route_id) {
         inbound: [],
         outbound: []
     };
-    // TODO: Look into why stops.inbound has outbound stops and vice versa
-    addMarkersForRoute(stops.inbound, OUTBOUND, this);
-    addMarkersForRoute(stops.outbound, INBOUND, this);
+
+    addMarkersForRoute(stops.outbound, OUTBOUND, this);
+    addMarkersForRoute(stops.inbound, INBOUND, this);
 
     var arrow = { path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW };
 
