@@ -110,7 +110,7 @@ app.infowindow = new InfoBubble({
 });
 
 app.onRoute = function (route_id) {
-    var routePath, point, marker, routeCoordinatesInbound = [],
+    var routePath, point, marker, routeName, routeCoordinatesInbound = [],
         routeCoordinatesOutbound = [], color, stops, longestShapes, addMarkersForRoute, onclick;
     var INBOUND = 1, OUTBOUND = 0;
     var self = this;
@@ -143,7 +143,7 @@ app.onRoute = function (route_id) {
             marker = new google.maps.Marker({
                 position: point,
                 map: null,
-                title: route_id + ": " + stop.name,
+                title: routeName + ": " + stop.name,
                 icon: MapIconMaker.createMarkerIcon({width: 20, height: 34, primaryColor: color}),
                 stop_id: stop.id,
                 route_id: route_id
@@ -157,6 +157,7 @@ app.onRoute = function (route_id) {
     };
     
     color = "#" + this.routes[route_id].color;
+    routeName = this.routes[route_id].long_name;
     
     this.markers[route_id] = {
         inbound: [],
@@ -166,7 +167,7 @@ app.onRoute = function (route_id) {
     addMarkersForRoute(stops.outbound, OUTBOUND, this);
     addMarkersForRoute(stops.inbound, INBOUND, this);
 
-    var arrow = { path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW };
+    var arrow = { path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW };
 
     longestShapes = this.getLongestShapesForRoute(route_id);
     paths = {
