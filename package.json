@@ -1,7 +1,7 @@
 {
   "name": "vaporetto",
   "user": "bennlich",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "scripts": {
     "start": "server.js"
   },
