@@ -164,8 +164,8 @@ app.onRoute = function (route_id) {
         outbound: []
     };
 
-    addMarkersForRoute(stops.outbound, OUTBOUND, this);
-    addMarkersForRoute(stops.inbound, INBOUND, this);
+    addMarkersForRoute(stops.outbound, INBOUND, this);
+    addMarkersForRoute(stops.inbound, OUTBOUND, this);
 
     var arrow = { path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW };
 
