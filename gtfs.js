@@ -74,26 +74,26 @@ GTFSReader.prototype.getGTFSFiles = function (file_url, self) {
     });
 };
 
-GTFSReader.prototype.unzipFeedFiles = function (file_name) {
-    var uncompressed, zipfile, dirname, zf, fd, i, name, buffer;
-    zipfile = require('zipfile');
-    zf = new zipfile.ZipFile(file_name);
-    console.log(zf);
-    for (i = 0; i < zf.names.length; i += 1) {
-        name = zf.names[i];
-        uncompressed = path.join(this.gtfsobj.dataDir, name);
+// GTFSReader.prototype.unzipFeedFiles = function (file_name) {
+//     var uncompressed, zipfile, dirname, zf, fd, i, name, buffer;
+//     zipfile = require('zipfile');
+//     zf = new zipfile.ZipFile(file_name);
+//     console.log(zf);
+//     for (i = 0; i < zf.names.length; i += 1) {
+//         name = zf.names[i];
+//         uncompressed = path.join(this.gtfsobj.dataDir, name);
         
-        if (path.extname(name)) {
-            buffer = zf.readFileSync(name);
-            fd = fs.openSync(uncompressed, 'w');
-            console.log('unzipping: ' + name);
-            fs.writeSync(fd, buffer, 0, buffer.length, null);
-            fs.closeSync(fd);
-        }
-    }
+//         if (path.extname(name)) {
+//             buffer = zf.readFileSync(name);
+//             fd = fs.openSync(uncompressed, 'w');
+//             console.log('unzipping: ' + name);
+//             fs.writeSync(fd, buffer, 0, buffer.length, null);
+//             fs.closeSync(fd);
+//         }
+//     }
 
-    this.gtfsobj.parseFeedFiles();
-};
+//     this.gtfsobj.parseFeedFiles();
+// };
 
 
 var GeneralTransitFeed = function (uri, callback) {
